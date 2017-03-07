@@ -1,4 +1,6 @@
 <?php
+namespace tools; 
+use Crayner_Machine.php;
 /**
 * @author Ammar F.
 * @license RedAngel_PHP_Concept (c) 2017
