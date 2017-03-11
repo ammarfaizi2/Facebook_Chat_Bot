@@ -24,33 +24,6 @@ class AI
     private $sapa;
     private $jadwal;
     private $hari;
-    private function ttreturn($key)
-    {
-        if (isset($this->wordlist[$key])) {
-            foreach ($this->wordlist[$key] as $key => $val) {
-                foreach ($val as $ky => $vl) {
-                    $a=explode(",", $ky);
-                    $tr=array();
-                    foreach ($a as $b) {
-                        $b=explode("-", $b);
-                        if (count($b)==2) {
-                            foreach (range($b[0], $b[1]) as $tmg) {
-                                $tr[]=$tmg;
-                            }
-                        } else {
-                            $tr[]=(int)$b[0];
-                        }
-                    }
-                    var_dump($tr);
-                    if (in_array(date("H", $this->gtime), $tr)) {
-                        return $vl[array_rand($vl)];
-                        break;
-                    }
-                }
-            }
-        }
-        return false;
-    }
     public function __construct()
     {
         $this->gtime = strtotime(date("Y-m-d H:i:s")."+10minutes");
@@ -65,7 +38,7 @@ array(
 "halo juga ^@",
 ),true,false,null,6,35,null),
 
-"ohayo,ohayou"=>array(
+"ohayo"=>array(
 array(
 "0-9,24"=>array("ohayou kang ^@, selamat beraktiftas"),
 "10-11"=>array("selamat pagi menjelang siang ^@"),
@@ -74,13 +47,19 @@ array(
 "19-23"=>array("ini udah malem kang ^@"),
 ),false,true,null,6,35,null),
 
-"siang,ciang,siank"=>array(
+"konnichiwa,konichiwa,koniciwa"=>array(
 array(
 "0-9,24"=>array("ini masih pagi kang ^@"),
-"10-15"=>array("selamat siang kang ^@, selamat beraktifitas"),
-"16-18"=>array("ini udah sore kang ^@"),
+"10-18"=>array("konnichiwa kang ^@, selamat beraktifitas"),
 "19-23"=>array("ini udah malem kang ^@"),
-),true,true,null,6,35,null),
+),false,true,null,6,35,null),
+
+"konbawa,konbanwa"=>array(
+array(
+"0-9,24"=>array("ini masih pagi kang ^@"),
+"10-23"=>array("konbanwa kang ^@"),
+),false,true,null,6,35,null),
+
 
 "pagi"=>array(
 array(
@@ -109,10 +88,10 @@ array(
 
 "malam,malem"=>array(
 array(
-"0-9,24"=>array("ini masih pagi kang ^@"),
+"3-9,24"=>array("ini masih pagi kang ^@"),
 "10-14"=>array("ini masih siang kang ^@"),
 "15-18"=>array("ini masih sore kang ^@"),
-"19-23"=>array("selamat malam kang ^@, selamat beristirahat"),
+"19-23,0-2"=>array("selamat malam kang ^@, selamat beristirahat"),
 ),true,true,null,6,35,null),
 
 "apa+kabar"=>array(
@@ -125,17 +104,17 @@ array(
 "jam+brp,jam+berapa,jm+brp,jm+berapa"=>array(
 array(
 "sekarang jam #d(jam) #d(sapa)"
-),true,false,null,5,35,null),
+),false,false,null,5,35,null),
 
 "hari+apa+besok"=>array(
 array(
 "besok hari #d(day+1day)"
-),true,false,null,10,45,null),
+),false,false,null,10,45,null),
 
 "hari+apa+kemarin"=>array(
 array(
 "kemarin hari #d(day-1day)"
-),true,false,null,10,45,null),
+),false,false,null,10,45,null),
 
 "hari+apa"=>array(
 array(
@@ -220,7 +199,34 @@ array(
 "jadwal"=>1,
 "lampu"=>2,
 "tv"=>3,
+"menu"=>1
 );
+    }
+    private function ttreturn($key)
+    {
+        if (isset($this->wordlist[$key])) {
+            foreach ($this->wordlist[$key] as $key => $val) {
+                foreach ($val as $ky => $vl) {
+                    $a=explode(",", $ky);
+                    $tr=array();
+                    foreach ($a as $b) {
+                        $b=explode("-", $b);
+                        if (count($b)==2) {
+                            foreach (range($b[0], $b[1]) as $tmg) {
+                                $tr[]=$tmg;
+                            }
+                        } else {
+                            $tr[]=(int)$b[0];
+                        }
+                    }
+                    if (in_array(date("H", $this->gtime), $tr)) {
+                        return $vl[array_rand($vl)];
+                        break;
+                    }
+                }
+            }
+        }
+        return false;
     }
     private function word_check($needle, $haystack, $word_identical=false, $trreply=false, $timerange=null, $max_words=null, $max_length=null, $word_exception=null)
     {
@@ -466,16 +472,14 @@ array(
                             $a->get_status()
                         );
                     }
-                break;
+                    break;
                 case 'whois':
-                var_dump($this->_msg);
                     $domain = new Whois($this->_msg);
                     if ($domain->isAvailable()) {
                         $sd = "Domain is available".PHP_EOL;
                     } else {
                         $sd = "Domain is registered".PHP_EOL;
                     }
-                    var_dump($domain->info());exit();
                     $c = "";
                     $get = array("Domain Name:","Registrar URL:","Updated Date:","Creation Date:","Registrar Registration Expiration Date:","Registrar:","Registrant Name:","Registrant Organization:","Registrant Street:","Registrant State/Province:","Registrant Phone:","Name Server:");
                     foreach (explode("\n", str_replace(".", " . ", $domain->info())) as $val) {
@@ -486,7 +490,8 @@ array(
                             }
                         }
                     }
-                   $msg= (empty($c)?$this->_msg." not found in database !":$c.PHP_EOL.PHP_EOL.$sd);
+                   $msg=(empty($c)?$this->_msg." not found in database !":$c.PHP_EOL.PHP_EOL.$sd);
+                    break;
             }
         }
         return isset($msg) ? $msg : false;

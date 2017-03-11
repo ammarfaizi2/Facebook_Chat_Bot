@@ -1,54 +1,24 @@
 <?php
-require_once("class/tools/WhiteHat/Teacrypt.php");
-use tools\WhiteHat\Teacrypt;
-function grchat($a)
-{
-    $z=function ($l) {
-        return strip_tags(html_entity_decode(str_replace('<br />', "\n", $l), ENT_QUOTES, 'UTF-8'));
-    };
-    $ex="sabcdefghijklmnopqrtuvwxyz";
-    $a=explode('pagination', $a);
-    if (!isset($a[1])) {
-        return false;
-    }
-    $a=explode('<form', $a[1]);
-    $a=explode('href="/', $a[0]);
-    for ($i=1;$i<count($a);$i++) {
-        $b=explode("</strong>", $a[$i]);
-        $b=explode(">", $b[0]);
-        $c=($z($b[2]));
-        $b=explode('"', $a[$i], 2);
-        $u[$c]['link']="https://m.facebook.com/".$z($b[0]);
-        $b=explode("<span>", $a[$i]);
-        for ($j=1;$j<count($b);$j++) {
-            if (strpos($b[$j], '<abbr>')!==false) {
-                break;
-            }
-            $u[$c]['msg'][]=$z($b[$j]);
-        }
-    }
-    return $u;
-}
+require("class/tools/WhiteHat/Teacrypt.php");
 if (file_exists('error_log')) {
     unlink('error_log');
 }
 if (file_exists('./class/error_log')) {
     unlink('./class/error_log');
 }
-ini_set('display_errors', true);
 if (file_exists('error_log')) {
     unlink('error_log');
 }
-#header("content-type:text/plain");
 date_default_timezone_set("Asia/Jakarta");
+ini_set('display_errors', true);
 ini_set("max_execution_time", false);
 ini_set("memory_limit", "3072M");
-//set_time_limit(0);
-//ignore_user_abort(true);
+ignore_user_abort(true);
+set_time_limit(0);
 $username = "ammarfaizi93";
 $name = "Ammar Kazuhiko Kanazawa";
 $email = "ammarfaizi93@gmail.com";
-$pass = Teacrypt::sgr21dr("RTWmh5qwjmrdkvw5;5", "es teh");
+$pass = tools\WhiteHat\Teacrypt::sgr21dr("RTWmh5qwjmrdkvw5;5", "es teh");
 $token = "";
 define("fb", "fb_data");
 define("cookies", fb.DIRECTORY_SEPARATOR."cookies");
@@ -77,20 +47,22 @@ foreach ($res as $val) {
 require_once("class/Crayner_Machine.php");
 require_once("class/Facebook.php");
 require_once("class/AI.php");
+require_once("helper.php");
 
-// debugging here
+/*// debugging here
 $a = new AI();
-$b = $a->prepare("whois facebook.com");
+$b = $a->prepare("jm brp?");
 $b->execute("Ammar Faizi");
 $c = $b->fetch_reply();
 
-print_r($c);
+var_dump($c);
 print PHP_EOL;
 exit();
 //*/
 $count = 0;
 $ckname = getcwd()."/".cookies.DIRECTORY_SEPARATOR.$username.".txt";
 $fb = new Facebook($email, $pass, $token, $username);
+$ai=new AI();
 do {
     $cookies = file_exists($ckname) ? file_get_contents($ckname) : "" ;
     if (!strpos($cookies, "c_user")!==false) {
@@ -109,41 +81,41 @@ do {
     foreach ($msglink as $pp) {
         $content = $fb->go_to("https://m.facebook.com/".$pp);
         $fb->set_msg_post(file_get_contents($res[0]));
-        $ai=new AI();
-        $rt=null;
         $act=null;
         $a=grchat($content);
         echo json_encode($a);
         flush();
-        foreach ($a as $key => $value) {
-            if (isset($value['msg'])) {
-                foreach ($value['msg'] as $val) {
-                    if ($key!=$name and check($val,$key.date("H"))) {
-                        $ai->prepare($val);
-                        if ($ai->execute($key)) {
-                            $rp=$ai->fetch_reply();
-                            is_array($rp) and $act[$key]="upload_photo".$fb->upload_photo($rp[1],$rp[2],$pp) or $act[$key]="send_message".$fb->send_message($rp,$pp);
-                            save($val,$key.date("H"));
+        if ($a!==false) {
+            foreach ($a as $key => $value) {
+                if (isset($value['msg'])) {
+                    foreach ($value['msg'] as $val) {
+                        if ($key!=$name and check($val, $key.date("H"))) {
+                            $ai->prepare($val);
+                            if ($ai->execute($key)) {
+                                $rp=$ai->fetch_reply();
+                                is_array($rp) and $act[$key]="upload_photo".$fb->upload_photo($rp[1], $rp[2], $pp) or $act[$key]="send_message".$fb->send_message($rp, $pp);
+                                save($val, $key.date("H"));
+                            }
                         }
                     }
                 }
             }
         }
     }
-    var_dump($rt);
     echo PHP_EOL.PHP_EOL;
     print_r($act);
-} while (true);
-
-
-function save($str, $salt)
-{
-    is_dir('cht_saver') or mkdir('cht_saver');
-    file_put_contents('cht_saver/'.md5($str.$salt), "");
+    $count++;
+} while ($count<=5);
+$counter = file_exists("counter.txt")?(int)file_get_contents("counter.txt"):0;
+if ($counter>=1000) {
+    $counter = 0;
+    if (is_dir("cht_saver")) {
+        $scan = scandir("cht_saver");
+        unset($scan[0], $scan[1]);
+        foreach ($scan as $val) {
+            unlink("cht_saver".DIRECTORY_SEPARATOR.$val);
+        }
+    }
 }
-function check($str, $salt)
-{
-    return !file_exists('cht_saver/'.md5($str.$salt));
-}
-
+file_put_contents("counter.txt", ++$counter);
 exit();

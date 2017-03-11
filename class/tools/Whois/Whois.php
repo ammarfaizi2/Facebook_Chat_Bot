@@ -12,7 +12,8 @@ class Whois
      * @param string $domain full domain name (without trailing dot)
      */
     public function __construct($domain)
-    {   $this->servers = json_decode(file_get_contents(__DIR__.'/whois.servers.json'), true);
+    {
+        $this->servers = json_decode(file_get_contents(__DIR__.'/whois.servers.json'), true);
         $this->domain = $domain;
         // check $domain syntax and split full domain name on subdomain and TLDs
         if (
