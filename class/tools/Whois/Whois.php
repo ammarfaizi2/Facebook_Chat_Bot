@@ -1,6 +1,9 @@
 <?php
+
 namespace tools\Whois;
-class Whois{
+
+class Whois
+{
     private $domain;
     private $TLDs;
     private $subDomain;
@@ -8,7 +11,8 @@ class Whois{
     /**
      * @param string $domain full domain name (without trailing dot)
      */
-    public function __construct($domain){
+    public function __construct($domain)
+    {   $this->servers = json_decode(file_get_contents(__DIR__.'/whois.servers.json'), true);
         $this->domain = $domain;
         // check $domain syntax and split full domain name on subdomain and TLDs
         if (
@@ -17,21 +21,17 @@ class Whois{
         ) {
             $this->subDomain = $matches[1];
             $this->TLDs = $matches[2];
-        } else
-            //throw new \InvalidArgumentException("Invalid $domain syntax");
-        // setup whois servers array from json file
-        $this->servers = json_decode(file_get_contents( __DIR__.'/whois.servers.json' ), true);
+            $this->servers = json_decode(file_get_contents(__DIR__.'/whois.servers.json'), true);
+        }
     }
-    public function info(){
+    public function info()
+    {
         if ($this->isValid()) {
             $whois_server = $this->servers[$this->TLDs][0];
-
             // If TLDs have been found
             if ($whois_server != '') {
-
                 // if whois server serve replay over HTTP protocol instead of WHOIS protocol
                 if (preg_match("/^https?:\/\//i", $whois_server)) {
-
                     // curl session to get whois reposnse
                     $ch = curl_init();
                     $url = $whois_server . $this->subDomain . '.' . $this->TLDs;
@@ -50,9 +50,7 @@ class Whois{
                         $string = strip_tags($data);
                     }
                     curl_close($ch);
-
                 } else {
-
                     // Getting whois information
                     $fp = fsockopen($whois_server, 43);
                     if (!$fp) {
@@ -72,7 +70,7 @@ class Whois{
 
                             $string .= $line;
 
-                            $lineArr = explode (":", $line);
+                            $lineArr = explode(":", $line);
 
                             if (strtolower($lineArr[0]) == 'whois server') {
                                 $whois_server = trim($lineArr[1]);
@@ -102,7 +100,7 @@ class Whois{
                     }
                     fclose($fp);
                 }
-                if (function_exists('mb_detect_encoding') AND function_exists('mb_convert_encoding')) {
+                if (function_exists('mb_detect_encoding') and function_exists('mb_convert_encoding')) {
                     $string_encoding = mb_detect_encoding($string, "UTF-8, ISO-8859-1, ISO-8859-15", true);
                     $string_utf8 = mb_convert_encoding($string, "UTF-8", $string_encoding);
                 } else {
@@ -118,40 +116,45 @@ class Whois{
         }
     }
 
-    public function htmlInfo(){
+    public function htmlInfo()
+    {
         return nl2br($this->info());
     }
     /**
      * @return string full domain name
      */
-    public function getDomain(){
+    public function getDomain()
+    {
         return $this->domain;
     }
     /**
      * @return string top level domains separated by dot
      */
-    public function getTLDs(){
+    public function getTLDs()
+    {
         return $this->TLDs;
     }
 
     /**
      * @return string return subdomain (low level domain)
      */
-    public function getSubDomain(){
+    public function getSubDomain()
+    {
         return $this->subDomain;
     }
 
-    public function isAvailable(){
+    public function isAvailable()
+    {
         $whois_string = $this->info();
         $not_found_string = '';
         if (isset($this->servers[$this->TLDs][1])) {
-           $not_found_string = $this->servers[$this->TLDs][1];
+            $not_found_string = $this->servers[$this->TLDs][1];
         }
 
         $whois_string2 = @preg_replace('/' . $this->domain . '/', '', $whois_string);
         $whois_string = @preg_replace("/\s+/", ' ', $whois_string);
 
-        $array = explode (":", $not_found_string);
+        $array = explode(":", $not_found_string);
         if ($array[0] == "MAXCHARS") {
             if (strlen($whois_string2) <= $array[1]) {
                 return true;
