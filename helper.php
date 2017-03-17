@@ -1,38 +1,33 @@
 <?php
-function save($str, $salt)
+function save($str, $salt=null)
 {
     is_dir('cht_saver') or mkdir('cht_saver');
     file_put_contents('cht_saver/'.md5($str.$salt), "");
 }
-function check($str, $salt)
+function check($str, $salt=null)
 {
     return !file_exists('cht_saver/'.md5($str.$salt));
 }
 function grchat($a)
 {
-    $z=function ($l) {
-        return strip_tags(html_entity_decode(str_replace('<br />', "\n", $l), ENT_QUOTES, 'UTF-8'));
-    };
-    $ex="sabcdefghijklmnopqrtuvwxyz";
-    $a=explode('pagination', $a);
-    if (!isset($a[1])) {
-        return false;
-    }
-    $a=explode('<form', $a[1]);
-    $a=explode('href="/', $a[0]);
-    for ($i=1;$i<count($a);$i++) {
-        $b=explode("</strong>", $a[$i]);
-        $b=explode(">", $b[0]);
-        $c=($z($b[2]));
-        $b=explode('"', $a[$i], 2);
-        $u[$c]['link']="https://m.facebook.com/".$z($b[0]);
-        $b=explode("<span>", $a[$i]);
-        for ($j=1;$j<count($b);$j++) {
-            if (strpos($b[$j], '<abbr>')!==false) {
-                break;
+    $a = explode('<table class="m" role="presentation">',$a);
+    $a = explode('<form',$a[2]);
+    $a = explode('<strong',$a[0]);
+    for ($i=1; $i < count($a); $i++) { 
+        $b = explode('>',$a[$i]);
+        $b = explode('<',$b[1]);
+        $c = explode("</strong>",$a[$i]);
+        $c = explode('<abbr>',$c[1]);
+        $c = explode("\n",trim(html_entity_decode(strip_tags(str_replace("<br />","\n",$c[0])),ENT_QUOTES,'UTF-8')));
+        if (count($c)>1) {
+            $d = "";
+            for ($k=0;$k<count($c);$k++) { 
+                $d.=trim($c[$k])."\n";
             }
-            $u[$c]['msg'][]=$z($b[$j]);
+        } else {
+            $d = $c[0];
         }
+        $sv[$b[0]][] = $d;
     }
-    return $u;
+    return $sv;
 }

@@ -1,5 +1,4 @@
 <?php
-
 namespace tools\Whois;
 
 class Whois
@@ -13,7 +12,6 @@ class Whois
      */
     public function __construct($domain)
     {
-        $this->servers = json_decode(file_get_contents(__DIR__.'/whois.servers.json'), true);
         $this->domain = $domain;
         // check $domain syntax and split full domain name on subdomain and TLDs
         if (
@@ -22,17 +20,23 @@ class Whois
         ) {
             $this->subDomain = $matches[1];
             $this->TLDs = $matches[2];
-            $this->servers = json_decode(file_get_contents(__DIR__.'/whois.servers.json'), true);
+        } else {
+            //throw new \InvalidArgumentException("Invalid $domain syntax");
+        // setup whois servers array from json file
+        $this->servers = json_decode(file_get_contents(__DIR__.'/whois.servers.json'), true);
         }
     }
     public function info()
     {
         if ($this->isValid()) {
             $whois_server = $this->servers[$this->TLDs][0];
+
             // If TLDs have been found
             if ($whois_server != '') {
+
                 // if whois server serve replay over HTTP protocol instead of WHOIS protocol
                 if (preg_match("/^https?:\/\//i", $whois_server)) {
+
                     // curl session to get whois reposnse
                     $ch = curl_init();
                     $url = $whois_server . $this->subDomain . '.' . $this->TLDs;
@@ -52,6 +56,7 @@ class Whois
                     }
                     curl_close($ch);
                 } else {
+
                     // Getting whois information
                     $fp = fsockopen($whois_server, 43);
                     if (!$fp) {

@@ -54,7 +54,7 @@ class SaferScript
             } catch (Error $e) {
                 $q = "Error";
             }
-            return isset($q) ? $q : "success, but empty response !";
+            return isset($q) ? $q : "success !";
         } else {
             print('cannot execute, script contains errors');
         }
