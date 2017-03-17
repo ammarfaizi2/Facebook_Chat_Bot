@@ -1,7 +1,7 @@
 <?php 
 date_default_timezone_set("Asia/Jakarta");
 /**
-* @author Ammar F. https://www.facebook.com/ammarfaizi2 <ammarfaizi2@gmail.com>
+* @author Ammar F. <ammarfaizi2@gmail.com> https://www.facebook.com/ammarfaizi2
 * @license RedAngel_PHP_Concept (c) 2017
 * @package Artificial Inteligence
 */
@@ -138,6 +138,7 @@ array(
 
 "makasih,terima+kasih,thank"=>array(
 array(
+"senang mendengarnya",
 "sama sama 😉",
 "welcome 😃",
 "all right 😉"
@@ -148,7 +149,7 @@ array(
 "douita"
 ),false,false,null,7,45,null),
 
-"es+teh"=>array(
+"es+teh,esteh"=>array(
 array(
 "es teh terasa segar ketika masuk ke mulut"
 ),false,false,null,5,30,null),
@@ -165,10 +166,28 @@ array(
 "lagi mikir",
 ),false,false,null,4,30,null),
 
+"makan"=>array(
+array(
+"makan yuk",
+"makan apa?",
+"udah makan?",
+"pernah makan tanah?"
+),false,false,null,5,50,null),
+
+"php"=>array(
+"ya, saya bisa php",
+),true,false,null,5,30,null),
+
 "zeeb,zeev"=>array(
 array(
 "zeeb (y)",
 "zeeb :*"
+),true,false,null,4,15,null),
+
+"siapa"=>array(
+array(
+"siapa aja",
+"siapapun"
 ),true,false,null,4,15,null),
 
 "ntap"=>array(
@@ -178,7 +197,7 @@ array(
 "mantap"
 ),false,false,null,5,25,null),
 
-"haha,wkwk,xixi,xexe,wkaka,wkeke,wkoko"=>array(
+"hihi,haha,wkwk,xixi,xexe,wkaka,wkeke,wkoko"=>array(
 array(
 "dilarang ketawa"
 ),false,false,null,10,65,null),

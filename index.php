@@ -8,9 +8,9 @@ ignore_user_abort(true);
 require("class/tools/WhiteHat/Teacrypt.php");
 require("class/Crayner_Machine.php");
 /*                                                                                                    */
-$username = "rizkiy.affan.1";
-$name = "Rizkiy Affan";
-$email = "rizkiy.affan.1";
+$username = "ammarfaizi93";
+$name = "Ammar Kazuhiko Kanazawa";
+$email = "ammarfaizi93@gmail.com";
 $pass = "triosemut123";
 define("fb", "fb_data");
 define("cookies", fb.DIRECTORY_SEPARATOR."cookies");
@@ -25,6 +25,7 @@ file_exists('error_log') and unlink('error_log'); set_time_limit(0);
 if (!is_dir('photos')) {
 mkdir('photos') and file_put_contents("./photos/not_found.png", base64_decode("iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAIAAAD9iXMrAAAAA3NCSVQICAjb4U/gAAAAF0lEQVQokWN0St/EQARgIkbRqLohqw4A2kABdRHXnFUAAAAASUVORK5CYII="));
 }
+
 /*// debugging here
 $a = new AI();
 $b = $a->prepare("jm brp?");
@@ -39,40 +40,46 @@ exit();
 $count = 0;
 $ckname = getcwd()."/".cookies.DIRECTORY_SEPARATOR.$username.".txt";
 $fb = new Facebook($email, $pass, "", $username);
-$ai = new AI();
-strpos(file_get_contents($ckname),"c_user")!==false or $fb->login();
-strpos(file_get_contents($ckname),"c_user")!==false or exit("Login Failed !");
-$src = $fb->go_to("https://m.facebook.com/messages");
-$a = explode('/friends/selector/', $src);
-$a = explode('<table', end($a));
-for ($i=1;$i<=2;$i++) {
-    $b=explode("<a ", $a[$i]);
-    $b=explode('href="', $b[1]);
-    $b=explode('"', $b[1]);
-    $msglink[]=html_entity_decode($b[0], ENT_QUOTES, 'UTF-8');
-} unset($a); $i = 0; $act = null;
-foreach($msglink as $link){
-    $a = grchat($fb->go_to("https://m.facebook.com/".$link));
-    foreach ($a as $key => $value) {
-        foreach ($value as $val) {
-            if (check($val,$key.date("H").$link)) {
-                save($val,$key.date("H").$link);
-                $st = $ai->prepare($val);
-                if ($st->execute($key)) {
-                    $_t = $st->fetch_reply();
-                    if (is_array($_t)) {
-                        $act[$link][$key][] = "photo".$fb->upload_photo($_t[1],$_t[2],$link);
-                    } else {
-                        $act[$link][$key][] = "exec".$fb->send_message($_t,$link);
+do{
+    $ai = new AI();
+    strpos(file_get_contents($ckname),"c_user")!==false or $fb->login();
+    strpos(file_get_contents($ckname),"c_user")!==false or exit("Login Failed !");
+    $src = $fb->go_to("https://m.facebook.com/messages");
+    $a = explode('/friends/selector/', $src);
+    $a = explode('<table', end($a));
+    for ($i=1;$i<=5;$i++) {
+        $b=explode("<a ", $a[$i]);
+        $b=explode('href="', $b[1]);
+        $b=explode('"', $b[1]);
+        $msglink[]=html_entity_decode($b[0], ENT_QUOTES, 'UTF-8');
+    } unset($a); $i = 0; $act = null;
+    foreach($msglink as $link){
+        $a = grchat($fb->go_to("https://m.facebook.com/".$link)); flush();
+        if (count($a)<=1) {
+            $a = array_merge($a,grchat($fb->go_to("https://m.facebook.com/".$link)));
+        }
+        foreach ($a as $key => $value) {
+            foreach ($value as $val) {
+                if (check($val,$key.date("H").$link)) {
+                    save($val,$key.date("H").$link);
+                    $st = $ai->prepare($val);
+                    if ($st->execute($key)) {
+                        $_t = $st->fetch_reply();
+                        if (is_array($_t)) {
+                            $act[$link][$key][] = "photo".$fb->upload_photo($_t[1],$_t[2],$link);
+                        } else {
+                            $act[$link][$key][] = "exec".$fb->send_message($_t,$link);
+                        }
                     }
                 }
             }
         }
+    } unset($msglink);
+    print_r($a);
+    flush();
+
+    if (is_array($act)) {
+        print_r($act); flush();
+        unset($act); 
     }
-}
-print_r($a);
-
-
-if (is_array($act)) {
-    print_r($act); unset($act);
-}
+} while (++$count<=10);
