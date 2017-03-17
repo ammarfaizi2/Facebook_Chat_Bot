@@ -60,8 +60,8 @@ do{
         }
         foreach ($a as $key => $value) {
             foreach ($value as $val) {
-                if (check($val,$key.date("H").$link)) {
-                    save($val,$key.date("H").$link);
+                if (check($val,$key.date("Hdmy").$link)) {
+                    save($val,$key.date("Hdmy").$link);
                     $st = $ai->prepare($val);
                     if ($st->execute($key)) {
                         $_t = $st->fetch_reply();
