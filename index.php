@@ -26,9 +26,9 @@ if (!is_dir('photos')) {
 mkdir('photos') and file_put_contents("./photos/not_found.png", base64_decode("iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAIAAAD9iXMrAAAAA3NCSVQICAjb4U/gAAAAF0lEQVQokWN0St/EQARgIkbRqLohqw4A2kABdRHXnFUAAAAASUVORK5CYII="));
 }
 
-/*// debugging here
+// debugging here
 $a = new AI();
-$b = $a->prepare("jm brp?");
+$b = $a->prepare("kemarin hari apa?");
 $b->execute("Ammar Faizi");
 $c = $b->fetch_reply();
 
@@ -56,11 +56,12 @@ do{
     foreach($msglink as $link){
         $a = grchat($fb->go_to("https://m.facebook.com/".$link)); flush();
         if (count($a)<=1) {
-            $a = array_merge($a,grchat($fb->go_to("https://m.facebook.com/".$link)));
+            $g = grchat($fb->go_to("https://m.facebook.com/".$link));
+            is_array($g) and $a = array_merge($a,$g);
         }
         foreach ($a as $key => $value) {
             foreach ($value as $val) {
-                if (check($val,$key.date("Hdmy").$link)) {
+                if ($key!=$name and check($val,$key.date("Hdmy").$link)) {
                     save($val,$key.date("Hdmy").$link);
                     $st = $ai->prepare($val);
                     if ($st->execute($key)) {
@@ -82,4 +83,4 @@ do{
         print_r($act); flush();
         unset($act); 
     }
-} while (++$count<=10);
+} while (++$count<=1);

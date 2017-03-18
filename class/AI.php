@@ -5,15 +5,10 @@ date_default_timezone_set("Asia/Jakarta");
 * @license RedAngel_PHP_Concept (c) 2017
 * @package Artificial Inteligence
 */
-include('tools/JadwalSholat.php');
-include('tools/Whois/Whois.php');
-include('tools/MyAnimeList.php');
-include('tools/SaferScript.php');
-include('tools/Translator.php');
-include('tools/WhatAnime.php');
-include('tools/Brainly.php');
-include('tools/Saklar.php');
-include('tools/TV.php');
+function autoload($class){
+    include __DIR__.DIRECTORY_SEPARATOR.str_replace("\\",DIRECTORY_SEPARATOR,$class).".php";
+}
+spl_autoload_register('autoload');
 use tools\JadwalSholat;
 use tools\Whois\Whois;
 use tools\MyAnimeList;
@@ -103,12 +98,13 @@ array(
 array(
 "kabar baik disini",
 "baik",
-"sehat"
+"sehat",
+"jelek"
 ),false,false,null,6,35,null),
 
 "jam+brp,jam+berapa,jm+brp,jm+berapa"=>array(
 array(
-"sekarang jam #d(jam) #d(sapa)"
+"sekarang jam #d(jam) #d(jam_sapa)"
 ),true,false,null,5,35,null),
 
 "what+time"=>array(
@@ -126,7 +122,7 @@ array(
 "besok hari #d(day+1day)"
 ),true,false,null,10,45,null),
 
-"hari+apa+kemarin,kemari+hari"=>array(
+"hari+apa+kemarin,kemarin+hari"=>array(
 array(
 "kemarin hari #d(day-1day)"
 ),true,false,null,10,45,null),
@@ -154,6 +150,19 @@ array(
 "es teh terasa segar ketika masuk ke mulut"
 ),false,false,null,5,30,null),
 
+"pernah+ngoding"=>array(
+array(
+"oh sering"
+),false,false,null,6,45,null),
+
+"ngoding,code,kode"=>array(
+array(
+"yuk ngoding",
+"ngoding emang asik",
+"ngoding eaa",
+),true,false,null,25,100,null),
+
+
 "kleng"=>array(
 array(
 "sokleng baso tengkleng"
@@ -166,15 +175,61 @@ array(
 "lagi mikir",
 ),false,false,null,4,30,null),
 
+"mikir+apa"=>array(
+array(
+"mikir coding",
+"mikir sawah"
+),true,false,null,5,30,null),
+
+"kucing"=>array(
+array(
+"wow kucing"
+),true,false,null,8,55,null),
+
 "makan"=>array(
 array(
 "makan yuk",
 "makan apa?",
 "udah makan?",
-"pernah makan tanah?"
+"pernah makan tanah?",
+"pernah makan gamping?",
 ),false,false,null,5,50,null),
 
+"skripsi"=>array(
+array(
+"ciye skripsi :v",
+"eaa skirpsi eaa :v",
+),false,false,null,10,70,null),
+
+"laravel"=>array(
+array(
+"kok kayak nama framework yak",
+),true,false,null,10,45,null),
+
+"ikut"=>array(
+array(
+"ikut kemana?",
+"dilarang ikut",
+),true,false,null,5,30,null),
+
+"proyek"=>array(
+array(
+"proyek nih asikk",
+),true,false,null,7,40,null),
+
+"project"=>array(
+array(
+"project nih asikk",
+),true,false,null,7,40,null),
+
+"sok+tau"=>array(
+array(
+"ciye sok tau",
+"^@ ini memang sok tau"
+),true,false,null,6,30,null),
+
 "php"=>array(
+array(
 "ya, saya bisa php",
 ),true,false,null,5,30,null),
 
@@ -200,7 +255,7 @@ array(
 "hihi,haha,wkwk,xixi,xexe,wkaka,wkeke,wkoko"=>array(
 array(
 "dilarang ketawa"
-),false,false,null,10,65,null),
+),false,false,null,25,100,null),
 
 "laper,lapar"=>array(
 array(
@@ -223,15 +278,15 @@ array(
         $this->jam = array('#01','#02','#03','#04','#05','#06','#07','#08','#09','#10','#11','#12','#13','#14','#15','#16','#17','#18','#19','#20','#21','#22','#23','#24','#00',);
         $this->sapa = array('dini hari','dini hari','dini hari','dini hari','pagi','pagi','pagi','pagi','pagi','menjelang siang','siang','siang','siang','siang','sore','sore','sore','sore','malam','malam','malam','malam','malam','dini hari','dini hari');
         $this->jadwal    = array(
-"Senin"        =>"Senin\n\nBiologi\nKewirausahaan\nMatematika\nMatematika\nKimia\nKimia\nFisika\n\nPulang jam 16.00",
-"Selasa"    =>"Selasa\n\nGeografi\nGeografi\nEkonomi\nEkonomi\nMatematika\nSeni Budaya\nAgama\nKeiran (Japan)\n\nPulang jam 16.30",
-"Rabu"        =>"Rabu\n\nB.Indonesia\nB.Indonesia\nB.Inggris\nB.Inggris\nBiologi\nBiologi\nAgama\nMatematika\nMatematika\n\nPulang jam 15.30",
-"Kamis"        =>"Kamis\n\nOlahraga\nOlahraga\nOlahraga\nGeografi\nB.Indonesia\nPKN\nFisika\nFisika\n\nPulang jam 15.30",
-"Jum'at"    =>"Jum'at\n\nSenam\nMatematika\nMatematika\nKimia\nSejarah\nSejarah\n\nPulang jam 11.00",
-"Sabtu"        =>"Sabtu\n\nPKN\nEkonomi\nB.Jawa\nPramuka(jarang)\nPramuka(jarang)\n\nPulang jam 11.00",
-"Minggu"    =>"Minggu\n\nNgisi kuliah kalsel\nNgisi kuliah Surabaya\nNgisi kuliah umum\nBebas"
+"Senin"  =>"Senin\n\nUpacara\nBiologi\nKewirausahaan\nMatematika\nMatematika\nKimia\nKimia\nFisika\n\nPulang jam 16.00",
+"Selasa" =>"Selasa\n\nGeografi\nGeografi\nEkonomi\nEkonomi\nMatematika\nSeni Budaya\nAgama\nKeiran (Japan)\n\nPulang jam 16.30",
+"Rabu"   =>"Rabu\n\nB.Indonesia\nB.Indonesia\nB.Inggris\nB.Inggris\nBiologi\nBiologi\nAgama\nMatematika\nMatematika\n\nPulang jam 15.30",
+"Kamis"  =>"Kamis\n\nOlahraga\nOlahraga\nOlahraga\nGeografi\nB.Indonesia\nPKN\nFisika\nFisika\n\nPulang jam 15.30",
+"Jum'at" =>"Jum'at\n\nSenam\nMatematika\nMatematika\nKimia\nSejarah\nSejarah\n\nPulang jam 11.00",
+"Sabtu"  =>"Sabtu\n\nPKN\nEkonomi\nB.Jawa\nPramuka(jarang)\nPramuka(jarang)\n\nPulang jam 11.00",
+"Minggu" =>"Minggu\n\nNgisi kuliah kalsel\nNgisi kuliah Surabaya\nNgisi kuliah umum\nBebas"
             );
-        $this->superuser = array("Ammar F");
+        $this->superuser = array("Ammar F","Ammar Faizi");
         $this->hari = array("Minggu","Senin","Selasa","Rabu","Kamis","Jum'at","Sabtu");
         $this->root_command = array(
 "off"=>2,
@@ -373,7 +428,7 @@ array(
         if (isset($this->root_command[$string]) && in_array($actor, $this->superuser)) {
             $a = null;
             switch ($string) {
-                case "on":
+                case "on": case "bot_on" :
                     $cf  = file_exists("bot_off");
                     $msg = ($cf ? "bot_on" : "~");
                     if ($cf) {
@@ -381,7 +436,7 @@ array(
                         $msg = file_exists("bot_off") ? "error" : $msg;
                     }
                     break;
-                case "off":
+                case "off": case "bot_off" :
                     $cf  = file_exists("bot_off");
                     $msg = ($cf ? "~" : "bot_off");
                     !$cf and file_put_contents("bot_off", "");
@@ -733,14 +788,50 @@ array(
         $this->actor=null;
         return false;
     }
-    private function fix_rp($str)
+    private function fdate($string)
     {
-        $hari = $this->hari[(int)date('w')];
-        $a=array("#d(day)","#d(jam)","#d(sapa)");
-        $b=array($hari,date("h:i:s"),"#".date("H"));
-        $str=str_replace($a, $b, $str);
-        $str=str_replace($this->jam, $this->sapa, $str);
-        return $str;
+        $pure = $string;
+        $a = explode("#d(",$string);
+        $a = explode(")",$a[1]);
+        $b = explode("+",$a[0]);
+        if (count($b)==1) {
+            $b = explode("-",$a[0]);
+            if (count($b)==1) {
+                $out = $b[0];
+                $tc = false;
+            } else {
+                $tc = true;
+                $op = "-";
+            }
+        } else {
+            $op = "+";
+            $tc = true;
+        }
+        if ($tc) {
+            $replacer = "#d(".$b[0].$op.$b[1].")";
+            $c = strtotime(date("Y-m-d H:i:s").$op.$b[1],strtotime("Y-m-d H:i:s"));
+            $b = $b[0];
+        } else {
+            $replacer = "#d(".$b[0].")";
+            $c = strtotime(date("Y-m-d H:i:s"));
+            $b = $b[0];
+        }
+        switch ($b) {
+            case 'day': case 'days' : 
+                $c = $this->hari[date("w",$c)];
+                break;
+            case 'jam' :
+                $c = date("h:i:s",$c);
+                break;
+            case 'jam_sapa' :
+                $c = "#".date("H");
+                break;
+        }
+        $return = str_replace($replacer,$c,$pure);
+        if (strpos($return,"#d(")!==false) {
+            $return = $this->fdate($return);
+        }
+        return $return;
     }
     public function fetch_reply()
     {
@@ -751,8 +842,8 @@ array(
             $shact=explode(" ", $this->actor);
             $rt=str_replace("^@", $shact[0], $this->msgrt);
             $rt=str_replace("@", $this->actor, $rt);
+            $rt=strpos($rt,"#d(")!==false?$this->fdate($rt):$rt;
             $rt=str_replace($this->jam, $this->sapa, $rt);
-            $rt=$this->fix_rp($rt);
         } else {
             $rt=$this->msgrt;
         }
