@@ -105,27 +105,27 @@ array(
 "jam+brp,jam+berapa,jm+brp,jm+berapa"=>array(
 array(
 "sekarang jam #d(jam) #d(jam_sapa)"
-),true,false,null,5,35,null),
+),true,false,null,15,45,null),
 
 "what+time"=>array(
 array(
 "time #d(jam)"
-),false,false,null,5,35,null),
+),false,false,null,8,35,null),
 
 "what+day"=>array(
 array(
 "today #d(day)"
-),false,false,null,5,35,null),
+),false,false,null,8,35,null),
 
 "hari+apa+besok,besok+hari"=>array(
 array(
 "besok hari #d(day+1day)"
-),true,false,null,10,45,null),
+),false,false,null,10,45,null),
 
 "hari+apa+kemarin,kemarin+hari"=>array(
 array(
 "kemarin hari #d(day-1day)"
-),true,false,null,10,45,null),
+),false,false,null,10,45,null),
 
 "hari+apa"=>array(
 array(
@@ -134,11 +134,10 @@ array(
 
 "makasih,terima+kasih,thank"=>array(
 array(
-"senang mendengarnya",
 "sama sama 😉",
 "welcome 😃",
-"all right 😉"
-),false,false,null,5,35,null),
+"senang mendengarnya 😉"
+),false,false,null,8,45,null),
 
 "arigato"=>array(
 array(
@@ -155,6 +154,22 @@ array(
 "oh sering"
 ),false,false,null,6,45,null),
 
+"levvat,lewat"=>array(
+array(
+"dilarang lewat",
+"mampir sekalian ga usah lewat"
+),true,false,null,4,15,null),
+
+"nyimak"=>array(
+array(
+"dilarang nyimak !"    
+),false,false,null,6,45,null),
+
+"ngoding+apaan,ngoding+apa"=>array(
+array(
+"coba tebak ngoding itu apa"
+),false,false,null,7,45,null),
+
 "ngoding,code,kode"=>array(
 array(
 "yuk ngoding",
@@ -162,11 +177,15 @@ array(
 "ngoding eaa",
 ),true,false,null,25,100,null),
 
-
 "kleng"=>array(
 array(
 "sokleng baso tengkleng"
 ),true,false,null,4,20,null),
+
+"kucing"=>array(
+array(
+"wow kucing"
+),true,false,null,8,55,null),
 
 "lagi+apa"=>array(
 array(
@@ -181,10 +200,17 @@ array(
 "mikir sawah"
 ),true,false,null,5,30,null),
 
-"kucing"=>array(
+"makan+apa"=>array(
 array(
-"wow kucing"
-),true,false,null,8,55,null),
+"makan nasi",
+"makan tanah",
+"makan kamu",
+),false,false,null,5,50,null),
+
+"dilarang"=>array(
+array(
+"ih ngelarang larang",
+),true,false,null,5,25,null),
 
 "makan"=>array(
 array(
@@ -194,6 +220,12 @@ array(
 "pernah makan tanah?",
 "pernah makan gamping?",
 ),false,false,null,5,50,null),
+
+"oyasumi,oyasume"=>array(
+array(
+"oyasumi ^@",
+"oyasuminasai",
+),false,false,null,5,35,null),
 
 "skripsi"=>array(
 array(
@@ -254,7 +286,7 @@ array(
 
 "hihi,haha,wkwk,xixi,xexe,wkaka,wkeke,wkoko"=>array(
 array(
-"dilarang ketawa"
+"dilarang ketawa",
 ),false,false,null,25,100,null),
 
 "laper,lapar"=>array(
@@ -268,6 +300,12 @@ array(
 "lu laper sampe mangap mangap gitu?",
 "kenapa ^@, laper tha?"
 ),true,false,null,2,4,null),
+
+"bot+kacang,bot+katjang"=>array(
+array(
+"nggk kacang kok, cuma nggk ngerti aja",
+"nggk kacang, cuma bingung mo ngomong apa",
+),false,false,null,6,25,null),
 
 "bot"=>array(
 array(
@@ -607,7 +645,7 @@ array(
                     $a = (array)$a->search($this->_msg)->entry;
                     if (!empty($a)) {
                         $file = data.DIRECTORY_SEPARATOR.md5($a['image']).".jpg";
-                        !file_exists($file) and file_put_contents($file,$this->qurl($a['image']));
+                        !file_exists($file) and file_put_contents($file,Crayner_Machine::curl($a['image']));
                         $msg = array(
                                 'img/text',
                                 $file,
@@ -630,7 +668,7 @@ array(
                     $a = (array)$a->search($this->_msg, "manga")->entry;
                     if (!empty($a)) {
                         $file = data.DIRECTORY_SEPARATOR.md5($a['image']).".jpg";
-                        !file_exists($file) and file_put_contents($file,$this->qurl($a['image']));
+                        !file_exists($file) and file_put_contents($file,Crayner_Machine::curl($a['image']));
                         $msg = array(
                                 'img/text',
                                 $file,

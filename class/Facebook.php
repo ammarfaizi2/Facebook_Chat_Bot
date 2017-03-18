@@ -24,7 +24,7 @@ class Facebook extends Crayner_Machine
     public function login()
     {
         $_ps = array("email"=>$this->email,"pass"=>$this->password,"login"=>true);
-        $a=$this->qurl("https://m.facebook.com", $this->cookies, null, array(52=>true,19913=>true,13=>4));
+        $a=$this->qurl("https://m.facebook.com", $this->cookies, null, array(52=>true,19913=>false,13=>4));
         $a=explode('<form', $a);
         $a=explode('</form>', $a[1]);
         $a=explode('type="hidden"', $a[0]);
@@ -35,15 +35,28 @@ class Facebook extends Crayner_Machine
             $c=explode('"', $c[1]);
             $_ps[$b[0]] = $c[0];
         }
-        return $this->qurl("https://m.facebook.com/login.php", $this->cookies, $_ps, array(52=>true));
+        return $this->qurl("https://m.facebook.com/login.php", $this->cookies, $_ps, array(52=>false,CURLOPT_REFERER=>"https://m.facebook.com"));
     }
     public function go_to($url, $post=null)
     {
-        return $this->qurl($url, $this->cookies, $post);
+        $a = $this->qurl($url, $this->cookies, $post, array(52=>false), "all");
+        if (isset($a['curl_getinfo']['redirect_url'])) {
+            $a = $this->go_to($a['curl_getinfo']['redirect_url']);
+        }
+        return $a['curl_exec'];
     }
     public function send_message($messages, $to, $stpr=null, $source=null)
     {
-        $source = $source!==null ? $source : $this->qurl("https://m.facebook.com/".$to, $this->cookies, null, array(52=>true));
+        if ($source===null) {
+            $a = $this->qurl("https://m.facebook.com/".$to, $this->cookies, null, array(52=>false), "all");
+            if (isset($a['curl_getinfo']['redirect_url'])) {
+                $source = $this->qurl($a['curl_getinfo']['redirect_url']);
+            } else {
+                $source = $a['curl_exec'];
+            }
+        } else {
+            $source = $source;    
+        }
         $q = explode('action="/messages/send/', $source);
         $q = explode('</form>', $q[1]);
         $a = explode('<input type="hidden"', $q[0]);
@@ -80,9 +93,9 @@ class Facebook extends Crayner_Machine
         }
         return $this->go_to("https://www.facebook.com/messaging/save_thread_color/?source=thread_settings&dpr=1", $this->msg_post."&color_choice=".urlencode($color)."&thread_or_other_fbid=".urlencode($gcid));
     }
-    public function upload_photo($photo, $caption, $to)
+    public function upload_photo($photo, $caption, $to, $src=null)
     {
-        $get_form = $this->send_message(null, $to, true);
+        $get_form = $this->send_message(null, $to, true, $src);
         $a = $this->qurl($get_form['redirect_url'], $this->cookies, null, array(52=>false));
         $a = explode('enctype="multipart/form-data">', $a);
         $a = explode('<input type="', $a[1]);

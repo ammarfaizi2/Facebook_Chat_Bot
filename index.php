@@ -1,17 +1,20 @@
 <?php
 header("Content-Type:text/plain");
+/*$a = file_get_contents("msg.txt");
+exit($a);*/
 date_default_timezone_set("Asia/Jakarta");
 ini_set('display_errors', true);
 ini_set("max_execution_time", false);
 ini_set("memory_limit", "3072M");
 ignore_user_abort(true);
+set_time_limit(0);
 require("class/tools/WhiteHat/Teacrypt.php");
 require("class/Crayner_Machine.php");
 /*                                                                                                    */
 $username = "ammarfaizi93";
 $name = "Ammar Kazuhiko Kanazawa";
-$email = "ammarfaizi93@gmail.com";
-$pass = "triosemut123";
+$email = "";
+$pass = "";
 define("fb", "fb_data");
 define("cookies", fb.DIRECTORY_SEPARATOR."cookies");
 define("data", fb.DIRECTORY_SEPARATOR."data");
@@ -26,9 +29,9 @@ if (!is_dir('photos')) {
 mkdir('photos') and file_put_contents("./photos/not_found.png", base64_decode("iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAIAAAD9iXMrAAAAA3NCSVQICAjb4U/gAAAAF0lEQVQokWN0St/EQARgIkbRqLohqw4A2kABdRHXnFUAAAAASUVORK5CYII="));
 }
 
-// debugging here
+/*// debugging here
 $a = new AI();
-$b = $a->prepare("kemarin hari apa?");
+$b = $a->prepare("q_anime sword art online");
 $b->execute("Ammar Faizi");
 $c = $b->fetch_reply();
 
@@ -40,46 +43,59 @@ exit();
 $count = 0;
 $ckname = getcwd()."/".cookies.DIRECTORY_SEPARATOR.$username.".txt";
 $fb = new Facebook($email, $pass, "", $username);
+/*$a = new AI();
+$b = $a->prepare("q_anime sword art online");
+$b->execute("Ammar Faizi");
+$c = $b->fetch_reply();
+print $fb->upload_photo($c[1],$c[2],"/messages/read/?tid=mid.1432428093419%3A73c5e631100196f169&gfid=AQD7mGw71ijNURcx&refid=11#fua");
+
+
+exit();*/
 do{
     $ai = new AI();
     strpos(file_get_contents($ckname),"c_user")!==false or $fb->login();
     strpos(file_get_contents($ckname),"c_user")!==false or exit("Login Failed !");
     $src = $fb->go_to("https://m.facebook.com/messages");
-    $a = explode('/friends/selector/', $src);
-    $a = explode('<table', end($a));
-    for ($i=1;$i<=5;$i++) {
-        $b=explode("<a ", $a[$i]);
-        $b=explode('href="', $b[1]);
-        $b=explode('"', $b[1]);
-        $msglink[]=html_entity_decode($b[0], ENT_QUOTES, 'UTF-8');
+    $src = empty($src) ? $fb->go_to("https://m.facebook.com/messages") : $src;
+    $a = explode('#search_section',$src);
+    $a = explode('see_older_threads',$a[1]);
+    $a = explode('href="',$a[0]);
+    for ($i=1; $i < count($a); $i++) { 
+        $b = explode('">',$a[$i]);
+        $msglink[] = html_entity_decode($b[0],ENT_QUOTES,'UTF-8');
     } unset($a); $i = 0; $act = null;
+    //$msglink = array("/messages/read/?tid=mid.1432428093419%3A73c5e631100196f169&gfid=AQD7mGw71ijNURcx&refid=11"); //debug
     foreach($msglink as $link){
-        $a = grchat($fb->go_to("https://m.facebook.com/".$link)); flush();
+        $src2 = $fb->go_to("https://m.facebook.com".$link);
+        $a = grchat($src2); flush();
         if (count($a)<=1) {
-            $g = grchat($fb->go_to("https://m.facebook.com/".$link));
+            $src2 = $fb->go_to("https://m.facebook.com".$link);
+            $g = grchat($src2);
+            !is_array($a) and $a = array();
             is_array($g) and $a = array_merge($a,$g);
         }
-        foreach ($a as $key => $value) {
-            foreach ($value as $val) {
-                if ($key!=$name and check($val,$key.date("Hdmy").$link)) {
-                    save($val,$key.date("Hdmy").$link);
-                    $st = $ai->prepare($val);
-                    if ($st->execute($key)) {
-                        $_t = $st->fetch_reply();
-                        if (is_array($_t)) {
-                            $act[$link][$key][] = "photo".$fb->upload_photo($_t[1],$_t[2],$link);
-                        } else {
-                            $act[$link][$key][] = "exec".$fb->send_message($_t,$link);
+        if (is_array($a)) {
+            foreach ($a as $key => $value) {
+                foreach ($value as $val) {
+                    if ($key!=$name and check($val,$key.date("Hdmy").$link) xor save($val,$key.date("Hdmy").$link)) {
+                        $st = $ai->prepare($val);
+                        if ($st->execute($key)) {
+                            $_t = $st->fetch_reply();
+                            if (is_array($_t)) {
+                                $act[$link][$key][] = "photo".$fb->upload_photo($_t[1],"",$link,$src2)."exec".$fb->send_message($_t[2],$link,null,$src2);
+                            } else {
+                                $act[$link][$key][] = "exec".$fb->send_message($_t,$link,null,$src2);
+                            }
                         }
                     }
                 }
             }
         }
     } unset($msglink);
-    print_r($a);
+    isset($a) and print_r($a);
     flush();
 
-    if (is_array($act)) {
+    if (isset($act) and is_array($act)) {
         print_r($act); flush();
         unset($act); 
     }
