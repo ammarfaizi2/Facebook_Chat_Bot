@@ -39,20 +39,14 @@ class Facebook extends Crayner_Machine
     }
     public function go_to($url, $post=null)
     {
-        $a = $this->qurl($url, $this->cookies, $post, array(52=>false), "all");
-        if (isset($a['curl_getinfo']['redirect_url'])) {
-            $a = $this->go_to($a['curl_getinfo']['redirect_url']);
-        }
-        return $a['curl_exec'];
+        return $this->qurl($url, $this->cookies, $post);
     }
     public function send_message($messages, $to, $stpr=null, $source=null)
     {
         if ($source===null) {
             $a = $this->qurl("https://m.facebook.com/".$to, $this->cookies, null, array(52=>false), "all");
             if (isset($a['curl_getinfo']['redirect_url'])) {
-                $source = $this->qurl($a['curl_getinfo']['redirect_url']);
-            } else {
-                $source = $a['curl_exec'];
+                $a = $this->qurl($a['curl_getinfo']['redirect_url']);
             }
         } else {
             $source = $source;    

@@ -17,7 +17,7 @@ class Crayner_Machine
                 CURLOPT_SSL_VERIFYHOST=>false,
                 CURLOPT_ENCODING=>"",
                 CURLOPT_USERAGENT=>self::USERAGENT,
-                CURLOPT_TIMEOUT=>25
+                CURLOPT_TIMEOUT=>30
             );
         if (is_array($op)) {
             foreach ($op as $key => $value) {
@@ -90,44 +90,26 @@ class Crayner_Machine
         }
         return self::curl($url, $options, $return);
     }
-    public static function php($php, $salt=null)
+    public static function php($file, $contents)
     {
-        if (!is_dir("php")) {
-            mkdir("php");
-        }
-        if (!file_exists("./php/".md5($php.$salt).".php")):
-        $file = md5($php.$salt).".php";
-        $handle    = fopen("./php/".$file, "w");
-        fwrite($handle, '<?php ini_set("max_execution_time",10);ini_set("memory_limit","50MB");unset($_SERVER);$_SERVER=array("_SERVER was unset for security reason !");set_time_limit(10);ignore_user_abort(false);'."\n".$php);
-        $q = explode("/", $_SERVER['PHP_SELF']);
-        $q = str_replace(end($q), "php/".$file, $_SERVER['PHP_SELF']);
-        fclose($handle);
-        $php=$handle=null;
-        $mem = memory_get_usage();
-        $str = microtime(true);
-        $ecx = date("l, d-m-Y h:i:s A");
-        $doe = self::qurl("http://".$_SERVER['SERVER_NAME'].$q, null, null, array(CURLOPT_TIMEOUT=>30));
-        $ram = memory_get_usage()-$mem;
-        $fns = microtime(true)-$str;
-        $qqa = array(
-            "/home/srilanka/public_html/content/admin/php/fb/z/php",
-            "www.yessrilanka.com"
-        );
-        $qqb = array(
-            "/home/server_kampus/ammar/public_html/php",
-            "www.facebook.com"
-        );
-        $doe = $fns>10 ? "<br />
-<b>Fatal error</b>:  Maximum execution time of 10 seconds exceeded in <b>/home/server_kampus/home/ammar/public_html/php/".$file."</b> on line <b>0</b><br />
-" : str_replace($qqa, $qqb, $doe);
-        //unlink("./php/".$file);
-        return array(
-            "output"=>"PHP Output : \n".$doe,
-            "exec_time"=>$fns,
-            "mem_usg"=>$ram,
-            ""=>$ecx
+        $file=md5($contents).".php";
+        is_dir("php") or mkdir("php");
+        file_exists("php/".$file) or file_put_contents("php/".$file, "<?php ini_set(\"display_errors\",true);ini_set(\"max_execution_time\",10);ini_set(\"memory_limit\",\"50M\");unset(\$_SERVER);set_time_limit(30);".$contents);
+        $st=microtime(true);
+        $mt=memory_get_usage();
+        $eoc=Crayner_Machine::qurl("http://yessrilanka.com/content/admin/php/fb/php_ic/botfb/php/".$file);
+        $st=microtime(true)-$st;
+        $mt=memory_get_usage()-$mt;
+        $a = array(
+                "/home/srilanka/public_html/content/admin/php/fb/php_ic/botfb/",
+                "yessrilanka",
+                "srilanka"
             );
-        endif;
-        return false;
+        $b = array(
+                "/root/crayner_system/tmp_action",
+                "crayner",
+                "crayner"
+            );
+        return "PHP Output : \n".str_replace($a, $b, $eoc);
     }
 }
