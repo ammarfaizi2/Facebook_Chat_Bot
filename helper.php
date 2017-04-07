@@ -20,7 +20,7 @@ function grchat($a)
                 break;
             }
             $c = trim(html_entity_decode(strip_tags(str_replace("<br />","\n","<".trim($b[$i]))),ENT_QUOTES,'UTF-8'));
-            !empty($c) and $sv[strip_tags("<".trim($b[0]))][] = $c;
+            !empty($c) and $sv[html_entity_decode(strip_tags("<".trim($b[0])),ENT_QUOTES,'UTF-8')][] = $c;
         }
     }
     return isset($sv)?$sv:false;
