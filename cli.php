@@ -59,6 +59,7 @@ $url = "https://m.facebook.com/";
 $count = 0;
 $ckname = getcwd()."/".cookies.DIRECTORY_SEPARATOR.$username.".txt";
 $fb = new Facebook($email, $pass, "", $username);
+$ai = new AI();
 if(chkck($ckname)){
 	$fb->login();
 }
@@ -110,7 +111,7 @@ if($st->execute($q['name'])){
 if(is_array($reply)){
 		if($reply[0]=="img/text"){
 			$fb->upload_photo($reply[0],'',null,$con);
-			$fb->send_messages($reply[1],null,null$con);
+			$fb->send_messages($reply[1],null,null,$con);
 			$act[$q['name']][] = "img/text";
 		} else {
 			$fb->send_message($reply,null,null,$con);
