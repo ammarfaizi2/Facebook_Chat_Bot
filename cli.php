@@ -104,7 +104,7 @@ foreach($data as $q){
 // foreach message
 foreach($q['messages'] as $m){
 	// check message
-	if(check($m,$link,$q['name'].date("HYmd")) and $q['name']!=$name){
+	if(check($m,$link.$q['name'].date("HYmd")) and $q['name']!=$name){
 // prepare statement
 $st = $ai->prepare($m);
 // execute statement
