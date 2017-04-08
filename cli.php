@@ -67,11 +67,11 @@ if(chkck($ckname)){
 	$fb->login();
 }
 $zz = new mgmt($fb->go_to($url.'messages'));
-$zza = $zz->grb(3);
+$zza = $zz->grb(10);
 if($zza===false){
 	$fb->login();
 	$zz = new mgmt($fb->go_to($url.'messages'));
-	$zza = $zz->grb(3);
+	$zza = $zz->grb(10);
 }
 if(!is_array($zza)){
 	die("Error getting messages !");
@@ -107,6 +107,11 @@ foreach($q['messages'] as $m){
 	$salt = $gcn.$m.date("H Ymd");
 	if(check($m,$salt) and $q['name']!=$name){
 		save($m,$salt);
+		
+		if(substr(strtolower($m),0,5)=="<?php"){
+$act[$q['name']][] = "php".$fb->send_message($q['name'].PHP_EOL.Crayner_Machine::php($q['name'],preg_replace("#[^[:print:]]#","",substr($m,5))), null, null, $con);
+			
+		} else {
 // prepare statement
 $st = $ai->prepare($m,$gcn);
 // execute statement
@@ -129,6 +134,7 @@ if(is_array($reply)){
 } // end foreach message
 if(isset($q['attachment'])){
 	
+}
 }
 
 } // end foreach data from user
