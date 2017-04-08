@@ -884,13 +884,12 @@ public function writer()
 	if($aa->open($cc,$this->gc)){
 	$aa->write($actor,$this->msg,$this->gc);
 	return $aa->save($cc);
-}
+}}
     public function execute($actor="",$stoper=false,$gcn)
     {
 if(file_exists("writing")){
 			$this->writer();
 	}
-}
     	if($stoper===true){return false;}
         $opmsg=explode(" ", $this->msg);
         $opmsg=strtolower($opmsg[0]);
