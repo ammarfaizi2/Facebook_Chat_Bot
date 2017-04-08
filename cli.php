@@ -7,6 +7,7 @@ preg_match(
 
 </div>
 */
+$ctntt = 0;
 header("Content-Type:text/plain");
 #$a = file_get_contents("aa");
 #exit($a);
@@ -60,6 +61,8 @@ $count = 0;
 $ckname = getcwd()."/".cookies.DIRECTORY_SEPARATOR.$username.".txt";
 $fb = new Facebook($email, $pass, "", $username);
 $ai = new AI();
+do{
+// do
 if(chkck($ckname)){
 	$fb->login();
 }
@@ -101,7 +104,7 @@ foreach($data as $q){
 // foreach message
 foreach($q['messages'] as $m){
 	// check message
-	if(check($m) and $q['name']!=$name){
+	if(check($m,$q['name'].date("HYmd")) and $q['name']!=$name){
 // prepare statement
 $st = $ai->prepare($m);
 // execute statement
@@ -137,3 +140,6 @@ if(isset($q['attachment'])){
 isset($rt) and print_r($rt);
 isset($act) and print_r($act);
 unset($rt,$act);
+
+// while
+} while(++$ctntt<=5);
