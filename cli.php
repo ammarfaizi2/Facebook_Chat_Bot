@@ -64,11 +64,11 @@ if(chkck($ckname)){
 	$fb->login();
 }
 $zz = new mgmt($fb->go_to($url.'messages'));
-$zza = $zz->grb();
+$zza = $zz->grb(10);
 if($zza===false){
 	$fb->login();
 	$zz = new mgmt($fb->go_to($url.'messages'));
-	$zza = $zz->grb(2);
+	$zza = $zz->grb(10);
 }
 if(!is_array($zza)){
 	die("Error getting messages !");
@@ -113,8 +113,9 @@ if(is_array($reply)){
 			$fb->upload_photo($reply[0],'',null,$con);
 			$fb->send_messages($reply[1],null,null,$con);
 			$act[$q['name']][] = "img/text";
-		} else {
+		}} else {
 			$fb->send_message($reply,null,null,$con);
+			
 			$act[$q['name']][] = "text";
 			}
 // end reply
@@ -131,7 +132,6 @@ if(isset($q['attachment'])){
 		'url'=>$link,
 		'data'=>$data
 	);
-	}
 }
 
 isset($rt) and print_r($rt);

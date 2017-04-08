@@ -465,7 +465,7 @@ array(
     public function spwcmd($string, $actor = null)
     {
         $a          = explode(" ", $this->_msg, 2);
-        $this->_msg = $a[1];
+        $this->_msg = isset($a[1])?$a[1]:null;
         if (isset($this->root_command[$string]) && in_array($actor, $this->superuser)) {
             $a = null;
             switch ($string) {
@@ -854,7 +854,7 @@ foreach($sholat as $z){
         }
         return isset($msg) ? $msg : false;
     }
-private function sm(){
+private function sm($actor){
 $a = json_decode(Crayner_Machine::curl("http://yessrilanka.com/simisimi.php?msg=".urlencode($this->msg)),true);
 file_put_contents("a.txt",json_encode($a));
 if(isset($a['respSentence'])){
@@ -926,7 +926,7 @@ return false;
             }
         }
 if(file_exists("sm")){
-return $this->sm();
+return $this->sm($actor);
 }
         $this->absmsg=false;
         $this->msg=null;
