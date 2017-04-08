@@ -854,40 +854,7 @@ foreach($sholat as $z){
         }
         return isset($msg) ? $msg : false;
     }
-    public function execute($actor="",$stoper=false)
-    {
-    	if($stoper===true){return false;}
-        $opmsg=explode(" ", $this->msg);
-        $opmsg=strtolower($opmsg[0]);
-        foreach ($this->root_command as $q => $val) {
-            if ($opmsg==$q) {
-                $this->absmsg=true;
-                $this->msg=null;
-                $this->msgrt=$this->spwcmd($q, $actor);
-                $this->actor=$actor;
-                return true;
-                break;
-            }
-        }
-        foreach ($this->command as $q => $z) {
-            if ($opmsg==$q) {
-                $this->absmsg=true;
-                $this->msg=null;
-                $this->msgrt=$this->spwcmd($q, $actor);
-                $this->actor=$actor;
-                    
-                return true;
-                break;
-            }
-        }
-        if (file_exists("bot_off")) {
-            $this->absmsg=false;
-            $this->msg=null;
-            $this->msgrt=null;
-            $this->actor=null;
-            return false;
-        }
-        if(file_exists("sm")){
+private function sm(){
 $a = json_decode(Crayner_Machine::curl("http://yessrilanka.com/simisimi.php?msg=".urlencode($this->msg)),true);
 file_put_contents("a.txt",json_encode($a));
 if(isset($a['respSentence'])){
@@ -904,15 +871,50 @@ if(isset($a['respSentence'])){
   $this->msgrt=str_ireplace($x,$b,urldecode($a['respSentence']));
   $this->actor=$actor;$this->absmsg=false;
 		return true;
-	}
-} else {
-		 $this->absmsg=false;
-  $this->msg=null;
-  $this->msgrt=null;
-  $this->actor=null;
-    return false;
+	}   	
+    	
+    	
+    }}
+    public function execute($actor="",$stoper=false)
+    {
+if(file_exists("writing")){
+	$aa = new Writer();
+	$cc = (int)file_get_contents("c_materi");
+	$cc = "materi_".$cc.".json";
+	$aa->open($cc);
+	$aa->write($actor,$this->msg);
+	$aa->save($cc);
 }
+    	if($stoper===true){return false;}
+        $opmsg=explode(" ", $this->msg);
+        $opmsg=strtolower($opmsg[0]);
+        foreach ($this->root_command as $q => $val) {
+            if ($opmsg==$q) {
+                $this->absmsg=true;
+                $this->msg=null;
+                $this->msgrt=$this->spwcmd($q, $actor);
+                $this->actor=$actor;
+                return true;
+                break;
+            }
         }
+        foreach ($this->command as $q => $z) {
+if ($opmsg==$q) {
+$this->absmsg=true;
+$this->msg=null;
+$this->msgrt=$this->spwcmd($q, $actor);
+$this->actor=$actor;                   
+return true;
+break;
+}
+}
+if (file_exists("bot_off")) {
+$this->absmsg=false;
+$this->msg=null;
+$this->msgrt=null;
+$this->actor=null;
+return false;
+}
         foreach ($this->wordlist as $key => $val) {
             if ($r=$this->word_check($key, $this->msg, (isset($val[1])?$val[1]:false), (isset($val[2])?$val[2]:false), (isset($val[3])?$val[3]:null), (isset($val[4])?$val[4]:null), (isset($val[5])?$val[5]:null))) {
                 $this->absmsg=false;
@@ -923,6 +925,9 @@ if(isset($a['respSentence'])){
                 break;
             }
         }
+if(file_exists("sm")){
+return $this->sm();
+}
         $this->absmsg=false;
         $this->msg=null;
         $this->msgrt=null;
