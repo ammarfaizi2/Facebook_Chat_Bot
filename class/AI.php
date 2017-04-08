@@ -876,15 +876,20 @@ if(isset($a['respSentence'])){
     	
     	
     }}
-    public function execute($actor="",$stoper=false,$gcn)
-    {
-if(file_exists("writing")){
+public function writer()
+{
 	$aa = new Writer();
 	$cc = (int)file_get_contents("c_materi");
 	$cc = "materi_".$cc.".json";
 	if($aa->open($cc,$this->gc)){
 	$aa->write($actor,$this->msg,$this->gc);
-	$aa->save($cc);}
+	return $aa->save($cc);
+}
+    public function execute($actor="",$stoper=false,$gcn)
+    {
+if(file_exists("writing")){
+			$this->writer();
+	}
 }
     	if($stoper===true){return false;}
         $opmsg=explode(" ", $this->msg);

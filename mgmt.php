@@ -60,6 +60,6 @@ for($i=1;$i<count($a);$i++){
 	);
 	!empty($att) and $rt[$i-1]['attachment'] = $att;
 }
-return $rt;
+return isset(rt)?$rt:null;
 }
 }

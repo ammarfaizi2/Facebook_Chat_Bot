@@ -130,6 +130,14 @@ if(is_array($reply)){
 			}
 // end reply
 }}
+} else if($q['name']==$name and file_exists("writer") and check($m,$name.date("H dmy")){
+	save($m,$name.date("H dmy"));
+	$st = $ai->prepare($m,$gcn);
+	$st->writer();
+} else if($q['name']==$name and file_exists("writer") and check($m,$name.date("H dmy"))){
+	save($m,$name.date("H dmy"));
+	$st = $ai->prepare($m,$gcn);
+	$st->writer();
 } // end check message
 } // end foreach message
 if(isset($q['attachment'])){
