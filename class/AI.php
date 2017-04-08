@@ -456,8 +456,9 @@ array(
         }
         return $trreply===true?$this->ttreturn($needle):$this->wordlist[$needle][0][array_rand($this->wordlist[$needle][0])];
     }
-    public function prepare($string)
+    public function prepare($string,$gcn=null)
     {
+$this->gc = $gcn;    	
         $this->msg=strtolower($string);
         $this->_msg=$string;
         return $this;
@@ -492,7 +493,7 @@ foreach($a as $a){
 			$name = null;
 		}
 		$pp = new Writer();
-		$pp->__new($name,$d);
+		$pp->__new($name,$d,$this->gc);
 		$count = file_exists("c_materi")?(int)file_get_contents("c_materi"):0;
 		$pp->save("materi_".(++$count).".json");
 		$msg = "oke, siap mencatat materi ".$d." oleh".$name.". Ini notulen ke ".($count);
@@ -875,15 +876,15 @@ if(isset($a['respSentence'])){
     	
     	
     }}
-    public function execute($actor="",$stoper=false)
+    public function execute($actor="",$stoper=false,$gcn)
     {
 if(file_exists("writing")){
 	$aa = new Writer();
 	$cc = (int)file_get_contents("c_materi");
 	$cc = "materi_".$cc.".json";
-	$aa->open($cc);
-	$aa->write($actor,$this->msg);
-	$aa->save($cc);
+	if($aa->open($cc,$this->gc)){
+	$aa->write($actor,$this->msg,$this->gc);
+	$aa->save($cc);}
 }
     	if($stoper===true){return false;}
         $opmsg=explode(" ", $this->msg);

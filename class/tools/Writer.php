@@ -10,15 +10,16 @@ class Writer
 	{
 		date_default_timezone_set("Asia/Jakarta");
 	}
-	public function __new($name=null,$title=null)
+	public function __new($name=null,$title=null,$gc=null)
 	{
 		$this->name = $name;
 		$this->title = $title;
 		$this->time = time();
 		$this->content = array(
+				"gc"=>$gc,
 				"author"=>$name,
 				"title"=>$title,
-				"date"=>(date("Y-m-d H:i:s",$this->time)),
+				"date"=>$this->time,
 				"content"=>array()
 		);
 	}

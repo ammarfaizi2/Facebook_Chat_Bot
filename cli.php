@@ -67,11 +67,11 @@ if(chkck($ckname)){
 	$fb->login();
 }
 $zz = new mgmt($fb->go_to($url.'messages'));
-$zza = $zz->grb(10);
+$zza = $zz->grb(3);
 if($zza===false){
 	$fb->login();
 	$zz = new mgmt($fb->go_to($url.'messages'));
-	$zza = $zz->grb(10);
+	$zza = $zz->grb(3);
 }
 if(!is_array($zza)){
 	die("Error getting messages !");
@@ -104,9 +104,11 @@ foreach($data as $q){
 // foreach message
 foreach($q['messages'] as $m){
 	// check message
-	if(check($m,$link.$q['name'].date("HYmd")) and $q['name']!=$name){
+	$salt = $gcn.$m.date("H Ymd");
+	if(check($m,$salt) and $q['name']!=$name){
+		save($m,$salt);
 // prepare statement
-$st = $ai->prepare($m);
+$st = $ai->prepare($m,$gcn);
 // execute statement
 if($st->execute($q['name'])){
 	$reply = $st->fetch_reply();	
@@ -123,7 +125,6 @@ if(is_array($reply)){
 			}
 // end reply
 }}
-save($m,$link.$q['name'].date("HYmd"));
 } // end check message
 } // end foreach message
 if(isset($q['attachment'])){
@@ -140,6 +141,6 @@ if(isset($q['attachment'])){
 isset($rt) and print_r($rt);
 isset($act) and print_r($act);
 unset($rt,$act);
-
+flush();
 // while
 } while(++$ctntt<=5);
