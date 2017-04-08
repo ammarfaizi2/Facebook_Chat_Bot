@@ -31,9 +31,12 @@ class Writer
 					"time"=>time()
 		);
 	}
-	public function open($file)
+	public function open($file,$gc=null)
 	{
 		$this->content = json_decode(file_get_contents($file),true);
+		if($this->content['gc']!=$gc){
+			return false;
+		}
 		return $this->content!==null?true:false;
 	}
 	public function save($file)
