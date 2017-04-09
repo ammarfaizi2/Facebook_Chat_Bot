@@ -885,7 +885,7 @@ public function writer()
 	$aa->write($actor,$this->msg,$this->gc);
 	return $aa->save($cc);
 }}
-    public function execute($actor="",$stoper=false,$gcn)
+    public function execute($actor="",$stoper=false,$gcn=null)
     {
 if(file_exists("writing")){
 			$this->writer();

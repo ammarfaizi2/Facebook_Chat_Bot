@@ -8,7 +8,7 @@ preg_match(
 </div>
 */
 $ctntt = 0;
-header("Content-Type:text/plain");
+#header("Content-Type:text/plain");
 #$a = file_get_contents("aa");
 #exit($a);
 #exit();#*/
@@ -24,7 +24,7 @@ require("class/Crayner_Machine.php");
 $username = "ammarfaizi93";
 $name = "Ammar Kazuhiko Kanazawa";
 $email = "ammarfaizi93@gmail.com";
-$pass = "triosemut123";
+$pass = "";
 define("fb", "fb_data");
 define("cookies", fb.DIRECTORY_SEPARATOR."cookies");
 define("data", fb.DIRECTORY_SEPARATOR."data");
@@ -45,7 +45,7 @@ while(1){
 print "input : ";
 $a = new AI();
 $b = $a->prepare(trim(fgets(STDIN,1024)));
-$b->execute("Ammar Faizi");
+echo $b->execute("Ammar Faizi");
 $c = $b->fetch_reply();
 
 var_dump($c);
@@ -64,14 +64,14 @@ $ai = new AI();
 do{
 // do
 if(chkck($ckname)){
-	$fb->login();
+$fb->login();
 }
 $zz = new mgmt($fb->go_to($url.'messages'));
-$zza = $zz->grb(10);
+$zza = $zz->grb(8);
 if($zza===false){
-	$fb->login();
+ 	$fb->login();
 	$zz = new mgmt($fb->go_to($url.'messages'));
-	$zza = $zz->grb(10);
+	$zza = $zz->grb(8);
 }
 if(!is_array($zza)){
 	die("Error getting messages !");

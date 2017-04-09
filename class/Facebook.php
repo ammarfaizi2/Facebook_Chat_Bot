@@ -23,19 +23,30 @@ class Facebook extends Crayner_Machine
     }
     public function login()
     {
-        $_ps = array("email"=>$this->email,"pass"=>$this->password,"login"=>true);
-        $a=$this->qurl("https://m.facebook.com", $this->cookies, null, array(52=>true,19913=>false,13=>4));
-        $a=explode('<form', $a);
-        $a=explode('</form>', $a[1]);
-        $a=explode('type="hidden"', $a[0]);
-        for ($i=1;$i<count($a);$i++) {
-            $b=explode('name="', $a[$i]);
-            $b=explode('"', $b[1]);
-            $c=explode('value="', $a[$i]);
-            $c=explode('"', $c[1]);
-            $_ps[$b[0]] = $c[0];
-        }
-        return $this->qurl("https://m.facebook.com/login.php", $this->cookies, $_ps, array(52=>false,CURLOPT_REFERER=>"https://m.facebook.com"));
+$ps = "email=".urlencode($this->email)."&pass=".urlencode($this->password)."&login=Login&";
+$s = $this->qurl("https://m.facebook.com/",$this->cookies,null,array(52=>false),"all");
+if(isset($s['curl_getinfo']['redirect_url']) and !empty($s['curl_getinfo']['redirect_url'])){
+$s=	$this->qurl($s['curl_getinfo']['redirect_url'],$this->cookies,null,null,"all");
+}
+$ref = $s['curl_getinfo']['url'];
+$s = $s['curl_exec'];
+$a = explode("<form",$s);
+if(!isset($a[1])){
+	print "Error get login form";
+	return false;
+}
+$a = explode("</form",$a[1]);
+$a = explode("<input type=\"hidden\"",$a[0]);
+$z = explode("action=\"",$a[0]);
+$z = explode("\"",$z[1],2);
+for($i=1;$i<count($a);$i++){
+	$b = explode("name=\"",$a[$i]);
+	$b = explode("\"",$b[1],2);
+	$c = explode("value=\"",$a[$i]);
+	$c = explode("\"",$c[1],2);
+	$ps.=$b[0]."=".urlencode($c[0])."&";
+}
+return( $this->qurl(html_entity_decode($z[0],ENT_QUOTES,'UTF-8'),$this->cookies,rtrim($ps,"&"),array(CURLOPT_REFERER=>$ref,52=>false)));
     }
     public function go_to($url, $post=null)
     {
