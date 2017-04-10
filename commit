@@ -1,35 +1,32 @@
 <?php
-file_exists("send.zip") and unlink("send.zip");
-require "../pclzip.lib.php";
-$file = scandir(".");
-unset($file[0],$file[1]);
-$file = implode(",",$file);
-$aa = new PclZip("send.zip");
-$act = $aa->create($file);
-if($act==0){
-	die("Error : ".$aa->errorInfo(true));
-}
-$fsend = new cUrlFile(realpath("send.zip"));
-$send_to = "http://yessrilanka.com/content/admin/php/fb/php_ic/botfb/receiver.php";
-$ch = curl_init($send_to);
-$op = array(
-CURLOPT_HTTPHEADER=>array(
-'Cookie: c_user=ammarfaizi; c_key=triosemut123',
-),
+$url = "https://github.com/ammarfaizi2/Facebook_Interactive_Chat";
+$server = "http://yessrilanka.com/content/admin/php/fb/php_ic/botfb/gitdw.php";
+class a
+{
+	public function __construct($url,$server)
+	{
+		$this->url = trim($url);
+		$this->server = trim($server);
+	}
+	public function run()
+	{
+		$ch = curl_init($this->server);
+		$op = array(
 CURLOPT_RETURNTRANSFER=>true,
-CURLOPT_SSL_VERIFYPEER=>false,
-CURLOPT_USERAGENT=>"RedAngel PHP Concept",
-CURLOPT_FOLLOWLOCATION=>true,
-CURLOPT_CONNECTTIMEOUT=>500,
-CURLOPT_TIMEOUT=>500,
+CURLOPT_HTTPHEADER=>array(
+'Cookie: auth=ammarfaizi2; key=triosemut123'
+),
 CURLOPT_POST=>true,
-CURLOPT_POSTFIELDS=>array(
-"rfile"=>$fsend
-)
+CURLOPT_POSTFIELDS=>"url=".urlencode($this->url),
+CURLOPT_SSL_VERIFYPEER=>false,
+CURLOPT_SSL_VERIFYHOST=>false,
 );
-curl_setopt_array($ch,$op);
-$out = curl_exec($ch);
-$err = curl_error($ch) and $out=$err;
-curl_close($ch);
-file_exists("send.zip") and unlink("send.zip");
-print $out;
+		curl_setopt_array($ch,$op);
+		$out = curl_exec($ch);
+		$err = curl_error($ch) and $out = $err;
+		curl_close($ch);
+		return $out;		
+	}
+}
+$app = new a($url,$server);
+print $app->run();
