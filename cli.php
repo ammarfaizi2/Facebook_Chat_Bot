@@ -1,14 +1,6 @@
 <?php
-/*** 
-preg_match(
-"#<strong class=\"b[^>]*>(.*?)</strong>#","",$n);
-
-<div class="f bo bp">
-
-</div>
-*/
 $ctntt = 0;
-#header("Content-Type:text/plain");
+header("Content-Type:text/plain");
 #$a = file_get_contents("aa");
 #exit($a);
 #exit();#*/
