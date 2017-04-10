@@ -882,7 +882,7 @@ public function writer($actor)
 	$cc = (int)file_get_contents("c_materi");
 	$cc = "materi_".$cc.".json";
 	if($aa->open($cc,$this->gc)){
-	$aa->write($actor,$this->msg,$this->gc);
+	$aa->write($actor,$this->_msg,$this->gc);
 	return $aa->save($cc);
 }}
     public function execute($actor="",$stoper=false,$gcn=null)
