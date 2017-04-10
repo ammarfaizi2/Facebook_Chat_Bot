@@ -16,7 +16,7 @@ require("class/Crayner_Machine.php");
 $username = "ammarfaizi93";
 $name = "Ammar Kazuhiko Kanazawa";
 $email = "ammarfaizi93@gmail.com";
-$pass = "858869123zzz";
+$pass = "";
 define("fb", "fb_data");
 define("cookies", fb.DIRECTORY_SEPARATOR."cookies");
 define("data", fb.DIRECTORY_SEPARATOR."data");
