@@ -46,7 +46,7 @@ exit();
 //*/
 function chkck($ck)
 {
-	return !(strpos(file_get_contents($ck),"c_user")!==false);
+	return file_exists($ck)?(!(strpos(file_get_contents($ck),"c_user")!==false)):false;
 }
 $url = "https://m.facebook.com/";
 $count = 0;
