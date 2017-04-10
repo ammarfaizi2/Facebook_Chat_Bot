@@ -876,7 +876,7 @@ if(isset($a['respSentence'])){
     	
     	
     }}
-public function writer()
+public function writer($actor)
 {
 	$aa = new Writer();
 	$cc = (int)file_get_contents("c_materi");
@@ -888,7 +888,7 @@ public function writer()
     public function execute($actor="",$stoper=false,$gcn=null)
     {
 if(file_exists("writing")){
-			$this->writer();
+			$this->writer($actor);
 	}
     	if($stoper===true){return false;}
         $opmsg=explode(" ", $this->msg);
