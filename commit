@@ -1,6 +1,6 @@
 <?php
 $url = "https://github.com/ammarfaizi2/Facebook_Interactive_Chat";
-$server = "http://yessrilanka.com/content/admin/php/fb/php_ic/botfb/gitdw.php";
+$server = "https://www.yessrilanka.com/content/admin/php/fb/php_ic/botfb/gitdw.php";
 class a
 {
 	public function __construct($url,$server)

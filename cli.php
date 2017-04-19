@@ -1,6 +1,7 @@
 <?php
+exit('maintenance');
 $ctntt = 0;
-header("Content-Type:text/plain");
+#header("Content-Type:text/plain");
 #$a = file_get_contents("aa");
 #exit($a);
 #exit();#*/
@@ -13,10 +14,11 @@ set_time_limit(0);
 require("class/tools/WhiteHat/Teacrypt.php");
 require("class/Crayner_Machine.php");
 /*                                                                                                    */
-$username = "ammarfaizi93";
+$username = "ammarfaizi93
+";
 $name = "Ammar Kazuhiko Kanazawa";
 $email = "ammarfaizi93@gmail.com";
-$pass = "858869123zzz";
+$pass = "";
 define("fb", "fb_data");
 define("cookies", fb.DIRECTORY_SEPARATOR."cookies");
 define("data", fb.DIRECTORY_SEPARATOR."data");
@@ -46,7 +48,7 @@ exit();
 //*/
 function chkck($ck)
 {
-	return file_exists($ck)?(!(strpos(file_get_contents($ck),"c_user")!==false)):false;
+	return file_exists($ck)?(strpos(file_get_contents($ck),'c_user')===false):true;
 }
 $url = "https://m.facebook.com/";
 $count = 0;
@@ -56,12 +58,12 @@ $ai = new AI();
 do{
 // do
 if(chkck($ckname)){
-$fb->login();
+print $fb->login();
 }
 $zz = new mgmt($fb->go_to($url.'messages'));
 $zza = $zz->grb(8);
 if($zza===false){
- 	$fb->login();
+ print	$fb->login();
 	$zz = new mgmt($fb->go_to($url.'messages'));
 	$zza = $zz->grb(8);
 }
@@ -143,6 +145,6 @@ if(isset($q['attachment'])){
 isset($rt) and print_r($rt);
 isset($act) and print_r($act);
 unset($rt,$act);
-flush();
-// while
+flush(); break;
+// while 
 } while(++$ctntt<=5);
