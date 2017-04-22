@@ -147,4 +147,4 @@ isset($act) and print_r($act);
 unset($rt,$act);
 flush(); break;
 // while 
-} while(++$ctntt<=10);
+} while(++$ctntt<=15);
