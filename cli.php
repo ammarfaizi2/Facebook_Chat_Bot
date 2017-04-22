@@ -1,7 +1,7 @@
 <?php
-exit('maintenance');
+#exit('maintenance');
 $ctntt = 0;
-#header("Content-Type:text/plain");
+header("Content-Type:text/plain");
 #$a = file_get_contents("aa");
 #exit($a);
 #exit();#*/
@@ -18,7 +18,7 @@ $username = "ammarfaizi93
 ";
 $name = "Ammar Kazuhiko Kanazawa";
 $email = "ammarfaizi93@gmail.com";
-$pass = "";
+$pass = "858869123aaa";
 define("fb", "fb_data");
 define("cookies", fb.DIRECTORY_SEPARATOR."cookies");
 define("data", fb.DIRECTORY_SEPARATOR."data");
@@ -38,13 +38,13 @@ mkdir('photos') and file_put_contents("./photos/not_found.png", base64_decode("i
 while(1){
 print "input : ";
 $a = new AI();
-$b = $a->prepare(trim(fgets(STDIN,1024)));
+$b = $a->prepare("q_anime shigatsu wa kimi");
 echo $b->execute("Ammar Faizi");
 $c = $b->fetch_reply();
 
 var_dump($c);
-print PHP_EOL;}
-exit();
+print PHP_EOL;
+exit();	}
 //*/
 function chkck($ck)
 {
@@ -66,7 +66,7 @@ if($zza===false){
  print	$fb->login();
 	$zz = new mgmt($fb->go_to($url.'messages'));
 	$zza = $zz->grb(8);
-}
+} 
 if(!is_array($zza)){
 	die("Error getting messages !");
 }
@@ -147,4 +147,4 @@ isset($act) and print_r($act);
 unset($rt,$act);
 flush(); break;
 // while 
-} while(++$ctntt<=5);
+} while(++$ctntt<=10);
