@@ -1,36 +1,39 @@
 <?php
+#exit('maintenance');
+$ctntt = 0;
 header("Content-Type:text/plain");
-//exit('maintenance');
-require "config.php";
-
-echo 111;
-
-/*// pg debug
 #$a = file_get_contents("aa");
 #exit($a);
-*/
-
-date_default_timezone_set($config['timezone']);
-ini_set('display_errors', $config['development_mode']);
-ini_set("max_execution_time", $config['max_execution_time']);
-ini_set("memory_limit", $config['memoy_limit']);
+#exit();#*/
+date_default_timezone_set("Asia/Jakarta");
+ini_set('display_errors', true);
+ini_set("max_execution_time", false);
+ini_set("memory_limit", "3072M");
 ignore_user_abort(true);
 set_time_limit(0);
-                                 
+require("class/tools/WhiteHat/Teacrypt.php");
+require("class/Crayner_Machine.php");
+/*                                                                                                    */
+$username = "ammarfaizi93
+";
+$name = "Ammar Kazuhiko Kanazawa";
+$email = "ammarfaizi93@gmail.com";
+$pass = "858869123aaa";
 define("fb", "fb_data");
 define("cookies", fb.DIRECTORY_SEPARATOR."cookies");
 define("data", fb.DIRECTORY_SEPARATOR."data");
-
-(file_exists('./class/error_log') and unlink('./class/error_log')) XOR (file_exists('error_log') and unlink('error_log')) XOR (!is_dir(fb) and mkdir(fb)) XOR (!is_dir(cookies) and mkdir(cookies)) XOR (!is_dir(data) and mkdir(data));
+/*                                                                                                    */
+require("mgmt.php");
+require("class/Facebook.php");
+require("class/AI.php");
+require("helper.php");
+file_exists('./class/error_log') and unlink('./class/error_log');
+file_exists('error_log') and unlink('error_log'); set_time_limit(0);
+!is_dir(fb) and mkdir(fb) xor !is_dir(cookies) and mkdir(cookies) xor !is_dir(data) and mkdir(data);
 if (!is_dir('photos')) {
 mkdir('photos') and file_put_contents("./photos/not_found.png", base64_decode("iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAIAAAD9iXMrAAAAA3NCSVQICAjb4U/gAAAAF0lEQVQokWN0St/EQARgIkbRqLohqw4A2kABdRHXnFUAAAAASUVORK5CYII="));
 }
-require "class/tools/WhiteHat/Teacrypt.php";
-require "class/Crayner_Machine.php";
-require "class/Facebook.php";
-require "class/AI.php";
-require "helper.php";
-require "mgmt.php";
+
 /*// debugging here
 while(1){
 print "input : ";
@@ -59,9 +62,9 @@ function void_log()
 	return (bool)file_put_contents("avoid_brute_login",(((int)file_get_contents("avoid_brute_login"))+1));
 }
 $url = "https://m.facebook.com/";
-$count = 0; 
+$count = 0;
 $ckname = getcwd()."/".cookies.DIRECTORY_SEPARATOR.$username.".txt";
-$fb = new Facebook($config['email'], $config['pass'], "", $config['username']);
+$fb = new Facebook($email, $pass, "", $username);
 $ai = new AI();
 do{
 // do
@@ -151,9 +154,9 @@ if(isset($q['attachment'])){
 	);
 }
 
-isset($rt) and print_r($rt);
-isset($act) and print_r($act);
+#isset($rt) and print_r($rt);
+#isset($act) and print_r($act);
 unset($rt,$act);
 flush(); break;
 // while 
-} while(++$ctntt<=$config['cycle']);
+} while(++$ctntt<=15);
