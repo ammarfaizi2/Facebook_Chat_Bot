@@ -11,9 +11,9 @@
 * 
 */
 $cf = array(
-'user'=>'ammarfaizi93',
-'name'=>'Ammar Kazuhiko Kanawaza',
-'email'=>'ammarfaizi93@gmail.com',
+'user'=>'ammarfaizi2',
+'name'=>'Ammar Faizi',
+'email'=>'ammarfaizi2@gmail.com',
 'pass'=>'password123',
 
 
