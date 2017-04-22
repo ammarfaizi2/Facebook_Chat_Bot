@@ -21,6 +21,7 @@ define("fb", "fb_data");
 define("cookies", fb.DIRECTORY_SEPARATOR."cookies");
 define("data", fb.DIRECTORY_SEPARATOR."data");
 /*                                                                                                    */
+require("hooks.php");
 require("mgmt.php");
 require("class/Facebook.php");
 require("class/AI.php");
