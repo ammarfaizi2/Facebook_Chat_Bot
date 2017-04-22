@@ -1,15 +1,9 @@
 <?php
 header("Content-Type:text/plain");
 //exit('maintenance');
-
 require "config.php";
-require "class/tools/WhiteHat/Teacrypt.php";
-require "class/Crayner_Machine.php";
-require "class/Facebook.php";
-require "class/AI.php";
-require "helper.php";
-require "mgmt.php";
 
+echo 111;
 
 /*// pg debug
 #$a = file_get_contents("aa");
@@ -31,7 +25,12 @@ define("data", fb.DIRECTORY_SEPARATOR."data");
 if (!is_dir('photos')) {
 mkdir('photos') and file_put_contents("./photos/not_found.png", base64_decode("iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAIAAAD9iXMrAAAAA3NCSVQICAjb4U/gAAAAF0lEQVQokWN0St/EQARgIkbRqLohqw4A2kABdRHXnFUAAAAASUVORK5CYII="));
 }
-
+require "class/tools/WhiteHat/Teacrypt.php";
+require "class/Crayner_Machine.php";
+require "class/Facebook.php";
+require "class/AI.php";
+require "helper.php";
+require "mgmt.php";
 /*// debugging here
 while(1){
 print "input : ";
