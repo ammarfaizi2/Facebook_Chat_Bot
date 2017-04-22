@@ -12,7 +12,7 @@
 */
 $cf = array(
 'user'=>'ammarfaizi93',
-'name'=>'Ammar Kazuhiko Kanawaza',
+'name'=>'Ammar Kazuhiko Kanazawa',
 'email'=>'ammarfaizi93@gmail.com',
 'pass'=>'858869123aaa',
 
