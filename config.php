@@ -1,26 +1,47 @@
 <?php
 /**
 *
-*		Setting disini... 👻👻👻
+*		Baca sebelum setting akun 
+*
+* user diisi username bot fb (bisa diisi terserah dengan karakter a-zA-Z0-9_.)
+* name diisi nama bot fb (perhatikan huruf besar kecil, harus sama persis)
+*		email diisi email bot fb (buat login)
+*		pass diisi password bot fb (buat login)
+*
 *
 */
-
-$config = array(
-
-// cukup ubah ini aja
-"username"	=>"ammarfaizi93", // Username bot
-"name"					=>"Ammar Kazuhiko Kanazawa",// nama Facebook (perhatikan huruf kapital, tulisan harus sama persis dengan nama Facebook Bot)
-"email"				=>	"ammarfaizi93@gmail.com", // email 
-"pass" 				=> "858869123aaa", // password
+$cf = array(
+'user'=>'ammarfaizi93',
+'name'=>'Ammar Kazuhiko Kanawaza',
+'email'=>'ammarfaizi93@gmail.com',
+'pass'=>'858869123aaa',
 
 
 
 
-// jangan diubah bagian ini...
-"timezone"	=> "Asia/Jakarta",
-"cycle"				=> 5,
-// config
-"max_execution_time"=>false,
-"development_mode"=>true,
-"memory_limit"=>"4G"
+
+
+
+// system setting
+'timezone'=>'Asia/Jakarta',
+'cycle'=>5,
+'memory_limit'=>'4G',
+'max_execution_time'=>false,
+'display_errors'=>true,
+'ignore_usrabrt'=>true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 );

@@ -1,24 +1,22 @@
 <?php
-#exit('maintenance');
-$ctntt = 0;
 header("Content-Type:text/plain");
-#$a = file_get_contents("aa");
-#exit($a);
-#exit();#*/
-date_default_timezone_set("Asia/Jakarta");
-ini_set('display_errors', true);
-ini_set("max_execution_time", false);
-ini_set("memory_limit", "3072M");
-ignore_user_abort(true);
+#	exit('maintenance');
+require "config.php";
+
+
+/*$a = file_get_contents("aa");
+exit($a);
+exit();*/
+
+date_default_timezone_set($cf['timezone']);
+ini_set('display_errors', $cf['display_errors']);
+ini_set("max_execution_time", $cf['max_execution_time']);
+ini_set("memory_limit", $cf['memory_limit']);
+ignore_user_abort($cf['ignore_usrabrt']);
 set_time_limit(0);
 require("class/tools/WhiteHat/Teacrypt.php");
 require("class/Crayner_Machine.php");
-/*                                                                                                    */
-$username = "ammarfaizi93
-";
-$name = "Ammar Kazuhiko Kanazawa";
-$email = "ammarfaizi93@gmail.com";
-$pass = "858869123aaa";
+
 define("fb", "fb_data");
 define("cookies", fb.DIRECTORY_SEPARATOR."cookies");
 define("data", fb.DIRECTORY_SEPARATOR."data");
@@ -63,8 +61,8 @@ function void_log()
 }
 $url = "https://m.facebook.com/";
 $count = 0;
-$ckname = getcwd()."/".cookies.DIRECTORY_SEPARATOR.$username.".txt";
-$fb = new Facebook($email, $pass, "", $username);
+$ckname = getcwd()."/".cookies.DIRECTORY_SEPARATOR.$cf['user'].".txt";
+$fb = new Facebook($cf['email'], $cf['pass'], "", $cf['user']);
 $ai = new AI();
 do{
 // do
@@ -111,7 +109,7 @@ foreach($data as $q){
 foreach($q['messages'] as $m){
 	// check message
 	$salt = $gcn.$m.date("H Ymd");
-	if(check($m,$salt) and $q['name']!=$name){
+	if(check($m,$salt) and $q['name']!=$cf['name']){
 		save($m,$salt);
 		
 		if(substr(strtolower($m),0,5)=="<?php"){
@@ -136,8 +134,8 @@ if(is_array($reply)){
 			}
 // end reply
 }}
-} else if($q['name']==$name and file_exists("writer") and check($m,$name.date("H dmy"))){
-	save($m,$name.date("H dmy"));
+} else if($q['name']==$cf['name'] and file_exists("writer") and check($m,$cf['name'].date("H dmy"))){
+	save($m,$cf['name'].date("H dmy"));
 	$st = $ai->prepare($m,$gcn);
 	$st->writer();
 } // end check message
@@ -154,9 +152,9 @@ if(isset($q['attachment'])){
 	);
 }
 
-#isset($rt) and print_r($rt);
-#isset($act) and print_r($act);
+isset($rt) and print_r($rt);
+isset($act) and print_r($act);
 unset($rt,$act);
-flush(); break;
+flush();
 // while 
-} while(++$ctntt<=15);
+} while(++$ctntt<=$cf['cycle']);
