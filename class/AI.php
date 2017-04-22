@@ -856,7 +856,7 @@ foreach($sholat as $z){
         return isset($msg) ? $msg : false;
     }
 private function sm($actor){
-$a = json_decode(Crayner_Machine::curl("http://yessrilanka.com/simisimi.php?msg=".urlencode($this->msg)),true);
+$a = json_decode(Crayner_Machine::curl("https://www.yessrilanka.com/simisimi.php?msg=".urlencode($this->msg)),true);
 file_put_contents("a.txt",json_encode($a));
 if(isset($a['respSentence'])){
 	if(strpos($a['respSentence'],"Saya belum paham")!==false){
