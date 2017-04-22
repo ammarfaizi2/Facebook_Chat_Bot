@@ -58,12 +58,12 @@ $ai = new AI();
 do{
 // do
 if(chkck($ckname)){
-print $fb->login();
+#print $fb->login();
 }
 $zz = new mgmt($fb->go_to($url.'messages'));
 $zza = $zz->grb(8);
 if($zza===false){
- print	$fb->login();
+ #print	$fb->login();
 	$zz = new mgmt($fb->go_to($url.'messages'));
 	$zza = $zz->grb(8);
 } 
@@ -142,8 +142,8 @@ if(isset($q['attachment'])){
 	);
 }
 
-isset($rt) and print_r($rt);
-isset($act) and print_r($act);
+#isset($rt) and print_r($rt);
+#isset($act) and print_r($act);
 unset($rt,$act);
 flush(); break;
 // while 
