@@ -50,6 +50,17 @@ function chkck($ck)
 {
 	return file_exists($ck)?(strpos(file_get_contents($ck),'c_user')===false):true;
 }
+function chkfile()
+{
+	if(!file_exists("login_avoid")){
+		file_put_contents("avoid_brute_login","0");
+	}
+	return ((int)file_get_contents("avoid_brute_login")<5);
+}
+function void_log()
+{
+	return (bool)file_put_contents("avoid_brute_login",(((int)file_get_contents("avoid_brute_login"))+1));
+}
 $url = "https://m.facebook.com/";
 $count = 0;
 $ckname = getcwd()."/".cookies.DIRECTORY_SEPARATOR.$username.".txt";
@@ -57,13 +68,14 @@ $fb = new Facebook($email, $pass, "", $username);
 $ai = new AI();
 do{
 // do
-if(chkck($ckname)){
-#print $fb->login();
+if(chkck($ckname) && chkfile()){
+ print $fb->login();
+ void_log();
 }
 $zz = new mgmt($fb->go_to($url.'messages'));
 $zza = $zz->grb(8);
 if($zza===false){
- #print	$fb->login();
+ chkfile() and print	$fb->login();
 	$zz = new mgmt($fb->go_to($url.'messages'));
 	$zza = $zz->grb(8);
 } 
