@@ -858,7 +858,7 @@ foreach($sholat as $z){
 private function sm($actor){
 	$x = array(" simi"," simi");
 	$b = array(" carik"," bot");
-$a = json_decode(Crayner_Machine::curl("https://www.yessrilanka.com/simisimi.php?msg=".
+$a = json_decode(Crayner_Machine::curl("https://instakuy.net/simsimi.php?kata=".
 
 str_ireplace($b,$x,urlencode($this->msg))
 
@@ -866,9 +866,8 @@ str_ireplace($b,$x,urlencode($this->msg))
 
 
 ,true);
-file_put_contents("a.txt",json_encode($a));
-if(isset($a['respSentence'])){
-	if(strpos($a['respSentence'],"Saya belum paham")!==false){
+if(isset($a['pesan'])){
+	if(strpos($a['pesan'],"lu ngomong apaan sih")!==false){
 	 $this->absmsg=false;
   $this->msg=null;
   $this->msgrt=null;
@@ -878,7 +877,7 @@ if(isset($a['respSentence'])){
 		$x = array("simi","simcarik");
 		$b = array("carik","carik");
 		$this->msg=null;
-  $this->msgrt=str_ireplace($x,$b,str_ireplace($x,$b,urldecode($a['respSentence'])));
+  $this->msgrt=str_ireplace($x,$b,str_ireplace($x,$b,urldecode($a['pesan'])));
   $this->actor=$actor;$this->absmsg=false;
 		return true;
 	}   	
