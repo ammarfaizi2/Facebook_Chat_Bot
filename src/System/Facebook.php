@@ -15,7 +15,7 @@ class Facebook extends CraynerMachine
 	private $password;
 	private $user;
 	private $token;
-
+	public $usercookies;
 	/**
 	*
 	*/
