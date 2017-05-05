@@ -49,7 +49,7 @@ class Facebook extends CraynerMachine
 
 	public function get_page($to,$post=null,$op=null)
 	{	
-		$st = new CMCurl((is_array($to) ? $to[0] : self::FB_URL.'/'.$to));
+		$st = new CMCurl(((substr($to, 0, 8)=="https://" or substr($to, 0, 7)=="http://")? $to : self::FB_URL.'/'.$to));
 		$st->set_cookie($this->usercookies);
 		$st->set_useragent();
 		if (isset($this->socks)) {
@@ -101,6 +101,6 @@ class Facebook extends CraynerMachine
 			$c = isset($c[1]) ? explode('"', $c[1], 2) : array('');
 			$post .= '&'.$b[0].'='.urlencode($c[0]);
 		}
-		return $this->get_page(array($ga),$post,array(CURLOPT_REFERER=>self::FB_URL));
+		return $this->get_page($ga,$post,array(CURLOPT_REFERER=>self::FB_URL));
 	}
 }
