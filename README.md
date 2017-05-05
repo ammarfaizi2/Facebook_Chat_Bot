@@ -6,4 +6,9 @@
 - Jalankan cli.php
 
 
+
+
+
+## Instalasi Composer
+`composer install`
 <a href="https://www.redangel.cf">RedAngel</a>
