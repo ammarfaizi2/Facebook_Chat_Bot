@@ -7,6 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'System' => array($baseDir . '/src', $vendorDir . '/ammarfaizi2/ai/src'),
-    'Curl' => array($vendorDir . '/ammarfaizi2/ratools/src'),
+    'Curl/CMCurl' => array($vendorDir . '/ammarfaizi2/ratools/src/Curl'),
     'App' => array($vendorDir . '/ammarfaizi2/ai/src'),
 );

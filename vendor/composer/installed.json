@@ -1,43 +1,5 @@
 [
     {
-        "name": "ammarfaizi2/ratools",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/ammarfaizi2/RA_Tools.git",
-            "reference": "87e634b88f935118e21bb874fe761ae089f8eb78"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/ammarfaizi2/RA_Tools/zipball/87e634b88f935118e21bb874fe761ae089f8eb78",
-            "reference": "87e634b88f935118e21bb874fe761ae089f8eb78",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.4.0"
-        },
-        "time": "2017-05-05 12:00:49",
-        "type": "project",
-        "installation-source": "source",
-        "autoload": {
-            "psr-0": {
-                "Curl": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "RedAngel PHP Concept"
-        ],
-        "authors": [
-            {
-                "name": "Ammar Faizi",
-                "email": "ammarfaizi2@gmail.com"
-            }
-        ],
-        "description": "RA Tools"
-    },
-    {
         "name": "ammarfaizi2/ai",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -75,5 +37,43 @@
             }
         ],
         "description": "AI"
+    },
+    {
+        "name": "ammarfaizi2/ratools",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ammarfaizi2/RA_Tools.git",
+            "reference": "c0b2f7b8d1dcd8cbf76a94c115d518b1076c992d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ammarfaizi2/RA_Tools/zipball/c0b2f7b8d1dcd8cbf76a94c115d518b1076c992d",
+            "reference": "c0b2f7b8d1dcd8cbf76a94c115d518b1076c992d",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0"
+        },
+        "time": "2017-05-05 15:26:26",
+        "type": "project",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Curl/CMCurl": "src/Curl"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "RedAngel PHP Concept"
+        ],
+        "authors": [
+            {
+                "name": "Ammar Faizi",
+                "email": "ammarfaizi2@gmail.com"
+            }
+        ],
+        "description": "RA Tools"
     }
 ]

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "147cd73b7f0c8b0f0eb3bac1d79dbe3a",
+    "hash": "42a7c8ef2bb64b46b01e434375e4e224",
     "content-hash": "75a0cbd07f3a61720809e918fc0964ab",
     "packages": [
         {
@@ -50,12 +50,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ammarfaizi2/RA_Tools.git",
-                "reference": "87e634b88f935118e21bb874fe761ae089f8eb78"
+                "reference": "c0b2f7b8d1dcd8cbf76a94c115d518b1076c992d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ammarfaizi2/RA_Tools/zipball/87e634b88f935118e21bb874fe761ae089f8eb78",
-                "reference": "87e634b88f935118e21bb874fe761ae089f8eb78",
+                "url": "https://api.github.com/repos/ammarfaizi2/RA_Tools/zipball/c0b2f7b8d1dcd8cbf76a94c115d518b1076c992d",
+                "reference": "c0b2f7b8d1dcd8cbf76a94c115d518b1076c992d",
                 "shasum": ""
             },
             "require": {
@@ -64,7 +64,7 @@
             "type": "project",
             "autoload": {
                 "psr-0": {
-                    "Curl": "src/"
+                    "Curl/CMCurl": "src/Curl"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -78,7 +78,7 @@
                 }
             ],
             "description": "RA Tools",
-            "time": "2017-05-05 12:00:49"
+            "time": "2017-05-05 15:26:26"
         }
     ],
     "packages-dev": [],
