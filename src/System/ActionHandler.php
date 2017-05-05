@@ -83,7 +83,7 @@ class ActionHandler
             $room = $this->fb->get_page(substr($link, 1));
             $chat = ChatController::grchat($room);
             if (count($chat)<2) {
-                $room = $this->fb->get_page(substr($link), 1);
+                $room = $this->fb->get_page(substr($link,1), 1);
                 $chat = ChatController::grchat($room);
             }
             if (!is_array($chat)) {
