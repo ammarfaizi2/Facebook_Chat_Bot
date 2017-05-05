@@ -42,7 +42,7 @@ class ActionHandler
 
 
 	/**
-	*
+	*	@return array
 	*/
 	private function get_chatroom_url()
 	{
@@ -61,6 +61,22 @@ class ActionHandler
 	}
 
 	/**
+	*
+	*/
+	private function manage_chat($soruce)
+	{
+		if (!is_array($soruce)) {
+			throw new \Exception("Error manage_chat !", 1);
+		}
+		foreach ($soruce as $key => $value) {
+			/**
+			*	Ambil isi chat
+			*/
+			$con = $this->fb->get_page(substr($link),1);
+		}
+	}
+
+	/**
 	* void run
 	*/
 	public function run()
@@ -68,23 +84,4 @@ class ActionHandler
 		$this->login_action();
 		$this->manage_chat($this->get_chatroom_url());
 	}
-}
-
-
-
-
-function chkck($ck)
-{
-    return file_exists($ck)?(strpos(file_get_contents($ck), 'c_user')===false):true;
-}
-function chkfile()
-{
-    if (!file_exists("login_avoid")) {
-        file_put_contents("avoid_brute_login", "0");
-    }
-    return ((int)file_get_contents("avoid_brute_login")<5);
-}
-function void_log()
-{
-    return (bool)file_put_contents("avoid_brute_login", (((int)file_get_contents("avoid_brute_login"))+1));
 }

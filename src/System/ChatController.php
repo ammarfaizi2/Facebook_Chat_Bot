@@ -7,7 +7,7 @@ class ChatController
     {
         $this->str = $str;
     }
-    private function tw($s)
+    private static function tw($s)
     {
         return trim(html_entity_decode($s, ENT_QUOTES, 'UTF-8'));
     }
@@ -23,11 +23,11 @@ class ChatController
             $b = explode("href=\"", $a[$i]);
             $b = explode("\"", $b[1], 3);
             $z = explode("<", $b[1]);
-            $rt[$this->tw(substr($z[0], 1))] = $this->tw($b[0]);
+            $rt[self::tw(substr($z[0], 1))] = self::tw($b[0]);
         }
         return $rt;
     }
-    public function grchat($a)
+    public static function grchat($a)
     {
         $a = explode("table ", $a);
         $a = explode("<form", $a[2]);
@@ -41,7 +41,7 @@ class ChatController
             preg_match("#<img src=\"(.*)\"#", $c[1], $n);
             if (isset($n[1])) {
                 $z = explode("\"", $n[1], 2);
-                $att = $this->tw($z[0]);
+                $att = self::tw($z[0]);
             } else {
                 $att = '';
             }
@@ -55,12 +55,12 @@ class ChatController
                 } else {
                     $f = "<span>".$d[$j];
                     preg_match("#<span>(.*)</span>#", $f, $n);
-                    $msg[] = $this->tw(str_replace("<br />", "\n", $n[1]));
+                    $msg[] = self::tw(str_replace("<br />", "\n", $n[1]));
                 }
             }
             $e[] = $d;
             $rt[$i-1] = array(
-	        'name'=>$this->tw($c[0]),
+	        'name'=>self::tw($c[0]),
 	        'messages'=>$msg,
 	        'time'=>$time,
     	);
