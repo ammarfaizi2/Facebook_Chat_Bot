@@ -1,0 +1,79 @@
+[
+    {
+        "name": "ammarfaizi2/ratools",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ammarfaizi2/RA_Tools.git",
+            "reference": "87e634b88f935118e21bb874fe761ae089f8eb78"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ammarfaizi2/RA_Tools/zipball/87e634b88f935118e21bb874fe761ae089f8eb78",
+            "reference": "87e634b88f935118e21bb874fe761ae089f8eb78",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0"
+        },
+        "time": "2017-05-05 12:00:49",
+        "type": "project",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Curl": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "RedAngel PHP Concept"
+        ],
+        "authors": [
+            {
+                "name": "Ammar Faizi",
+                "email": "ammarfaizi2@gmail.com"
+            }
+        ],
+        "description": "RA Tools"
+    },
+    {
+        "name": "ammarfaizi2/ai",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ammarfaizi2/AI.git",
+            "reference": "00774906cbecf5134285e02a85d544ae707d089e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ammarfaizi2/AI/zipball/00774906cbecf5134285e02a85d544ae707d089e",
+            "reference": "00774906cbecf5134285e02a85d544ae707d089e",
+            "shasum": ""
+        },
+        "require": {
+            "ammarfaizi2/ratools": "dev-master"
+        },
+        "time": "2017-05-05 12:58:15",
+        "type": "project",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "App": "src/",
+                "System": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "RedAngel PHP Concept"
+        ],
+        "authors": [
+            {
+                "name": "Ammar Faizi",
+                "email": "ammarfaizi2@gmail.com"
+            }
+        ],
+        "description": "AI"
+    }
+]

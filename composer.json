@@ -1,0 +1,16 @@
+{
+    "name": "ammarfaizi2/botfb",
+    "description": "Bot Facebook",
+    "type": "Project",
+    "require": {
+        "ammarfaizi2/ai": "dev-master"
+    },
+    "license": "RedAngel PHP Concept",
+    "authors": [
+        {
+            "name": "Ammar Faizi",
+            "email": "ammarfaizi2@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
