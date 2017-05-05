@@ -33,8 +33,31 @@ class ActionHandler
 			$this->fb->login();
 		}
 	}
+
+
+	private function get_messages_page()
+	{
+		return $this->fb->get_page('messages');
+	}
+
+
+	/**
+	*
+	*/
+	private function chat_action()
+	{
+		$src = $this->get_messages_page();
+		$n	 = new ChatController($src);
+		$zza = $zz->grb(8);
+		return $zza;
+	}
+
+	/**
+	* void run
+	*/
 	public function run()
 	{
 		$this->login_action();
+		print_r($this->chat_action());
 	}
 }
