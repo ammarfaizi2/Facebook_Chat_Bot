@@ -8,7 +8,7 @@ use System\ActionHandler;
 class BotFacebook extends ActionHandler
 {
 	private $sup;
-	public function __construct($cofig)
+	public function __construct($config)
 	{
 		$this->sup = parent::__construct($config);
 	}

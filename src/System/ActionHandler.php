@@ -8,8 +8,12 @@ use System\ChatController;
 class ActionHandler
 {
 	
-	function __construct($config)
+	public function __construct($config)
 	{
-		# code...
+		$this->fb = new Facebook($config['email'],$config['pass'],$config['user'],$config['token']);
+	}
+	public function run()
+	{
+		print $this->fb->login();
 	}
 }

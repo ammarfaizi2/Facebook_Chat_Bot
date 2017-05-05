@@ -3,7 +3,9 @@ require __DIR__.'/vendor/autoload.php';
 require __DIR__.'/config.php';
 use System\AI;
 use System\Facebook;
+use System\BotFacebook;
 use System\ChatController;
+
 
 define('data', __DIR__.'/data');
 define('fb_data',data.'/fb_data');

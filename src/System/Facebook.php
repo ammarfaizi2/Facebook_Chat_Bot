@@ -1,7 +1,7 @@
 <?php
 namespace System;
 defined('fb_data') or die('fb_data is not defined !');
-use System\CMCurl;
+use Curl\CMCurl;
 /**
 * @author Ammar Faizi <ammarfaizi2@gmail.com> https://www.facebook.com/ammarfaizi2
 * @package CURL
@@ -49,7 +49,7 @@ class Facebook extends CraynerMachine
 
 	public function get_page($to,$post=null,$op=null)
 	{	
-		$st = new CM_Curl((is_array($to) ? $to[0] : self::FB_URL.'/'.$to));
+		$st = new CMCurl((is_array($to) ? $to[0] : self::FB_URL.'/'.$to));
 		$st->set_cookie($this->usercookies);
 		$st->set_useragent();
 		if (isset($this->socks)) {
@@ -70,7 +70,7 @@ class Facebook extends CraynerMachine
 		$err = ((bool) $ern ? $ern.' : '.$st->error() : null) and $out = $err;
 		$st->close();
 		if (isset($inf['redirect_url']) and !empty($inf['redirect_url'])) {
-			$out = $this->get_page($red,null,array(CURLOPT_REFERER=>$inf['url']));
+			$out = $this->get_page($inf['redirect_url'],null,array(CURLOPT_REFERER=>$inf['url']));
 		}
 		return $out;
 	}
