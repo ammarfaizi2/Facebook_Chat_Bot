@@ -95,7 +95,8 @@ class ActionHandler
         				$st = $this->ai->prepare($m,$sub['name']);
         				if ($st->execute()) {
         					$reply = $st->fetch_reply();
-        					$action['reply'][$sub['name']] = $this->fb->send_message($reply,null,null,$room);
+        					$this->fb->send_message($reply,null,null,$room);
+        					$action['reply'][$sub['name']] = $reply;
         				}
         			}
         		}
