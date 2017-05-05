@@ -10,6 +10,7 @@ class ActionHandler
 	
 	public function __construct($config)
 	{
+		$this->config = $config;
 		$this->fb = new Facebook($config['email'],$config['pass'],$config['user'],$config['token']);
 	}
 
@@ -68,11 +69,27 @@ class ActionHandler
 		if (!is_array($soruce)) {
 			throw new \Exception("Error manage_chat !", 1);
 		}
-		foreach ($soruce as $key => $value) {
+		foreach ($soruce as $gcname => $link) {
 			/**
 			*	Ambil isi chat
 			*/
-			$con = $this->fb->get_page(substr($link),1);
+			$room = $this->fb->get_page(substr($link,1));
+			$chat = ChatController::grchat($room);
+			if (count($chat)<2) {
+            	$room = $this->fb->get_page(substr($link),1);
+				$chat = ChatController::grchat($room);
+        	}
+        	if (!is_array($chat)) {
+            	$rt[$gcn] = "An error occured !";
+        	}
+        	foreach ($chat as $sub) {
+        		foreach ($sub['messages'] as $m) {
+        			$salt = $gcname.$m.date("H Ymd");
+        			if (check($m, $salt) and $q['name']!=$this->config['name']) {
+        				save($m, $salt);
+        			}
+        		}
+        	}
 		}
 	}
 
