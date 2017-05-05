@@ -50,12 +50,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ammarfaizi2/RA_Tools.git",
-                "reference": "c0b2f7b8d1dcd8cbf76a94c115d518b1076c992d"
+                "reference": "6ecf997c659b00f03ced94503f7c27ad4e0e5bdf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ammarfaizi2/RA_Tools/zipball/c0b2f7b8d1dcd8cbf76a94c115d518b1076c992d",
-                "reference": "c0b2f7b8d1dcd8cbf76a94c115d518b1076c992d",
+                "url": "https://api.github.com/repos/ammarfaizi2/RA_Tools/zipball/6ecf997c659b00f03ced94503f7c27ad4e0e5bdf",
+                "reference": "6ecf997c659b00f03ced94503f7c27ad4e0e5bdf",
                 "shasum": ""
             },
             "require": {
@@ -64,7 +64,7 @@
             "type": "project",
             "autoload": {
                 "psr-0": {
-                    "Curl/CMCurl": "src/Curl"
+                    "Curl": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -78,7 +78,7 @@
                 }
             ],
             "description": "RA Tools",
-            "time": "2017-05-05 15:26:26"
+            "time": "2017-05-05 16:01:59"
         }
     ],
     "packages-dev": [],
