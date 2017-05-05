@@ -3306,7 +3306,7 @@
 
       // ----- Look for extract by ereg rule
       // ereg() is deprecated with PHP 5.3
-      /* 
+      /*
       else if (   (isset($p_options[PCLZIP_OPT_BY_EREG]))
                && ($p_options[PCLZIP_OPT_BY_EREG] != "")) {
 
