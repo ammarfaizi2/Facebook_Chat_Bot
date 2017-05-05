@@ -1,3 +1,4 @@
 vendor/ammarfaizi2/ins.hash
 data/
 .php_cs.cache
+config.php
