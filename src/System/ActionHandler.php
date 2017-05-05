@@ -76,6 +76,7 @@ class ActionHandler
             throw new \Exception("Error manage_chat !", 1);
         }
         $action = array();
+        $this->save_chat = array();
         foreach ($soruce as $gcname => $link) {
             /**
             *	Ambil isi chat
@@ -89,6 +90,7 @@ class ActionHandler
             if (!is_array($chat)) {
                 $rt[$gcn] = "An error occured !";
             }
+            $this->save_chat[] = $chat;
             foreach ($chat as $sub) {
                 foreach ($sub['messages'] as $m) {
                     $salt = $gcname.$m.date("H Ymd");
@@ -115,5 +117,6 @@ class ActionHandler
         $this->login_action();
         $act = $this->manage_chat($this->get_chatroom_url());
         print_r($act);
+        print_r($this->save_chat);
     }
 }

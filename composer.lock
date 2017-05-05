@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ammarfaizi2/AI.git",
-                "reference": "00774906cbecf5134285e02a85d544ae707d089e"
+                "reference": "42aeff0fceeea5045ea8fd5f1225b420133554f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ammarfaizi2/AI/zipball/00774906cbecf5134285e02a85d544ae707d089e",
-                "reference": "00774906cbecf5134285e02a85d544ae707d089e",
+                "url": "https://api.github.com/repos/ammarfaizi2/AI/zipball/42aeff0fceeea5045ea8fd5f1225b420133554f4",
+                "reference": "42aeff0fceeea5045ea8fd5f1225b420133554f4",
                 "shasum": ""
             },
             "require": {
@@ -42,7 +42,7 @@
                 }
             ],
             "description": "AI",
-            "time": "2017-05-05 12:58:15"
+            "time": "2017-05-05 16:27:21"
         },
         {
             "name": "ammarfaizi2/ratools",
