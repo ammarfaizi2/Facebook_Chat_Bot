@@ -44,12 +44,20 @@ class ActionHandler
 	/**
 	*
 	*/
-	private function chat_action()
+	private function get_chat_room()
 	{
 		$src = $this->get_messages_page();
 		$n	 = new ChatController($src);
-		$zza = $zz->grb(8);
-		return $zza;
+		$st = $n->grb(8);
+		if ($st===false) {
+	        chkfile() and print $fb->login();
+	        $n = new ChatController($fb->go_to($url.'messages'));
+	        $st = $n->grb(8);
+	    }
+	    if (!is_array($st)) {
+	        die("Error getting messages !");
+	    }
+	    return $st;
 	}
 
 	/**
@@ -58,6 +66,25 @@ class ActionHandler
 	public function run()
 	{
 		$this->login_action();
-		print_r($this->chat_action());
+		$this->get_chat_room();
 	}
+}
+
+
+
+
+function chkck($ck)
+{
+    return file_exists($ck)?(strpos(file_get_contents($ck), 'c_user')===false):true;
+}
+function chkfile()
+{
+    if (!file_exists("login_avoid")) {
+        file_put_contents("avoid_brute_login", "0");
+    }
+    return ((int)file_get_contents("avoid_brute_login")<5);
+}
+function void_log()
+{
+    return (bool)file_put_contents("avoid_brute_login", (((int)file_get_contents("avoid_brute_login"))+1));
 }
