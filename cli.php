@@ -18,4 +18,5 @@ $st->execute();
 var_dump($st->fetch_reply());
 //*/
 
-$fb = new Facebook($config['email'],$config['pass'],$config['user'],$config['token']);
+$app = new BotFacebook($config);
+$app->run();
