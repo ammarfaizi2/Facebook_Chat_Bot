@@ -27,16 +27,35 @@ class ActionHandler
     {
         return file_exists($this->fb->usercookies) ? strpos(file_get_contents($this->fb->usercookies), "c_user")!==false : false;
     }
+
+    /**
+    *   @return bool
+    */
+    private function avoid_brute_login()
+    {
+        return file_exists(fb_data.'/avoid_brute_login') ? ( (int)file_get_contents(fb_data.'/avoid_brute_login')<=8 ) : true;
+    }
     
+    /**
+    *   @return int
+    */
+    private function inc_brute_login()
+    {
+        return file_put_contents(fb_data.'/avoid_brute_login', (file_exists(fb_data.'/avoid_brute_login') ? ((int)file_get_contents(fb_data.'/avoid_brute_login')+1):1));
+    }
+
+
     /**
     * void
     */
     private function login_action()
     {
-        if (!$this->check_login_status()) {
+        if (!$this->check_login_status() && $this->avoid_brute_login()) {
+            $this->inc_brute_login();
             $this->fb->login();
         }
-        if (!$this->check_login_status()) {
+        if (!$this->check_login_status() && $this->avoid_brute_login()) {
+            $this->inc_brute_login();
             $this->fb->login();
         }
     }
