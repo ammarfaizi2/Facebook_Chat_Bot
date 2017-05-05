@@ -1,5 +1,6 @@
 <?php
 namespace System;
+
 defined('fb_data') or die('fb_data is not defined !');
 class ChatController
 {
@@ -60,10 +61,10 @@ class ChatController
             }
             $e[] = $d;
             $rt[$i-1] = array(
-	        'name'=>self::tw($c[0]),
-	        'messages'=>$msg,
-	        'time'=>$time,
-    	);
+            'name'=>self::tw($c[0]),
+            'messages'=>$msg,
+            'time'=>$time,
+        );
             !empty($att) and $rt[$i-1]['attachment'] = $att;
         }
         return isset($rt)?$rt:null;
