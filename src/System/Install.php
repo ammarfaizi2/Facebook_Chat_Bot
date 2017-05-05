@@ -11,7 +11,7 @@ class Install
         file_exists(__DIR__.'/../../de/install.zip') or die("Installer not found !");
         require __DIR__.'/../../PCLZip.php';
         $this->hash = array(
-                __DIR__.'/../../vendor/ammarfaizi2/ins.hash',
+                (file_get_contents(__DIR__.'/../../de/hash.txt'))=>__DIR__.'/../../vendor/ammarfaizi2/ins.hash',
             );
         $this->pclzip = new \PCLZip(__DIR__.'/../../de/install.zip');
     }
