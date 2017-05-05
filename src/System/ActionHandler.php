@@ -75,10 +75,13 @@ class ActionHandler
         $src = $this->get_messages_page();
         $n     = new ChatController($src);
         $st = $n->grb(8);
-        if ($st===false) {
-            chkfile() and print $fb->login();
+        if ($st===false and $this->avoid_brute_login()) {
+            $this->inc_brute_login() and print $fb->login();
             $n = new ChatController($fb->go_to($url.'messages'));
             $st = $n->grb(8);
+        } else 
+        if ($st===false) {
+            die("Error !");
         }
         if (!is_array($st)) {
             die("Error getting messages !");
