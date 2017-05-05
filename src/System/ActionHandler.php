@@ -1,5 +1,6 @@
 <?php
 namespace System;
+use System\AI;
 use System\Facebook;
 use System\ChatController;
 /**
@@ -7,11 +8,14 @@ use System\ChatController;
 */
 class ActionHandler
 {
-	
+	private $ai;
+	private $fb;
+	private $config;
 	public function __construct($config)
 	{
-		$this->config = $config;
+		$this->ai = new AI();
 		$this->fb = new Facebook($config['email'],$config['pass'],$config['user'],$config['token']);
+		$this->config = $config;
 	}
 
 	/**
@@ -69,6 +73,7 @@ class ActionHandler
 		if (!is_array($soruce)) {
 			throw new \Exception("Error manage_chat !", 1);
 		}
+		$action = array();
 		foreach ($soruce as $gcname => $link) {
 			/**
 			*	Ambil isi chat
@@ -85,12 +90,18 @@ class ActionHandler
         	foreach ($chat as $sub) {
         		foreach ($sub['messages'] as $m) {
         			$salt = $gcname.$m.date("H Ymd");
-        			if (check($m, $salt) and $q['name']!=$this->config['name']) {
+        			if (check($m, $salt) and $sub['name']!=$this->config['name']) {
         				save($m, $salt);
+        				$st = $this->ai->prepare($m,$sub['name']);
+        				if ($st->execute()) {
+        					$reply = $st->fetch_reply();
+        					$action['reply'][$sub['name']] = $this->fb->send_message($reply,null,null,$room);
+        				}
         			}
         		}
         	}
 		}
+		return $action;
 	}
 
 	/**
@@ -99,6 +110,7 @@ class ActionHandler
 	public function run()
 	{
 		$this->login_action();
-		$this->manage_chat($this->get_chatroom_url());
+		$act = $this->manage_chat($this->get_chatroom_url());
+		print_r($act);
 	}
 }

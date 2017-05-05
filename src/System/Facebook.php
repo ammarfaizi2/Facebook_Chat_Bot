@@ -103,4 +103,36 @@ class Facebook extends CraynerMachine
 		}
 		return $this->get_page($ga,$post,array(CURLOPT_REFERER=>self::FB_URL));
 	}
+	public function send_message($messages, $to, $stpr=null, $source=null)
+    {
+        if ($source===null) {
+            $source = $this->get_page("https://m.facebook.com/".$to);
+        } else {
+            $source = $source;
+        }
+        $q = explode('action="/messages/send/', $source);
+        $q = explode('</form>', $q[1]);
+        $a = explode('<input type="hidden"', $q[0]);
+        $postfields = array();
+        for ($i=1;$i<count($a);$i++) {
+            $b = explode(">", $a[$i]);
+            $c = explode('name="', $b[0]);
+            $d = explode('"', $c[1]);
+            $e = explode('value="', $a[$i]);
+            $f = isset($e[1]) ? explode('"', $e[1]) : array("","");
+            $postfields[$d[0]] = $f[0];
+        }
+        $action = explode('"', $q[0]);
+        $action = $action[0];
+        $source=$q=$a=$b=$c=$d=$e=$f=null;
+        if ($stpr===null) {
+            $postfields['body'] = empty($messages)?"~":$messages;
+            $postfields['Send'] = 'Kirim';
+            $rt = null;
+        } else {
+            $postfields['send_photo'] = true;
+            $rt = "curl_getinfo";
+        }
+        return $this->get_page("https://m.facebook.com/messages/send/?".$action,$postfields);
+    }
 }
