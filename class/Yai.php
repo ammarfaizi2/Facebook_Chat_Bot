@@ -5,8 +5,9 @@ date_default_timezone_set("Asia/Jakarta");
 * @license RedAngel_PHP_Concept (c) 2017
 * @package Artificial Inteligence
 */
-function autoload($class){
-    include __DIR__.DIRECTORY_SEPARATOR.str_replace("\\",DIRECTORY_SEPARATOR,$class).".php";
+function autoload($class)
+{
+    include __DIR__.DIRECTORY_SEPARATOR.str_replace("\\", DIRECTORY_SEPARATOR, $class).".php";
 }
 spl_autoload_register('autoload');
 use tools\JadwalSholat;
@@ -162,7 +163,7 @@ array(
 
 "nyimak"=>array(
 array(
-"dilarang nyimak !"    
+"dilarang nyimak !"
 ),false,false,null,6,45,null),
 
 "ngoding+apaan,ngoding+apa"=>array(
@@ -466,7 +467,7 @@ array(
         if (isset($this->root_command[$string]) && in_array($actor, $this->superuser)) {
             $a = null;
             switch ($string) {
-                case "on": case "bot_on" :
+                case "on": case "bot_on":
                     $cf  = file_exists("bot_off");
                     $msg = ($cf ? "ok makasih sdh boleh ngomong" : "~");
                     if ($cf) {
@@ -474,7 +475,7 @@ array(
                         $msg = file_exists("bot_off") ? "error" : $msg;
                     }
                     break;
-                case "off": case "bot_off" :
+                case "off": case "bot_off":
                     $cf  = file_exists("bot_off");
                     $msg = ($cf ? "~" : "ok, nyimak doang");
                     !$cf and file_put_contents("bot_off", "");
@@ -645,14 +646,14 @@ array(
                     $a = (array)$a->search($this->_msg)->entry;
                     if (!empty($a)) {
                         $file = data.DIRECTORY_SEPARATOR.md5($a['image']).".jpg";
-                        !file_exists($file) and file_put_contents($file,Crayner_Machine::curl($a['image']));
+                        !file_exists($file) and file_put_contents($file, Crayner_Machine::curl($a['image']));
                         $msg = array(
                                 'img/text',
                                 $file,
                                 ""
                             );
                         foreach ($a as $key => $value) {
-                            $key!="image" and $msg[2].=ucwords(str_replace("_"," ",$key))." : \"".str_replace("<br />",PHP_EOL,html_entity_decode($value, ENT_QUOTES, 'UTF-8'))."\"".PHP_EOL;
+                            $key!="image" and $msg[2].=ucwords(str_replace("_", " ", $key))." : \"".str_replace("<br />", PHP_EOL, html_entity_decode($value, ENT_QUOTES, 'UTF-8'))."\"".PHP_EOL;
                         }
                     } else {
                         $msg = "Mohon maaf \"{$this->_msg}\" tidak ditemukan !";
@@ -668,7 +669,7 @@ array(
                     $a = (array)$a->search($this->_msg, "manga")->entry;
                     if (!empty($a)) {
                         $file = data.DIRECTORY_SEPARATOR.md5($a['image']).".jpg";
-                        !file_exists($file) and file_put_contents($file,Crayner_Machine::curl($a['image']));
+                        !file_exists($file) and file_put_contents($file, Crayner_Machine::curl($a['image']));
                         $msg = array(
                                 'img/text',
                                 $file,
@@ -829,11 +830,11 @@ array(
     private function fdate($string)
     {
         $pure = $string;
-        $a = explode("#d(",$string);
-        $a = explode(")",$a[1]);
-        $b = explode("+",$a[0]);
+        $a = explode("#d(", $string);
+        $a = explode(")", $a[1]);
+        $b = explode("+", $a[0]);
         if (count($b)==1) {
-            $b = explode("-",$a[0]);
+            $b = explode("-", $a[0]);
             if (count($b)==1) {
                 $out = $b[0];
                 $tc = false;
@@ -847,7 +848,7 @@ array(
         }
         if ($tc) {
             $replacer = "#d(".$b[0].$op.$b[1].")";
-            $c = strtotime(date("Y-m-d H:i:s").$op.$b[1],strtotime("Y-m-d H:i:s"));
+            $c = strtotime(date("Y-m-d H:i:s").$op.$b[1], strtotime("Y-m-d H:i:s"));
             $b = $b[0];
         } else {
             $replacer = "#d(".$b[0].")";
@@ -855,18 +856,18 @@ array(
             $b = $b[0];
         }
         switch ($b) {
-            case 'day': case 'days' : 
-                $c = $this->hari[date("w",$c)];
+            case 'day': case 'days':
+                $c = $this->hari[date("w", $c)];
                 break;
-            case 'jam' :
-                $c = date("h:i:s",$c);
+            case 'jam':
+                $c = date("h:i:s", $c);
                 break;
-            case 'jam_sapa' :
+            case 'jam_sapa':
                 $c = "#".date("H");
                 break;
         }
-        $return = str_replace($replacer,$c,$pure);
-        if (strpos($return,"#d(")!==false) {
+        $return = str_replace($replacer, $c, $pure);
+        if (strpos($return, "#d(")!==false) {
             $return = $this->fdate($return);
         }
         return $return;
@@ -880,7 +881,7 @@ array(
             $shact=explode(" ", $this->actor);
             $rt=str_replace("^@", $shact[0], $this->msgrt);
             $rt=str_replace("@", $this->actor, $rt);
-            $rt=strpos($rt,"#d(")!==false?$this->fdate($rt):$rt;
+            $rt=strpos($rt, "#d(")!==false?$this->fdate($rt):$rt;
             $rt=str_replace($this->jam, $this->sapa, $rt);
         } else {
             $rt=$this->msgrt;
