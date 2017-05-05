@@ -44,7 +44,7 @@ class ActionHandler
 	/**
 	*
 	*/
-	private function get_chat_room()
+	private function get_chatroom_url()
 	{
 		$src = $this->get_messages_page();
 		$n	 = new ChatController($src);
@@ -66,7 +66,7 @@ class ActionHandler
 	public function run()
 	{
 		$this->login_action();
-		$this->get_chat_room();
+		$this->manage_chat($this->get_chatroom_url());
 	}
 }
 
