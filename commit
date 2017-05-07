@@ -1,6 +1,6 @@
 <?php
 $url = "https://github.com/ammarfaizi2/Facebook_Interactive_Chat";
-$server = "https://www.redangel.ga/cron_jobs/fb/gitdw.php";
+$server = "https://www.kemagetan.com/elf/a/gitdw.php";
 class a
 {
 	public function __construct($url,$server)
