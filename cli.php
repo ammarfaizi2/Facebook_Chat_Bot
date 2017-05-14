@@ -18,7 +18,7 @@ if (!$ins->is_installed()) {
 }
 unset($ins);
 
-/*// debugging here
+/// debugging here
 $a = new AI();
 $st = $a->prepare("ask penemu lampu");
 $st->execute();
