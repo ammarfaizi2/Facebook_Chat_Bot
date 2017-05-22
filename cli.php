@@ -9,7 +9,7 @@ define('data', __DIR__.'/data');
 define('fb_data', data.'/fb_data');
 is_dir(data) or mkdir(data);
 is_dir(fb_data) or mkdir(fb_data);
-header('Content-type:text/plain');
+#header('Content-type:text/plain');
 $ins = new Install();
 if (!$ins->is_installed()) {
     $ins->install();

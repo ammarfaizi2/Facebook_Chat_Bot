@@ -12,8 +12,8 @@ class ComposerStaticInit499403dc2a976e127e63788a54092000
             'System' => 
             array (
                 0 => __DIR__ . '/../..' . '/src',
-                1 => __DIR__ . '/..' . '/ammarfaizi2/ai/src',
-                2 => __DIR__ . '/..' . '/ammarfaizi2/facebook/facebook',
+                1 => __DIR__ . '/..' . '/ammarfaizi2/facebook/facebook',
+                2 => __DIR__ . '/..' . '/ammarfaizi2/ai/src',
             ),
         ),
         'C' => 
