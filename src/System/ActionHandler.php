@@ -103,11 +103,12 @@ class ActionHandler
             *	Ambil isi chat
             */
             $room = $this->fb->get_page(substr($link, 1));
-            $chat = ChatController::grchat($room);
+            $chat = Facebook::grchat($room);
             if (count($chat)<2) {
                 $room = $this->fb->get_page(substr($link, 1), 1);
-                $chat = ChatController::grchat($room);
+                $chat = Facebook::grchat($room);
             }
+            print_r($chat);die;
             if (!is_array($chat)) {
                 $rt[$gcn] = "An error occured !";
             }
