@@ -104,6 +104,7 @@ class ActionHandler
             */
             $room = $this->fb->get_page(substr($link, 1));
             $chat = Facebook::grchat($room);
+            
             if (count($chat)<2) {
                 $room = $this->fb->get_page(substr($link, 1), 1);
                 $chat = Facebook::grchat($room);
@@ -111,10 +112,14 @@ class ActionHandler
             if (!is_array($chat)) {
                 $rt[$gcname] = "An error occured !";
             }
+             $ctnn = count($chat)-1;
             $this->save_chat[] = $chat;
+            if($chat[$ctnn]['name']==$this->config['name']){
+            	continue;
+            }
             foreach ($chat as $sub) {
                 foreach ($sub['messages'] as $m) {
-                    if ($sub['name']!=$this->config['name']) {
+                    if ($sub['name']!=$this->config['name']  ) {
                         $st = $this->ai->prepare($m, $sub['name']);
                         if ($st->execute()) {
                             $reply = $st->fetch_reply();
