@@ -108,15 +108,13 @@ class ActionHandler
                 $room = $this->fb->get_page(substr($link, 1), 1);
                 $chat = Facebook::grchat($room);
             }
-            print_r($chat);die;
             if (!is_array($chat)) {
                 $rt[$gcn] = "An error occured !";
             }
             $this->save_chat[] = $chat;
             foreach ($chat as $sub) {
                 foreach ($sub['messages'] as $m) {
-                    $salt = $gcname.$m.date("H Ymd");
-                    if (check($m, $salt) and $sub['name']!=$this->config['name']) {
+                    if ($sub['name']!=$this->config['name']) {
                         save($m, $salt);
                         $st = $this->ai->prepare($m, $sub['name']);
                         if ($st->execute()) {
