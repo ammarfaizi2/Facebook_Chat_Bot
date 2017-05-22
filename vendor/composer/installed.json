@@ -82,18 +82,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/ammarfaizi2/AI.git",
-            "reference": "287c9999837dee0767dc638b7d28ca3aea9d75d6"
+            "reference": "e90907b35682b9becf4833c35c42cf8dcb70f787"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/ammarfaizi2/AI/zipball/287c9999837dee0767dc638b7d28ca3aea9d75d6",
-            "reference": "287c9999837dee0767dc638b7d28ca3aea9d75d6",
+            "url": "https://api.github.com/repos/ammarfaizi2/AI/zipball/e90907b35682b9becf4833c35c42cf8dcb70f787",
+            "reference": "e90907b35682b9becf4833c35c42cf8dcb70f787",
             "shasum": ""
         },
         "require": {
             "ammarfaizi2/ratools": "dev-master"
         },
-        "time": "2017-05-15T08:05:50+00:00",
+        "time": "2017-05-22T06:07:45+00:00",
         "type": "project",
         "installation-source": "source",
         "autoload": {
