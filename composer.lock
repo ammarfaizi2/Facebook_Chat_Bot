@@ -4,7 +4,6 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "42a7c8ef2bb64b46b01e434375e4e224",
     "content-hash": "75a0cbd07f3a61720809e918fc0964ab",
     "packages": [
         {
@@ -13,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ammarfaizi2/AI.git",
-                "reference": "42aeff0fceeea5045ea8fd5f1225b420133554f4"
+                "reference": "287c9999837dee0767dc638b7d28ca3aea9d75d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ammarfaizi2/AI/zipball/42aeff0fceeea5045ea8fd5f1225b420133554f4",
-                "reference": "42aeff0fceeea5045ea8fd5f1225b420133554f4",
+                "url": "https://api.github.com/repos/ammarfaizi2/AI/zipball/287c9999837dee0767dc638b7d28ca3aea9d75d6",
+                "reference": "287c9999837dee0767dc638b7d28ca3aea9d75d6",
                 "shasum": ""
             },
             "require": {
@@ -42,7 +41,7 @@
                 }
             ],
             "description": "AI",
-            "time": "2017-05-05 16:27:21"
+            "time": "2017-05-15 08:05:50"
         },
         {
             "name": "ammarfaizi2/ratools",
@@ -50,12 +49,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ammarfaizi2/RA_Tools.git",
-                "reference": "6ecf997c659b00f03ced94503f7c27ad4e0e5bdf"
+                "reference": "7c0bf4b5b38628c005c38a018e444770728b5331"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ammarfaizi2/RA_Tools/zipball/6ecf997c659b00f03ced94503f7c27ad4e0e5bdf",
-                "reference": "6ecf997c659b00f03ced94503f7c27ad4e0e5bdf",
+                "url": "https://api.github.com/repos/ammarfaizi2/RA_Tools/zipball/7c0bf4b5b38628c005c38a018e444770728b5331",
+                "reference": "7c0bf4b5b38628c005c38a018e444770728b5331",
                 "shasum": ""
             },
             "require": {
@@ -78,7 +77,7 @@
                 }
             ],
             "description": "RA Tools",
-            "time": "2017-05-05 16:01:59"
+            "time": "2017-05-06 13:06:50"
         }
     ],
     "packages-dev": [],
