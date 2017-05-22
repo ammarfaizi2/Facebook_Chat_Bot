@@ -706,5 +706,269 @@
         "actor": "Ammar Faizi",
         "msg": "FemaleGeek PHP Indonesia\n <a href=\"https:\/\/lm.facebook.com\/l.php?u=https%3A%2F%2Ftelegram.me%2Ffemalegeek&h=ATNBZo8IhDytgVtIt1g0o--Et6UhiGzSKeHQ9R_epxSmAbyanNBpkiAVoE4-1P62JJTOmAYS14EcAn08fP56bEC8ZUJNGFmxA2An0WA4UAanVpFPwoCUprJup2wEqBBhEoaX&s=1\" target=\"_blank\">https:\/\/telegram.me\/\u00adfemalegeek<\/a>",
         "reply": "lu laper sampe mangap mangap gitu? \ud83d\ude0e"
+    },
+    {
+        "time": "2017-05-22 18:59:12",
+        "actor": "Alin Chan",
+        "msg": ":v",
+        "reply": "mangap mangap itu gak sehat kang Alin"
+    },
+    {
+        "time": "2017-05-22 18:59:14",
+        "actor": "Alin Chan",
+        "msg": "Hooh",
+        "reply": "mangap mangap itu gak sehat kang Alin"
+    },
+    {
+        "time": "2017-05-22 18:59:14",
+        "actor": "Fajar Rizki Setiawan",
+        "msg": "@Lucky Ananda Azhari   mabar lgi gk??",
+        "reply": "mangap mangap itu gak sehat kang Alin"
+    },
+    {
+        "time": "2017-05-22 18:59:14",
+        "actor": "Gak Usah Kepo",
+        "msg": ":v",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:17",
+        "actor": "Hanifah N W",
+        "msg": "Ciee kangen :v",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:20",
+        "actor": "Khong Ghuan Isi Rengginang",
+        "msg": ":\"|",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:21",
+        "actor": "Shiroyuki",
+        "msg": "Selamat sore om bot <i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z4c\/1\/16\/1f642.png)\"><\/i>",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:21",
+        "actor": "Shiroyuki",
+        "msg": "<i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z3c\/1\/16\/1f34e.png)\"><\/i>",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:22",
+        "actor": "LailaTull Qodri",
+        "msg": "Sapi kali ini grup:v",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:22",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Mungkun kurang Aqua :'v",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:22",
+        "actor": "LailaTull Qodri",
+        "msg": "Huu:v mndingan yg akunya ke blok di hpsin sadja:v",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:22",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Tanya admin aja \n Aq bkn admin",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:24",
+        "actor": "Ammar Faizi",
+        "msg": "Bagus",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:24",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke. Ane lanjut dlu um. Btw server scriptol aman kah? Soalnya account um ammar di hekel sma org :3",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:24",
+        "actor": "Ammar Faizi",
+        "msg": "Aman",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:24",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke um :3",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:24",
+        "actor": "Arrayyan Saputra",
+        "msg": "Makasih um :3",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:25",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n \n Phone:+62 21 30422800",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:25",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n \n Phone:02130422800",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:25",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n +622130422800",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:25",
+        "actor": "Ammar Faizi",
+        "msg": "FemaleGeek PHP Indonesia\n <a href=\"https:\/\/lm.facebook.com\/l.php?u=https%3A%2F%2Ftelegram.me%2Ffemalegeek&h=ATOFIdUQSRSK8hCJDof4_rpDSOuaeXFP7gWex9_rOJ4VKKRVwkNPUO_VlMUKK5ZsA_L4V5hgemBkvadCWvaxYCoWKExFI1Xa59dq_jwMHCVG1w0ntawtLwnB1lVUoMuvf-Pg&s=1\" target=\"_blank\">https:\/\/telegram.me\/\u00adfemalegeek<\/a>",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:49",
+        "actor": "Nafisa Rahma II",
+        "msg": "Akun yg ini aku outin juga yak",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:03:49",
+        "actor": "Hanifah N W",
+        "msg": ":v",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:51",
+        "actor": "Hanifah N W",
+        "msg": "Jangan",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:51",
+        "actor": "Hanifah N W",
+        "msg": "Bala ih :'v",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:51",
+        "actor": "Cindi Chan",
+        "msg": "Hanya karena pp couple jadi gini :3",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:52",
+        "actor": "Alin Chan",
+        "msg": ":'",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:52",
+        "actor": "Alin Chan",
+        "msg": "V",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:53",
+        "actor": "Khong Ghuan Isi Rengginang",
+        "msg": ":\"|",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:54",
+        "actor": "Shiroyuki",
+        "msg": "Selamat sore om bot <i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z4c\/1\/16\/1f642.png)\"><\/i>",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:54",
+        "actor": "Shiroyuki",
+        "msg": "<i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z3c\/1\/16\/1f34e.png)\"><\/i>",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:56",
+        "actor": "LailaTull Qodri",
+        "msg": "Sapi kali ini grup:v",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:56",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Mungkun kurang Aqua :'v",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:56",
+        "actor": "LailaTull Qodri",
+        "msg": "Huu:v mndingan yg akunya ke blok di hpsin sadja:v",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:56",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Tanya admin aja \n Aq bkn admin",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:57",
+        "actor": "Ammar Faizi",
+        "msg": "Bagus",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:57",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke. Ane lanjut dlu um. Btw server scriptol aman kah? Soalnya account um ammar di hekel sma org :3",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:57",
+        "actor": "Ammar Faizi",
+        "msg": "Aman",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:57",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke um :3",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:57",
+        "actor": "Arrayyan Saputra",
+        "msg": "Makasih um :3",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:58",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n \n Phone:+62 21 30422800",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:58",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n \n Phone:02130422800",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:58",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n +622130422800",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:58",
+        "actor": "Ammar Faizi",
+        "msg": "FemaleGeek PHP Indonesia\n <a href=\"https:\/\/lm.facebook.com\/l.php?u=https%3A%2F%2Ftelegram.me%2Ffemalegeek&h=ATOLlEDSRiYa1goVOGh5nEESSj_R_citnAnqHJMJOUZdJILWNToX18b0yHK87ILOLRjzGdfrsiXyt1_KqUJyOQyFz66QbVwKVheBdBs4tCjKV8eG22BekH8VT6if645KUJG_&s=1\" target=\"_blank\">https:\/\/telegram.me\/\u00adfemalegeek<\/a>",
+        "reply": "dilarang mangap \ud83d\ude12"
     }
 ]
