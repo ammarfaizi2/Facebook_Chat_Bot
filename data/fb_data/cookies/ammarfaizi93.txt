@@ -7,8 +7,8 @@
 .facebook.com	TRUE	/	TRUE	0	noscript	1
 .facebook.com	TRUE	/	TRUE	1496044973	locale	id_ID
 #HttpOnly_.facebook.com	TRUE	/	TRUE	1558512213	sb	VJsiWfI0HnKd-hcBBbaeMyxU
-.facebook.com	TRUE	/	TRUE	1503229785	c_user	100009288837884
-#HttpOnly_.facebook.com	TRUE	/	TRUE	1503229785	xs	43%3A9C1XFn_jXeRqPA%3A2%3A1495440212%3A5602
-#HttpOnly_.facebook.com	TRUE	/	TRUE	1503229785	fr	0MJHK4is02sKwGJGW.AWVl9lqbmFrpkEKlt4dyHLdoJ9I.BZIptU.nx.AAA.0.0.BZItBa.AWXHEibS
+.facebook.com	TRUE	/	TRUE	1503284751	c_user	100009288837884
+#HttpOnly_.facebook.com	TRUE	/	TRUE	1503284751	xs	43%3A9C1XFn_jXeRqPA%3A2%3A1495440212%3A5602
+#HttpOnly_.facebook.com	TRUE	/	TRUE	1503284751	fr	0MJHK4is02sKwGJGW.AWXk22TTENSabJBOpqCpYYIJ348.BZIptU.nx.AAA.0.0.BZI6cP.AWVRZLCU
 #HttpOnly_.facebook.com	TRUE	/	TRUE	1558512213	lu	gA
 #HttpOnly_.facebook.com	TRUE	/	FALSE	0	dnonce	deleted

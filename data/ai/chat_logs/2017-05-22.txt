@@ -1240,5 +1240,275 @@
         "actor": "Arrayyan Saputra",
         "msg": "Makasih um :3",
         "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:06",
+        "actor": "Alin Chan",
+        "msg": ":'",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:06",
+        "actor": "Alin Chan",
+        "msg": "V",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:09",
+        "actor": "Shiroyuki",
+        "msg": "Selamat sore om bot <i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z4c\/1\/16\/1f642.png)\"><\/i>",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:09",
+        "actor": "Shiroyuki",
+        "msg": "<i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z3c\/1\/16\/1f34e.png)\"><\/i>",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:10",
+        "actor": "LailaTull Qodri",
+        "msg": "Sapi kali ini grup:v",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:10",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Mungkun kurang Aqua :'v",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:10",
+        "actor": "LailaTull Qodri",
+        "msg": "Huu:v mndingan yg akunya ke blok di hpsin sadja:v",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:10",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Tanya admin aja \n Aq bkn admin",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:11",
+        "actor": "Ammar Faizi",
+        "msg": "Bagus",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:11",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke. Ane lanjut dlu um. Btw server scriptol aman kah? Soalnya account um ammar di hekel sma org :3",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:11",
+        "actor": "Ammar Faizi",
+        "msg": "Aman",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:11",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke um :3",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:11",
+        "actor": "Arrayyan Saputra",
+        "msg": "Makasih um :3",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:19",
+        "actor": "Alin Chan",
+        "msg": ":'",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:19",
+        "actor": "Alin Chan",
+        "msg": "V",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:21",
+        "actor": "Shiroyuki",
+        "msg": "Selamat sore om bot <i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z4c\/1\/16\/1f642.png)\"><\/i>",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:21",
+        "actor": "Shiroyuki",
+        "msg": "<i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z3c\/1\/16\/1f34e.png)\"><\/i>",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:23",
+        "actor": "LailaTull Qodri",
+        "msg": "Sapi kali ini grup:v",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:23",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Mungkun kurang Aqua :'v",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:23",
+        "actor": "LailaTull Qodri",
+        "msg": "Huu:v mndingan yg akunya ke blok di hpsin sadja:v",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:23",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Tanya admin aja \n Aq bkn admin",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:24",
+        "actor": "Ammar Faizi",
+        "msg": "Bagus",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:24",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke. Ane lanjut dlu um. Btw server scriptol aman kah? Soalnya account um ammar di hekel sma org :3",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:24",
+        "actor": "Ammar Faizi",
+        "msg": "Aman",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:24",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke um :3",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:24",
+        "actor": "Arrayyan Saputra",
+        "msg": "Makasih um :3",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:30",
+        "actor": "Ramadhan Hidayat",
+        "msg": "Main gta online yok",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:30",
+        "actor": "Alin Chan",
+        "msg": "Gay?",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:31",
+        "actor": "\u00d0ik\u00ff",
+        "msg": "Ammar & BOT = GAY :v",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:31",
+        "actor": "Alin Chan",
+        "msg": "Oh gitu",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:31",
+        "actor": "Alin Chan",
+        "msg": "Yayaya",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:32",
+        "actor": "Khong Ghuan Isi Rengginang",
+        "msg": ":\"|",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:32",
+        "actor": "Icha",
+        "msg": "Saya cewek'-'",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:32",
+        "actor": "Lie Hua",
+        "msg": "halo",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:33",
+        "actor": "Shiroyuki",
+        "msg": "Selamat sore om bot <i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z4c\/1\/16\/1f642.png)\"><\/i>",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:33",
+        "actor": "Shiroyuki",
+        "msg": "<i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z3c\/1\/16\/1f34e.png)\"><\/i>",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:34",
+        "actor": "LailaTull Qodri",
+        "msg": "Sapi kali ini grup:v",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:34",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Mungkun kurang Aqua :'v",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:34",
+        "actor": "LailaTull Qodri",
+        "msg": "Huu:v mndingan yg akunya ke blok di hpsin sadja:v",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:34",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Tanya admin aja \n Aq bkn admin",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:35",
+        "actor": "Ammar Faizi",
+        "msg": "Bagus",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:35",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke. Ane lanjut dlu um. Btw server scriptol aman kah? Soalnya account um ammar di hekel sma org :3",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:35",
+        "actor": "Ammar Faizi",
+        "msg": "Aman",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:35",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke um :3",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:35",
+        "actor": "Arrayyan Saputra",
+        "msg": "Makasih um :3",
+        "reply": null
     }
 ]
