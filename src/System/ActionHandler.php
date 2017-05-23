@@ -117,6 +117,15 @@ class ActionHandler
             if($chat[$ctnn]['name']==$this->config['name']){
             	continue;
             }
+  $pointer = 0;
+  foreach($chat as $key => $val){
+ 		 	if($val['name']==$this->config['name']){
+  		$pointer = $key;
+  		}
+  }
+  for($i=0;$i<=$pointer;$i++){
+  	unset($chat[$i]);
+  }
             foreach ($chat as $sub) {
                 foreach ($sub['messages'] as $m) {
                     if ($sub['name']!=$this->config['name']  ) {
