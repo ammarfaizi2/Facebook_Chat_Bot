@@ -103,20 +103,32 @@ class ActionHandler
             *	Ambil isi chat
             */
             $room = $this->fb->get_page(substr($link, 1));
-            $chat = ChatController::grchat($room);
+            $chat = Facebook::grchat($room);
+            
             if (count($chat)<2) {
                 $room = $this->fb->get_page(substr($link, 1), 1);
-                $chat = ChatController::grchat($room);
+                $chat = Facebook::grchat($room);
             }
             if (!is_array($chat)) {
-                $rt[$gcn] = "An error occured !";
+                $rt[$gcname] = "An error occured !";
             }
+             $ctnn = count($chat)-1;
             $this->save_chat[] = $chat;
+            if($chat[$ctnn]['name']==$this->config['name']){
+            	continue;
+            }
+  $pointer = 0;
+  foreach($chat as $key => $val){
+ 		 	if($val['name']==$this->config['name']){
+  		$pointer = $key;
+  		}
+  }
+  for($i=0;$i<=$pointer;$i++){
+  	unset($chat[$i]);
+  }
             foreach ($chat as $sub) {
                 foreach ($sub['messages'] as $m) {
-                    $salt = $gcname.$m.date("H Ymd");
-                    if (check($m, $salt) and $sub['name']!=$this->config['name']) {
-                        save($m, $salt);
+                    if ($sub['name']!=$this->config['name']  ) {
                         $st = $this->ai->prepare($m, $sub['name']);
                         if ($st->execute()) {
                             $reply = $st->fetch_reply();

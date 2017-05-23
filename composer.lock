@@ -4,8 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "42a7c8ef2bb64b46b01e434375e4e224",
-    "content-hash": "75a0cbd07f3a61720809e918fc0964ab",
+    "content-hash": "23af80b89f984489ceed84166a428d5f",
     "packages": [
         {
             "name": "ammarfaizi2/ai",
@@ -13,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ammarfaizi2/AI.git",
-                "reference": "42aeff0fceeea5045ea8fd5f1225b420133554f4"
+                "reference": "e90907b35682b9becf4833c35c42cf8dcb70f787"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ammarfaizi2/AI/zipball/42aeff0fceeea5045ea8fd5f1225b420133554f4",
-                "reference": "42aeff0fceeea5045ea8fd5f1225b420133554f4",
+                "url": "https://api.github.com/repos/ammarfaizi2/AI/zipball/e90907b35682b9becf4833c35c42cf8dcb70f787",
+                "reference": "e90907b35682b9becf4833c35c42cf8dcb70f787",
                 "shasum": ""
             },
             "require": {
@@ -42,7 +41,43 @@
                 }
             ],
             "description": "AI",
-            "time": "2017-05-05 16:27:21"
+            "time": "2017-05-22 06:07:45"
+        },
+        {
+            "name": "ammarfaizi2/facebook",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ammarfaizi2/Facebook.git",
+                "reference": "4a890d2080df72ee0032b9551878dbb6c8e65189"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ammarfaizi2/Facebook/zipball/4a890d2080df72ee0032b9551878dbb6c8e65189",
+                "reference": "4a890d2080df72ee0032b9551878dbb6c8e65189",
+                "shasum": ""
+            },
+            "require": {
+                "ammarfaizi2/ratools": "dev-master"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-0": {
+                    "System": "facebook/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "RedAngel PHP Concept"
+            ],
+            "authors": [
+                {
+                    "name": "Ammar Faizi",
+                    "email": "ammarfaizi2@gmail.com"
+                }
+            ],
+            "description": "Facebook Utilities",
+            "time": "2017-05-22 07:39:03"
         },
         {
             "name": "ammarfaizi2/ratools",
@@ -50,12 +85,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ammarfaizi2/RA_Tools.git",
-                "reference": "6ecf997c659b00f03ced94503f7c27ad4e0e5bdf"
+                "reference": "7c0bf4b5b38628c005c38a018e444770728b5331"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ammarfaizi2/RA_Tools/zipball/6ecf997c659b00f03ced94503f7c27ad4e0e5bdf",
-                "reference": "6ecf997c659b00f03ced94503f7c27ad4e0e5bdf",
+                "url": "https://api.github.com/repos/ammarfaizi2/RA_Tools/zipball/7c0bf4b5b38628c005c38a018e444770728b5331",
+                "reference": "7c0bf4b5b38628c005c38a018e444770728b5331",
                 "shasum": ""
             },
             "require": {
@@ -78,14 +113,15 @@
                 }
             ],
             "description": "RA Tools",
-            "time": "2017-05-05 16:01:59"
+            "time": "2017-05-06 13:06:50"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "ammarfaizi2/ai": 20
+        "ammarfaizi2/ai": 20,
+        "ammarfaizi2/facebook": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

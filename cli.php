@@ -5,20 +5,18 @@ use System\AI;
 use System\Install;
 use System\Facebook;
 use System\BotFacebook;
-use System\ChatController;
-
 define('data', __DIR__.'/data');
 define('fb_data', data.'/fb_data');
 is_dir(data) or mkdir(data);
 is_dir(fb_data) or mkdir(fb_data);
-header('Content-type:text/plain');
+#header('Content-type:text/plain');
 $ins = new Install();
 if (!$ins->is_installed()) {
     $ins->install();
 }
 unset($ins);
 
-/// debugging here
+/*// debugging here
 $a = new AI();
 $st = $a->prepare("ask penemu lampu");
 $st->execute();

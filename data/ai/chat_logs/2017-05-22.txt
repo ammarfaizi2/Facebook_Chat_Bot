@@ -1,0 +1,1514 @@
+[
+    {
+        "time": "2017-05-22 14:57:44",
+        "actor": null,
+        "msg": "ask penemu lampu",
+        "reply": "Hasil pencarian dari pertanyaan \n\nPertanyaan yang mirip :\npenemu lampu boklam?\n\nJawaban : \nYaitu Thomas Alva Edison\n"
+    },
+    {
+        "time": "2017-05-22 15:18:58",
+        "actor": "Hanifah Nurwalidaini",
+        "msg": "gabisa seret foto--''",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 15:18:58",
+        "actor": "Hanifah Nurwalidaini",
+        "msg": "",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 15:18:59",
+        "actor": "Muhammad Taufiq Furushima",
+        "msg": "'\\",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 15:18:59",
+        "actor": "Rizki Setyawan",
+        "msg": "All rencana mw beli laptop  saya ada 2 pilihan. Yg pertama 1. Macbook pro 2016 atau 2. Zenbook 3 ??  Kira2 yg cocok mana ya gan, untuk pemrograman node js, react, react native, android studio",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 15:18:59",
+        "actor": "Kindi Setiadi",
+        "msg": "macbook aku wkwk",
+        "reply": "dilarang ketawa !"
+    },
+    {
+        "time": "2017-05-22 15:19:01",
+        "actor": "Rizki Setyawan",
+        "msg": "Kebanyakan programmer pke macbook y gan ??",
+        "reply": "dilarang ketawa !"
+    },
+    {
+        "time": "2017-05-22 15:19:02",
+        "actor": "Veno Park Hyo Jin",
+        "msg": "<i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z6c\/1\/16\/2764.png)\"><\/i>",
+        "reply": "dilarang ketawa !"
+    },
+    {
+        "time": "2017-05-22 15:19:02",
+        "actor": "Icha",
+        "msg": "<i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z6c\/1\/16\/2764.png)\"><\/i>",
+        "reply": "dilarang ketawa !"
+    },
+    {
+        "time": "2017-05-22 15:19:02",
+        "actor": "Veno Park Hyo Jin",
+        "msg": "<i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z6c\/1\/16\/2764.png)\"><\/i>",
+        "reply": "dilarang ketawa !"
+    },
+    {
+        "time": "2017-05-22 15:19:02",
+        "actor": "Icha",
+        "msg": ":v sepi",
+        "reply": "mangap mangap itu gak sehat kang Icha"
+    },
+    {
+        "time": "2017-05-22 15:19:06",
+        "actor": "Alin Chan",
+        "msg": ":v",
+        "reply": "kenapa Alin, laper banget tha?"
+    },
+    {
+        "time": "2017-05-22 15:19:09",
+        "actor": "Arrayyan Saputra",
+        "msg": "savi :V",
+        "reply": "kenapa Arrayyan, laper banget tha?"
+    },
+    {
+        "time": "2017-05-22 15:19:11",
+        "actor": "Erikaga",
+        "msg": "lewat",
+        "reply": "kenapa Arrayyan, laper banget tha?"
+    },
+    {
+        "time": "2017-05-22 15:19:11",
+        "actor": "Agung Suryokusumo",
+        "msg": ":v",
+        "reply": "mangap mangap itu gak sehat kang Agung"
+    },
+    {
+        "time": "2017-05-22 15:19:13",
+        "actor": "\u00d0ik\u00ff",
+        "msg": "ngeng",
+        "reply": "mangap mangap itu gak sehat kang Agung"
+    },
+    {
+        "time": "2017-05-22 15:19:14",
+        "actor": "LailaTull Qodri",
+        "msg": "Sapi kali ini grup:v",
+        "reply": "mangap mangap itu gak sehat kang Agung"
+    },
+    {
+        "time": "2017-05-22 15:19:14",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Mungkun kurang Aqua :'v",
+        "reply": "mangap mangap itu gak sehat kang Agung"
+    },
+    {
+        "time": "2017-05-22 15:19:14",
+        "actor": "LailaTull Qodri",
+        "msg": "Huu:v mndingan yg akunya ke blok di hpsin sadja:v",
+        "reply": "mangap mangap itu gak sehat kang Agung"
+    },
+    {
+        "time": "2017-05-22 15:19:14",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Tanya admin aja \n Aq bkn admin",
+        "reply": "mangap mangap itu gak sehat kang Agung"
+    },
+    {
+        "time": "2017-05-22 15:19:15",
+        "actor": "Ammar Faizi",
+        "msg": "Bagus",
+        "reply": "mangap mangap itu gak sehat kang Agung"
+    },
+    {
+        "time": "2017-05-22 15:19:15",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke. Ane lanjut dlu um. Btw server scriptol aman kah? Soalnya account um ammar di hekel sma org :3",
+        "reply": "mangap mangap itu gak sehat kang Agung"
+    },
+    {
+        "time": "2017-05-22 15:19:15",
+        "actor": "Ammar Faizi",
+        "msg": "Aman",
+        "reply": "mangap mangap itu gak sehat kang Agung"
+    },
+    {
+        "time": "2017-05-22 15:19:15",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke um :3",
+        "reply": "mangap mangap itu gak sehat kang Agung"
+    },
+    {
+        "time": "2017-05-22 15:19:15",
+        "actor": "Arrayyan Saputra",
+        "msg": "Makasih um :3",
+        "reply": "mangap mangap itu gak sehat kang Agung"
+    },
+    {
+        "time": "2017-05-22 15:19:16",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n \n Phone:+62 21 30422800",
+        "reply": "mangap mangap itu gak sehat kang Agung"
+    },
+    {
+        "time": "2017-05-22 15:19:16",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n \n Phone:02130422800",
+        "reply": "mangap mangap itu gak sehat kang Agung"
+    },
+    {
+        "time": "2017-05-22 15:19:16",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n +622130422800",
+        "reply": "mangap mangap itu gak sehat kang Agung"
+    },
+    {
+        "time": "2017-05-22 15:19:16",
+        "actor": "Ammar Faizi",
+        "msg": "FemaleGeek PHP Indonesia\n <a href=\"https:\/\/lm.facebook.com\/l.php?u=https%3A%2F%2Ftelegram.me%2Ffemalegeek&h=ATN8ouIkagMnz3c198jsN8D-Cc8p4EybrU09a3cAcujgfdM9QgwjMwi-EOOvWsxgZ2tZVE8RgYNCo9F7NDs1plIh6tf-LG98aL51HRXKS0Lq-6ZuGTriN6tYpWMvsixy_0m-&s=1\" target=\"_blank\">https:\/\/telegram.me\/\u00adfemalegeek<\/a>",
+        "reply": "mangap mangap itu gak sehat kang Agung"
+    },
+    {
+        "time": "2017-05-22 15:21:34",
+        "actor": "Agung Suryokusumo",
+        "msg": ":v",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 15:21:37",
+        "actor": "\u00d0ik\u00ff",
+        "msg": "ngeng",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 15:21:38",
+        "actor": "Veno Park Hyo Jin",
+        "msg": "<i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z6c\/1\/16\/2764.png)\"><\/i>",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 15:21:38",
+        "actor": "Icha",
+        "msg": "<i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z6c\/1\/16\/2764.png)\"><\/i>",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 15:21:38",
+        "actor": "Veno Park Hyo Jin",
+        "msg": "<i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z6c\/1\/16\/2764.png)\"><\/i>",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 15:21:38",
+        "actor": "Icha",
+        "msg": ":v sepi",
+        "reply": "lu laper sampe mangap mangap gitu? \ud83d\ude0e"
+    },
+    {
+        "time": "2017-05-22 15:21:41",
+        "actor": "Rizki Setyawan",
+        "msg": "All rencana mw beli laptop  saya ada 2 pilihan. Yg pertama 1. Macbook pro 2016 atau 2. Zenbook 3 ??  Kira2 yg cocok mana ya gan, untuk pemrograman node js, react, react native, android studio",
+        "reply": "lu laper sampe mangap mangap gitu? \ud83d\ude0e"
+    },
+    {
+        "time": "2017-05-22 15:21:41",
+        "actor": "Kindi Setiadi",
+        "msg": "macbook aku wkwk",
+        "reply": "dilarang ketawa coeg :v"
+    },
+    {
+        "time": "2017-05-22 15:21:43",
+        "actor": "Rizki Setyawan",
+        "msg": "Kebanyakan programmer pke macbook y gan ??",
+        "reply": "dilarang ketawa coeg :v"
+    },
+    {
+        "time": "2017-05-22 15:21:44",
+        "actor": "Hanifah Nurwalidaini",
+        "msg": "sensei :v",
+        "reply": "dilarang ketawa coeg :v"
+    },
+    {
+        "time": "2017-05-22 15:21:44",
+        "actor": "Farhan-Kun",
+        "msg": "Namanya :v",
+        "reply": "dilarang ketawa coeg :v"
+    },
+    {
+        "time": "2017-05-22 15:21:44",
+        "actor": "Hanifah Nurwalidaini",
+        "msg": "Ga tau :'v aneh ih",
+        "reply": "dilarang ketawa coeg :v"
+    },
+    {
+        "time": "2017-05-22 15:21:44",
+        "actor": "Hanifah Nurwalidaini",
+        "msg": "gabisa seret foto--''",
+        "reply": "dilarang ketawa coeg :v"
+    },
+    {
+        "time": "2017-05-22 15:21:44",
+        "actor": "Hanifah Nurwalidaini",
+        "msg": "",
+        "reply": "dilarang ketawa coeg :v"
+    },
+    {
+        "time": "2017-05-22 15:21:45",
+        "actor": "LailaTull Qodri",
+        "msg": "Sapi kali ini grup:v",
+        "reply": "dilarang ketawa coeg :v"
+    },
+    {
+        "time": "2017-05-22 15:21:45",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Mungkun kurang Aqua :'v",
+        "reply": "dilarang ketawa coeg :v"
+    },
+    {
+        "time": "2017-05-22 15:21:45",
+        "actor": "LailaTull Qodri",
+        "msg": "Huu:v mndingan yg akunya ke blok di hpsin sadja:v",
+        "reply": "dilarang ketawa coeg :v"
+    },
+    {
+        "time": "2017-05-22 15:21:45",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Tanya admin aja \n Aq bkn admin",
+        "reply": "dilarang ketawa coeg :v"
+    },
+    {
+        "time": "2017-05-22 15:21:46",
+        "actor": "Ammar Faizi",
+        "msg": "Bagus",
+        "reply": "dilarang ketawa coeg :v"
+    },
+    {
+        "time": "2017-05-22 15:21:46",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke. Ane lanjut dlu um. Btw server scriptol aman kah? Soalnya account um ammar di hekel sma org :3",
+        "reply": "dilarang ketawa coeg :v"
+    },
+    {
+        "time": "2017-05-22 15:21:46",
+        "actor": "Ammar Faizi",
+        "msg": "Aman",
+        "reply": "dilarang ketawa coeg :v"
+    },
+    {
+        "time": "2017-05-22 15:21:46",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke um :3",
+        "reply": "dilarang ketawa coeg :v"
+    },
+    {
+        "time": "2017-05-22 15:21:46",
+        "actor": "Arrayyan Saputra",
+        "msg": "Makasih um :3",
+        "reply": "dilarang ketawa coeg :v"
+    },
+    {
+        "time": "2017-05-22 15:21:47",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n \n Phone:+62 21 30422800",
+        "reply": "dilarang ketawa coeg :v"
+    },
+    {
+        "time": "2017-05-22 15:21:47",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n \n Phone:02130422800",
+        "reply": "dilarang ketawa coeg :v"
+    },
+    {
+        "time": "2017-05-22 15:21:47",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n +622130422800",
+        "reply": "dilarang ketawa coeg :v"
+    },
+    {
+        "time": "2017-05-22 15:21:47",
+        "actor": "Ammar Faizi",
+        "msg": "FemaleGeek PHP Indonesia\n <a href=\"https:\/\/lm.facebook.com\/l.php?u=https%3A%2F%2Ftelegram.me%2Ffemalegeek&h=ATPkZDvO6v1CFi0_7LG1rIUEtCXwJdQAOCRSthfLzq3gpuycyEWGuwiUiK7HqC_J7kIIHdaO_uSS6MWun4ccYQFjlh5FOz9NJSvKOghGQrgkPGWBu3fOACJOyKGpt2GTXY9L&s=1\" target=\"_blank\">https:\/\/telegram.me\/\u00adfemalegeek<\/a>",
+        "reply": "dilarang ketawa coeg :v"
+    },
+    {
+        "time": "2017-05-22 15:22:07",
+        "actor": "Kindi Setiadi",
+        "msg": "macbook aku wkwk",
+        "reply": "dilarang ketawa \ud83d\ude20\ud83d\ude21"
+    },
+    {
+        "time": "2017-05-22 15:22:09",
+        "actor": "Rizki Setyawan",
+        "msg": "Kebanyakan programmer pke macbook y gan ??",
+        "reply": "dilarang ketawa \ud83d\ude20\ud83d\ude21"
+    },
+    {
+        "time": "2017-05-22 15:22:11",
+        "actor": "\u00d0ik\u00ff",
+        "msg": "ngeng",
+        "reply": "dilarang ketawa \ud83d\ude20\ud83d\ude21"
+    },
+    {
+        "time": "2017-05-22 15:22:12",
+        "actor": "LailaTull Qodri",
+        "msg": "Sapi kali ini grup:v",
+        "reply": "dilarang ketawa \ud83d\ude20\ud83d\ude21"
+    },
+    {
+        "time": "2017-05-22 15:22:12",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Mungkun kurang Aqua :'v",
+        "reply": "dilarang ketawa \ud83d\ude20\ud83d\ude21"
+    },
+    {
+        "time": "2017-05-22 15:22:12",
+        "actor": "LailaTull Qodri",
+        "msg": "Huu:v mndingan yg akunya ke blok di hpsin sadja:v",
+        "reply": "dilarang ketawa \ud83d\ude20\ud83d\ude21"
+    },
+    {
+        "time": "2017-05-22 15:22:12",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Tanya admin aja \n Aq bkn admin",
+        "reply": "dilarang ketawa \ud83d\ude20\ud83d\ude21"
+    },
+    {
+        "time": "2017-05-22 15:22:13",
+        "actor": "Ammar Faizi",
+        "msg": "Bagus",
+        "reply": "dilarang ketawa \ud83d\ude20\ud83d\ude21"
+    },
+    {
+        "time": "2017-05-22 15:22:13",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke. Ane lanjut dlu um. Btw server scriptol aman kah? Soalnya account um ammar di hekel sma org :3",
+        "reply": "dilarang ketawa \ud83d\ude20\ud83d\ude21"
+    },
+    {
+        "time": "2017-05-22 15:22:13",
+        "actor": "Ammar Faizi",
+        "msg": "Aman",
+        "reply": "dilarang ketawa \ud83d\ude20\ud83d\ude21"
+    },
+    {
+        "time": "2017-05-22 15:22:13",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke um :3",
+        "reply": "dilarang ketawa \ud83d\ude20\ud83d\ude21"
+    },
+    {
+        "time": "2017-05-22 15:22:13",
+        "actor": "Arrayyan Saputra",
+        "msg": "Makasih um :3",
+        "reply": "dilarang ketawa \ud83d\ude20\ud83d\ude21"
+    },
+    {
+        "time": "2017-05-22 15:22:14",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n \n Phone:+62 21 30422800",
+        "reply": "dilarang ketawa \ud83d\ude20\ud83d\ude21"
+    },
+    {
+        "time": "2017-05-22 15:22:14",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n \n Phone:02130422800",
+        "reply": "dilarang ketawa \ud83d\ude20\ud83d\ude21"
+    },
+    {
+        "time": "2017-05-22 15:22:14",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n +622130422800",
+        "reply": "dilarang ketawa \ud83d\ude20\ud83d\ude21"
+    },
+    {
+        "time": "2017-05-22 15:22:14",
+        "actor": "Ammar Faizi",
+        "msg": "FemaleGeek PHP Indonesia\n <a href=\"https:\/\/lm.facebook.com\/l.php?u=https%3A%2F%2Ftelegram.me%2Ffemalegeek&h=ATOWTtquB-ygOMACqJpuGLesU2qcvKadmTnQhSdGacyrgScjPES1nn8C4fSKuhYrtcIAzZybwOnd1V8OnY853IWx5G32Y5PH6KBGScACAQez73LEKTKKtkWeXQZeuwPdi5Q7&s=1\" target=\"_blank\">https:\/\/telegram.me\/\u00adfemalegeek<\/a>",
+        "reply": "dilarang ketawa \ud83d\ude20\ud83d\ude21"
+    },
+    {
+        "time": "2017-05-22 11:49:43",
+        "actor": "Alin Chan",
+        "msg": "<i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/zd0\/1\/16\/1f602.png)\"><\/i>",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 11:49:43",
+        "actor": "Fajar Rizki Setiawan",
+        "msg": "Fix out",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 11:49:43",
+        "actor": "Alin Chan",
+        "msg": "Btw",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 11:49:44",
+        "actor": "Cindi Chan",
+        "msg": "Translate :\"\"\"\"\"v",
+        "reply": ": \"\" \"\" \"V"
+    },
+    {
+        "time": "2017-05-22 11:49:47",
+        "actor": "Nafisa Arin Rahma",
+        "msg": "Translate :\"V kalian ngomong apa :'v",
+        "reply": ":\"V kalian ngomong apa :'v"
+    },
+    {
+        "time": "2017-05-22 11:49:50",
+        "actor": "Jeffry Sufianda",
+        "msg": ":v",
+        "reply": "kenapa Jeffry, laper banget tha?"
+    },
+    {
+        "time": "2017-05-22 11:49:53",
+        "actor": "Ramadhan Hidayat",
+        "msg": ":v",
+        "reply": "mangap mangap itu gak sehat kang Ramadhan"
+    },
+    {
+        "time": "2017-05-22 11:49:55",
+        "actor": "Alin Chan",
+        "msg": "Bot comeback",
+        "reply": "mangap mangap itu gak sehat kang Ramadhan"
+    },
+    {
+        "time": "2017-05-22 11:49:58",
+        "actor": "Veno Park Hyo Jin",
+        "msg": "<i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z6c\/1\/16\/2764.png)\"><\/i>",
+        "reply": "mangap mangap itu gak sehat kang Ramadhan"
+    },
+    {
+        "time": "2017-05-22 11:49:58",
+        "actor": "Icha",
+        "msg": ":v sepi",
+        "reply": "mangap mangap itu gak sehat kang Icha"
+    },
+    {
+        "time": "2017-05-22 11:50:00",
+        "actor": "Khong Ghuan Isi Rengginang",
+        "msg": ":\"|",
+        "reply": "mangap mangap itu gak sehat kang Icha"
+    },
+    {
+        "time": "2017-05-22 11:50:02",
+        "actor": "LailaTull Qodri",
+        "msg": "Sapi kali ini grup:v",
+        "reply": "mangap mangap itu gak sehat kang Icha"
+    },
+    {
+        "time": "2017-05-22 11:50:02",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Mungkun kurang Aqua :'v",
+        "reply": "mangap mangap itu gak sehat kang Icha"
+    },
+    {
+        "time": "2017-05-22 11:50:02",
+        "actor": "LailaTull Qodri",
+        "msg": "Huu:v mndingan yg akunya ke blok di hpsin sadja:v",
+        "reply": "mangap mangap itu gak sehat kang Icha"
+    },
+    {
+        "time": "2017-05-22 11:50:02",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Tanya admin aja \n Aq bkn admin",
+        "reply": "mangap mangap itu gak sehat kang Icha"
+    },
+    {
+        "time": "2017-05-22 11:50:03",
+        "actor": "Ammar Faizi",
+        "msg": "Bagus",
+        "reply": "mangap mangap itu gak sehat kang Icha"
+    },
+    {
+        "time": "2017-05-22 11:50:03",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke. Ane lanjut dlu um. Btw server scriptol aman kah? Soalnya account um ammar di hekel sma org :3",
+        "reply": "mangap mangap itu gak sehat kang Icha"
+    },
+    {
+        "time": "2017-05-22 11:50:03",
+        "actor": "Ammar Faizi",
+        "msg": "Aman",
+        "reply": "mangap mangap itu gak sehat kang Icha"
+    },
+    {
+        "time": "2017-05-22 11:50:03",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke um :3",
+        "reply": "mangap mangap itu gak sehat kang Icha"
+    },
+    {
+        "time": "2017-05-22 11:50:03",
+        "actor": "Arrayyan Saputra",
+        "msg": "Makasih um :3",
+        "reply": "mangap mangap itu gak sehat kang Icha"
+    },
+    {
+        "time": "2017-05-22 11:50:04",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n \n Phone:+62 21 30422800",
+        "reply": "mangap mangap itu gak sehat kang Icha"
+    },
+    {
+        "time": "2017-05-22 11:50:04",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n \n Phone:02130422800",
+        "reply": "mangap mangap itu gak sehat kang Icha"
+    },
+    {
+        "time": "2017-05-22 11:50:04",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n +622130422800",
+        "reply": "mangap mangap itu gak sehat kang Icha"
+    },
+    {
+        "time": "2017-05-22 11:50:04",
+        "actor": "Ammar Faizi",
+        "msg": "FemaleGeek PHP Indonesia\n <a href=\"https:\/\/lm.facebook.com\/l.php?u=https%3A%2F%2Ftelegram.me%2Ffemalegeek&h=ATM6WezVy3MoqEtPesavN8HQi7yi5VDcagrCDm2RlX9iqmvESBDfXsqmbxrghNnwgngDdxkN_w7eOLlW6d-5x1WNwIH8QmLOdtA_uslyork95umPT_oo-sIfvRwUqpv-Dc8P&s=1\" target=\"_blank\">https:\/\/telegram.me\/\u00adfemalegeek<\/a>",
+        "reply": "mangap mangap itu gak sehat kang Icha"
+    },
+    {
+        "time": "2017-05-22 11:50:57",
+        "actor": "Yogi Jhie",
+        "msg": ":'v kok kluar",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 11:50:57",
+        "actor": "Gak Usah Kepo",
+        "msg": "Kalo di translate memalu kn njir -,-",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 11:50:58",
+        "actor": "Icha",
+        "msg": ":v sepi",
+        "reply": "mangap mangap itu gak sehat kang Icha"
+    },
+    {
+        "time": "2017-05-22 11:51:01",
+        "actor": "Khong Ghuan Isi Rengginang",
+        "msg": ":\"|",
+        "reply": "mangap mangap itu gak sehat kang Icha"
+    },
+    {
+        "time": "2017-05-22 11:51:02",
+        "actor": "Jeffry Sufianda",
+        "msg": ":v",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 11:51:05",
+        "actor": "Ramadhan Hidayat",
+        "msg": ":v",
+        "reply": "lu laper sampe mangap mangap gitu? \ud83d\ude0e"
+    },
+    {
+        "time": "2017-05-22 11:51:07",
+        "actor": "Alin Chan",
+        "msg": "Bot comeback",
+        "reply": "lu laper sampe mangap mangap gitu? \ud83d\ude0e"
+    },
+    {
+        "time": "2017-05-22 11:51:08",
+        "actor": "Shiroyuki",
+        "msg": "Selamat sore om bot <i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z4c\/1\/16\/1f642.png)\"><\/i>",
+        "reply": "lu laper sampe mangap mangap gitu? \ud83d\ude0e"
+    },
+    {
+        "time": "2017-05-22 11:51:08",
+        "actor": "Shiroyuki",
+        "msg": "<i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z3c\/1\/16\/1f34e.png)\"><\/i>",
+        "reply": "lu laper sampe mangap mangap gitu? \ud83d\ude0e"
+    },
+    {
+        "time": "2017-05-22 11:51:09",
+        "actor": "LailaTull Qodri",
+        "msg": "Sapi kali ini grup:v",
+        "reply": "lu laper sampe mangap mangap gitu? \ud83d\ude0e"
+    },
+    {
+        "time": "2017-05-22 11:51:09",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Mungkun kurang Aqua :'v",
+        "reply": "lu laper sampe mangap mangap gitu? \ud83d\ude0e"
+    },
+    {
+        "time": "2017-05-22 11:51:09",
+        "actor": "LailaTull Qodri",
+        "msg": "Huu:v mndingan yg akunya ke blok di hpsin sadja:v",
+        "reply": "lu laper sampe mangap mangap gitu? \ud83d\ude0e"
+    },
+    {
+        "time": "2017-05-22 11:51:09",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Tanya admin aja \n Aq bkn admin",
+        "reply": "lu laper sampe mangap mangap gitu? \ud83d\ude0e"
+    },
+    {
+        "time": "2017-05-22 11:51:11",
+        "actor": "Ammar Faizi",
+        "msg": "Bagus",
+        "reply": "lu laper sampe mangap mangap gitu? \ud83d\ude0e"
+    },
+    {
+        "time": "2017-05-22 11:51:11",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke. Ane lanjut dlu um. Btw server scriptol aman kah? Soalnya account um ammar di hekel sma org :3",
+        "reply": "lu laper sampe mangap mangap gitu? \ud83d\ude0e"
+    },
+    {
+        "time": "2017-05-22 11:51:11",
+        "actor": "Ammar Faizi",
+        "msg": "Aman",
+        "reply": "lu laper sampe mangap mangap gitu? \ud83d\ude0e"
+    },
+    {
+        "time": "2017-05-22 11:51:11",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke um :3",
+        "reply": "lu laper sampe mangap mangap gitu? \ud83d\ude0e"
+    },
+    {
+        "time": "2017-05-22 11:51:11",
+        "actor": "Arrayyan Saputra",
+        "msg": "Makasih um :3",
+        "reply": "lu laper sampe mangap mangap gitu? \ud83d\ude0e"
+    },
+    {
+        "time": "2017-05-22 11:51:12",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n \n Phone:+62 21 30422800",
+        "reply": "lu laper sampe mangap mangap gitu? \ud83d\ude0e"
+    },
+    {
+        "time": "2017-05-22 11:51:12",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n \n Phone:02130422800",
+        "reply": "lu laper sampe mangap mangap gitu? \ud83d\ude0e"
+    },
+    {
+        "time": "2017-05-22 11:51:12",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n +622130422800",
+        "reply": "lu laper sampe mangap mangap gitu? \ud83d\ude0e"
+    },
+    {
+        "time": "2017-05-22 11:51:12",
+        "actor": "Ammar Faizi",
+        "msg": "FemaleGeek PHP Indonesia\n <a href=\"https:\/\/lm.facebook.com\/l.php?u=https%3A%2F%2Ftelegram.me%2Ffemalegeek&h=ATNBZo8IhDytgVtIt1g0o--Et6UhiGzSKeHQ9R_epxSmAbyanNBpkiAVoE4-1P62JJTOmAYS14EcAn08fP56bEC8ZUJNGFmxA2An0WA4UAanVpFPwoCUprJup2wEqBBhEoaX&s=1\" target=\"_blank\">https:\/\/telegram.me\/\u00adfemalegeek<\/a>",
+        "reply": "lu laper sampe mangap mangap gitu? \ud83d\ude0e"
+    },
+    {
+        "time": "2017-05-22 18:59:12",
+        "actor": "Alin Chan",
+        "msg": ":v",
+        "reply": "mangap mangap itu gak sehat kang Alin"
+    },
+    {
+        "time": "2017-05-22 18:59:14",
+        "actor": "Alin Chan",
+        "msg": "Hooh",
+        "reply": "mangap mangap itu gak sehat kang Alin"
+    },
+    {
+        "time": "2017-05-22 18:59:14",
+        "actor": "Fajar Rizki Setiawan",
+        "msg": "@Lucky Ananda Azhari   mabar lgi gk??",
+        "reply": "mangap mangap itu gak sehat kang Alin"
+    },
+    {
+        "time": "2017-05-22 18:59:14",
+        "actor": "Gak Usah Kepo",
+        "msg": ":v",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:17",
+        "actor": "Hanifah N W",
+        "msg": "Ciee kangen :v",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:20",
+        "actor": "Khong Ghuan Isi Rengginang",
+        "msg": ":\"|",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:21",
+        "actor": "Shiroyuki",
+        "msg": "Selamat sore om bot <i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z4c\/1\/16\/1f642.png)\"><\/i>",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:21",
+        "actor": "Shiroyuki",
+        "msg": "<i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z3c\/1\/16\/1f34e.png)\"><\/i>",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:22",
+        "actor": "LailaTull Qodri",
+        "msg": "Sapi kali ini grup:v",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:22",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Mungkun kurang Aqua :'v",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:22",
+        "actor": "LailaTull Qodri",
+        "msg": "Huu:v mndingan yg akunya ke blok di hpsin sadja:v",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:22",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Tanya admin aja \n Aq bkn admin",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:24",
+        "actor": "Ammar Faizi",
+        "msg": "Bagus",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:24",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke. Ane lanjut dlu um. Btw server scriptol aman kah? Soalnya account um ammar di hekel sma org :3",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:24",
+        "actor": "Ammar Faizi",
+        "msg": "Aman",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:24",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke um :3",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:24",
+        "actor": "Arrayyan Saputra",
+        "msg": "Makasih um :3",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:25",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n \n Phone:+62 21 30422800",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:25",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n \n Phone:02130422800",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:25",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n +622130422800",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 18:59:25",
+        "actor": "Ammar Faizi",
+        "msg": "FemaleGeek PHP Indonesia\n <a href=\"https:\/\/lm.facebook.com\/l.php?u=https%3A%2F%2Ftelegram.me%2Ffemalegeek&h=ATOFIdUQSRSK8hCJDof4_rpDSOuaeXFP7gWex9_rOJ4VKKRVwkNPUO_VlMUKK5ZsA_L4V5hgemBkvadCWvaxYCoWKExFI1Xa59dq_jwMHCVG1w0ntawtLwnB1lVUoMuvf-Pg&s=1\" target=\"_blank\">https:\/\/telegram.me\/\u00adfemalegeek<\/a>",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:49",
+        "actor": "Nafisa Rahma II",
+        "msg": "Akun yg ini aku outin juga yak",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:03:49",
+        "actor": "Hanifah N W",
+        "msg": ":v",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:51",
+        "actor": "Hanifah N W",
+        "msg": "Jangan",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:51",
+        "actor": "Hanifah N W",
+        "msg": "Bala ih :'v",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:51",
+        "actor": "Cindi Chan",
+        "msg": "Hanya karena pp couple jadi gini :3",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:52",
+        "actor": "Alin Chan",
+        "msg": ":'",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:52",
+        "actor": "Alin Chan",
+        "msg": "V",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:53",
+        "actor": "Khong Ghuan Isi Rengginang",
+        "msg": ":\"|",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:54",
+        "actor": "Shiroyuki",
+        "msg": "Selamat sore om bot <i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z4c\/1\/16\/1f642.png)\"><\/i>",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:54",
+        "actor": "Shiroyuki",
+        "msg": "<i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z3c\/1\/16\/1f34e.png)\"><\/i>",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:56",
+        "actor": "LailaTull Qodri",
+        "msg": "Sapi kali ini grup:v",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:56",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Mungkun kurang Aqua :'v",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:56",
+        "actor": "LailaTull Qodri",
+        "msg": "Huu:v mndingan yg akunya ke blok di hpsin sadja:v",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:56",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Tanya admin aja \n Aq bkn admin",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:57",
+        "actor": "Ammar Faizi",
+        "msg": "Bagus",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:57",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke. Ane lanjut dlu um. Btw server scriptol aman kah? Soalnya account um ammar di hekel sma org :3",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:57",
+        "actor": "Ammar Faizi",
+        "msg": "Aman",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:57",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke um :3",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:57",
+        "actor": "Arrayyan Saputra",
+        "msg": "Makasih um :3",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:58",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n \n Phone:+62 21 30422800",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:58",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n \n Phone:02130422800",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:58",
+        "actor": "Ammar Faizi",
+        "msg": "Address: Sentral Senayan II Lantai 28, Jl. Asia Afrika No. 8, Gelora, Tanah Abang, RT.1\/RW.3, Gelora, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia\n +622130422800",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:03:58",
+        "actor": "Ammar Faizi",
+        "msg": "FemaleGeek PHP Indonesia\n <a href=\"https:\/\/lm.facebook.com\/l.php?u=https%3A%2F%2Ftelegram.me%2Ffemalegeek&h=ATOLlEDSRiYa1goVOGh5nEESSj_R_citnAnqHJMJOUZdJILWNToX18b0yHK87ILOLRjzGdfrsiXyt1_KqUJyOQyFz66QbVwKVheBdBs4tCjKV8eG22BekH8VT6if645KUJG_&s=1\" target=\"_blank\">https:\/\/telegram.me\/\u00adfemalegeek<\/a>",
+        "reply": "dilarang mangap \ud83d\ude12"
+    },
+    {
+        "time": "2017-05-22 19:53:11",
+        "actor": "Nafisa Arin Rahma",
+        "msg": "Apa sih bot",
+        "reply": "apa sih kang Nafisa \ud83d\ude06"
+    },
+    {
+        "time": "2017-05-22 19:53:14",
+        "actor": "Ammar Faizi",
+        "msg": "Apa mas?",
+        "reply": "apa sih kang Nafisa \ud83d\ude06"
+    },
+    {
+        "time": "2017-05-22 19:53:14",
+        "actor": "Fajar Rizki Setiawan",
+        "msg": "bukan bot ini mah <i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/zd0\/1\/16\/1f602.png)\"><\/i>",
+        "reply": "apa sih kang Nafisa \ud83d\ude06"
+    },
+    {
+        "time": "2017-05-22 19:53:14",
+        "actor": "Alin Chan",
+        "msg": "Hadeh",
+        "reply": "apa sih kang Nafisa \ud83d\ude06"
+    },
+    {
+        "time": "2017-05-22 19:53:14",
+        "actor": "\u00d0ik\u00ff",
+        "msg": "Kebiasaan Bot kalo sama aku",
+        "reply": "kenapa kang \u00d0ik\u00ff? \ud83d\ude05"
+    },
+    {
+        "time": "2017-05-22 19:53:18",
+        "actor": "Alin Chan",
+        "msg": ":'",
+        "reply": "kenapa kang \u00d0ik\u00ff? \ud83d\ude05"
+    },
+    {
+        "time": "2017-05-22 19:53:18",
+        "actor": "Alin Chan",
+        "msg": "V",
+        "reply": "kenapa kang \u00d0ik\u00ff? \ud83d\ude05"
+    },
+    {
+        "time": "2017-05-22 19:53:20",
+        "actor": "Shiroyuki",
+        "msg": "Selamat sore om bot <i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z4c\/1\/16\/1f642.png)\"><\/i>",
+        "reply": "kenapa kang \u00d0ik\u00ff? \ud83d\ude05"
+    },
+    {
+        "time": "2017-05-22 19:53:20",
+        "actor": "Shiroyuki",
+        "msg": "<i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z3c\/1\/16\/1f34e.png)\"><\/i>",
+        "reply": "kenapa kang \u00d0ik\u00ff? \ud83d\ude05"
+    },
+    {
+        "time": "2017-05-22 19:53:21",
+        "actor": "LailaTull Qodri",
+        "msg": "Sapi kali ini grup:v",
+        "reply": "kenapa kang \u00d0ik\u00ff? \ud83d\ude05"
+    },
+    {
+        "time": "2017-05-22 19:53:21",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Mungkun kurang Aqua :'v",
+        "reply": "kenapa kang \u00d0ik\u00ff? \ud83d\ude05"
+    },
+    {
+        "time": "2017-05-22 19:53:21",
+        "actor": "LailaTull Qodri",
+        "msg": "Huu:v mndingan yg akunya ke blok di hpsin sadja:v",
+        "reply": "kenapa kang \u00d0ik\u00ff? \ud83d\ude05"
+    },
+    {
+        "time": "2017-05-22 19:53:21",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Tanya admin aja \n Aq bkn admin",
+        "reply": "kenapa kang \u00d0ik\u00ff? \ud83d\ude05"
+    },
+    {
+        "time": "2017-05-22 19:53:22",
+        "actor": "Ammar Faizi",
+        "msg": "Bagus",
+        "reply": "kenapa kang \u00d0ik\u00ff? \ud83d\ude05"
+    },
+    {
+        "time": "2017-05-22 19:53:22",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke. Ane lanjut dlu um. Btw server scriptol aman kah? Soalnya account um ammar di hekel sma org :3",
+        "reply": "kenapa kang \u00d0ik\u00ff? \ud83d\ude05"
+    },
+    {
+        "time": "2017-05-22 19:53:22",
+        "actor": "Ammar Faizi",
+        "msg": "Aman",
+        "reply": "kenapa kang \u00d0ik\u00ff? \ud83d\ude05"
+    },
+    {
+        "time": "2017-05-22 19:53:22",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke um :3",
+        "reply": "kenapa kang \u00d0ik\u00ff? \ud83d\ude05"
+    },
+    {
+        "time": "2017-05-22 19:53:22",
+        "actor": "Arrayyan Saputra",
+        "msg": "Makasih um :3",
+        "reply": "kenapa kang \u00d0ik\u00ff? \ud83d\ude05"
+    },
+    {
+        "time": "2017-05-22 19:53:37",
+        "actor": "Nafisa Arin Rahma",
+        "msg": "Apa sih bot",
+        "reply": "ahh kang Nafisa \ud83d\ude02\ud83d\ude02"
+    },
+    {
+        "time": "2017-05-22 19:53:41",
+        "actor": "Alin Chan",
+        "msg": ":'",
+        "reply": "ahh kang Nafisa \ud83d\ude02\ud83d\ude02"
+    },
+    {
+        "time": "2017-05-22 19:53:41",
+        "actor": "Alin Chan",
+        "msg": "V",
+        "reply": "ahh kang Nafisa \ud83d\ude02\ud83d\ude02"
+    },
+    {
+        "time": "2017-05-22 19:53:43",
+        "actor": "Shiroyuki",
+        "msg": "Selamat sore om bot <i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z4c\/1\/16\/1f642.png)\"><\/i>",
+        "reply": "ahh kang Nafisa \ud83d\ude02\ud83d\ude02"
+    },
+    {
+        "time": "2017-05-22 19:53:43",
+        "actor": "Shiroyuki",
+        "msg": "<i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z3c\/1\/16\/1f34e.png)\"><\/i>",
+        "reply": "ahh kang Nafisa \ud83d\ude02\ud83d\ude02"
+    },
+    {
+        "time": "2017-05-22 19:53:45",
+        "actor": "LailaTull Qodri",
+        "msg": "Sapi kali ini grup:v",
+        "reply": "ahh kang Nafisa \ud83d\ude02\ud83d\ude02"
+    },
+    {
+        "time": "2017-05-22 19:53:45",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Mungkun kurang Aqua :'v",
+        "reply": "ahh kang Nafisa \ud83d\ude02\ud83d\ude02"
+    },
+    {
+        "time": "2017-05-22 19:53:45",
+        "actor": "LailaTull Qodri",
+        "msg": "Huu:v mndingan yg akunya ke blok di hpsin sadja:v",
+        "reply": "ahh kang Nafisa \ud83d\ude02\ud83d\ude02"
+    },
+    {
+        "time": "2017-05-22 19:53:45",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Tanya admin aja \n Aq bkn admin",
+        "reply": "ahh kang Nafisa \ud83d\ude02\ud83d\ude02"
+    },
+    {
+        "time": "2017-05-22 19:53:46",
+        "actor": "Ammar Faizi",
+        "msg": "Bagus",
+        "reply": "ahh kang Nafisa \ud83d\ude02\ud83d\ude02"
+    },
+    {
+        "time": "2017-05-22 19:53:46",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke. Ane lanjut dlu um. Btw server scriptol aman kah? Soalnya account um ammar di hekel sma org :3",
+        "reply": "ahh kang Nafisa \ud83d\ude02\ud83d\ude02"
+    },
+    {
+        "time": "2017-05-22 19:53:46",
+        "actor": "Ammar Faizi",
+        "msg": "Aman",
+        "reply": "ahh kang Nafisa \ud83d\ude02\ud83d\ude02"
+    },
+    {
+        "time": "2017-05-22 19:53:46",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke um :3",
+        "reply": "ahh kang Nafisa \ud83d\ude02\ud83d\ude02"
+    },
+    {
+        "time": "2017-05-22 19:53:46",
+        "actor": "Arrayyan Saputra",
+        "msg": "Makasih um :3",
+        "reply": "ahh kang Nafisa \ud83d\ude02\ud83d\ude02"
+    },
+    {
+        "time": "2017-05-22 19:53:53",
+        "actor": "Alin Chan",
+        "msg": ":'",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:53:53",
+        "actor": "Alin Chan",
+        "msg": "V",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:53:56",
+        "actor": "Shiroyuki",
+        "msg": "Selamat sore om bot <i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z4c\/1\/16\/1f642.png)\"><\/i>",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:53:56",
+        "actor": "Shiroyuki",
+        "msg": "<i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z3c\/1\/16\/1f34e.png)\"><\/i>",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:53:57",
+        "actor": "LailaTull Qodri",
+        "msg": "Sapi kali ini grup:v",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:53:57",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Mungkun kurang Aqua :'v",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:53:57",
+        "actor": "LailaTull Qodri",
+        "msg": "Huu:v mndingan yg akunya ke blok di hpsin sadja:v",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:53:57",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Tanya admin aja \n Aq bkn admin",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:53:58",
+        "actor": "Ammar Faizi",
+        "msg": "Bagus",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:53:58",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke. Ane lanjut dlu um. Btw server scriptol aman kah? Soalnya account um ammar di hekel sma org :3",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:53:58",
+        "actor": "Ammar Faizi",
+        "msg": "Aman",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:53:58",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke um :3",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:53:58",
+        "actor": "Arrayyan Saputra",
+        "msg": "Makasih um :3",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:06",
+        "actor": "Alin Chan",
+        "msg": ":'",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:06",
+        "actor": "Alin Chan",
+        "msg": "V",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:09",
+        "actor": "Shiroyuki",
+        "msg": "Selamat sore om bot <i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z4c\/1\/16\/1f642.png)\"><\/i>",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:09",
+        "actor": "Shiroyuki",
+        "msg": "<i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z3c\/1\/16\/1f34e.png)\"><\/i>",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:10",
+        "actor": "LailaTull Qodri",
+        "msg": "Sapi kali ini grup:v",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:10",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Mungkun kurang Aqua :'v",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:10",
+        "actor": "LailaTull Qodri",
+        "msg": "Huu:v mndingan yg akunya ke blok di hpsin sadja:v",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:10",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Tanya admin aja \n Aq bkn admin",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:11",
+        "actor": "Ammar Faizi",
+        "msg": "Bagus",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:11",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke. Ane lanjut dlu um. Btw server scriptol aman kah? Soalnya account um ammar di hekel sma org :3",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:11",
+        "actor": "Ammar Faizi",
+        "msg": "Aman",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:11",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke um :3",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:58:11",
+        "actor": "Arrayyan Saputra",
+        "msg": "Makasih um :3",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:19",
+        "actor": "Alin Chan",
+        "msg": ":'",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:19",
+        "actor": "Alin Chan",
+        "msg": "V",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:21",
+        "actor": "Shiroyuki",
+        "msg": "Selamat sore om bot <i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z4c\/1\/16\/1f642.png)\"><\/i>",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:21",
+        "actor": "Shiroyuki",
+        "msg": "<i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z3c\/1\/16\/1f34e.png)\"><\/i>",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:23",
+        "actor": "LailaTull Qodri",
+        "msg": "Sapi kali ini grup:v",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:23",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Mungkun kurang Aqua :'v",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:23",
+        "actor": "LailaTull Qodri",
+        "msg": "Huu:v mndingan yg akunya ke blok di hpsin sadja:v",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:23",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Tanya admin aja \n Aq bkn admin",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:24",
+        "actor": "Ammar Faizi",
+        "msg": "Bagus",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:24",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke. Ane lanjut dlu um. Btw server scriptol aman kah? Soalnya account um ammar di hekel sma org :3",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:24",
+        "actor": "Ammar Faizi",
+        "msg": "Aman",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:24",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke um :3",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 19:59:24",
+        "actor": "Arrayyan Saputra",
+        "msg": "Makasih um :3",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:30",
+        "actor": "Ramadhan Hidayat",
+        "msg": "Main gta online yok",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:30",
+        "actor": "Alin Chan",
+        "msg": "Gay?",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:31",
+        "actor": "\u00d0ik\u00ff",
+        "msg": "Ammar & BOT = GAY :v",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:31",
+        "actor": "Alin Chan",
+        "msg": "Oh gitu",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:31",
+        "actor": "Alin Chan",
+        "msg": "Yayaya",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:32",
+        "actor": "Khong Ghuan Isi Rengginang",
+        "msg": ":\"|",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:32",
+        "actor": "Icha",
+        "msg": "Saya cewek'-'",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:32",
+        "actor": "Lie Hua",
+        "msg": "halo",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:33",
+        "actor": "Shiroyuki",
+        "msg": "Selamat sore om bot <i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z4c\/1\/16\/1f642.png)\"><\/i>",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:33",
+        "actor": "Shiroyuki",
+        "msg": "<i class=\"_47e3 _3kkw\" style=\"background-image:url(https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v8\/z3c\/1\/16\/1f34e.png)\"><\/i>",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:34",
+        "actor": "LailaTull Qodri",
+        "msg": "Sapi kali ini grup:v",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:34",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Mungkun kurang Aqua :'v",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:34",
+        "actor": "LailaTull Qodri",
+        "msg": "Huu:v mndingan yg akunya ke blok di hpsin sadja:v",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:34",
+        "actor": "Ainul Rikudo Yaqin",
+        "msg": "Tanya admin aja \n Aq bkn admin",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:35",
+        "actor": "Ammar Faizi",
+        "msg": "Bagus",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:35",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke. Ane lanjut dlu um. Btw server scriptol aman kah? Soalnya account um ammar di hekel sma org :3",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:35",
+        "actor": "Ammar Faizi",
+        "msg": "Aman",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:35",
+        "actor": "Arrayyan Saputra",
+        "msg": "Oke um :3",
+        "reply": null
+    },
+    {
+        "time": "2017-05-22 22:30:35",
+        "actor": "Arrayyan Saputra",
+        "msg": "Makasih um :3",
+        "reply": null
+    }
+]
