@@ -23,6 +23,8 @@ $st->execute();
 var_dump($st->fetch_reply());
 die;
 //*/
-
+for($i=0;$i<=10;$i++){
 $app = new BotFacebook($config);
 $app->run();
+sleep(3);
+}
