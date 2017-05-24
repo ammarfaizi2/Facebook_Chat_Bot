@@ -113,34 +113,33 @@ class ActionHandler
             if (!is_array($chat)) {
                 $rt[$gcname] = "An error occured !";
             }
-             $ctnn = count($chat)-1;
+            $ctnn = count($chat)-1;
             $this->save_chat[] = $chat;
-            if($chat[$ctnn]['name']==$this->config['name']){
-            	continue;
+            if ($chat[$ctnn]['name']==$this->config['name']) {
+                continue;
             }
-  $pointer = 0;
-  foreach($chat as $key => $val){
- 		 	if($val['name']==$this->config['name']){
-  		$pointer = $key;
-  		}
-  }
-  for($i=0;$i<=$pointer;$i++){
-  	unset($chat[$i]);
-  }
+            $pointer = 0;
+            foreach ($chat as $key => $val) {
+                if ($val['name']==$this->config['name']) {
+                    $pointer = $key;
+                }
+            }
+            for ($i=0;$i<=$pointer;$i++) {
+                unset($chat[$i]);
+            }
             foreach ($chat as $sub) {
                 foreach ($sub['messages'] as $m) {
-                    if ($sub['name']!=$this->config['name']  ) {
+                    if ($sub['name']!=$this->config['name']) {
                         $st = $this->ai->prepare($m, $sub['name']);
                         if ($st->execute()) {
                             $reply = $st->fetch_reply();
-          if(is_array($reply)){
- $this->fb->send_message($reply[1], null, null, $room);
- $fn = md5($reply[0]).'.jpg';
- file_put_contents($fn,(new CMCurl($reply[0]))->execute());
- $this->fb->upload_photo(realpath($fn),'','', $room);
-          	
-          	} else {
-                            $this->fb->send_message($reply, null, null, $room);
+                            if (is_array($reply)) {
+                                $this->fb->send_message($reply[1], null, null, $room);
+                                $fn = md5($reply[0]).'.jpg';
+                                file_put_contents($fn, (new CMCurl($reply[0]))->execute());
+                                $this->fb->upload_photo(realpath($fn), '', '', $room);
+                            } else {
+                                $this->fb->send_message($reply, null, null, $room);
                             }
                             $action['reply'][$sub['name']] = $reply;
                         }

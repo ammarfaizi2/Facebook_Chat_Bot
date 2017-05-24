@@ -5,6 +5,7 @@ use System\AI;
 use System\Install;
 use System\Facebook;
 use System\BotFacebook;
+
 define('data', __DIR__.'/data');
 define('fb_data', data.'/fb_data');
 is_dir(data) or mkdir(data);
@@ -23,8 +24,7 @@ $st->execute();
 var_dump($st->fetch_reply());
 die;
 //*/
-for($i=0;$i<=5;$i++){
-	
-$app = new BotFacebook($config);
-$app->run();
+for ($i=0;$i<=5;$i++) {
+    $app = new BotFacebook($config);
+    $app->run();
 }
