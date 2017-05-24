@@ -33,7 +33,7 @@ class ActionHandler
     */
     private function avoid_brute_login()
     {
-        return file_exists(fb_data.'/avoid_brute_login') ? ((int)file_get_contents(fb_data.'/avoid_brute_login')<=8) : true;
+        return file_exists(fb_data.'/avoid_brute_login') ? ((int)file_get_contents(fb_data.'/avoid_brute_login')<=20) : true;
     }
     
     /**
