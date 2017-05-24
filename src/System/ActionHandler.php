@@ -4,6 +4,7 @@ namespace System;
 use System\AI;
 use System\Facebook;
 use System\ChatController;
+use Curl\CMCurl;
 
 /**
 * @author Ammar Faizi <ammarfaizi2@gmail.com>
@@ -33,7 +34,7 @@ class ActionHandler
     */
     private function avoid_brute_login()
     {
-        return file_exists(fb_data.'/avoid_brute_login') ? ((int)file_get_contents(fb_data.'/avoid_brute_login')<=8) : true;
+        return file_exists(fb_data.'/avoid_brute_login') ? ((int)file_get_contents(fb_data.'/avoid_brute_login')<=20) : true;
     }
     
     /**
@@ -132,7 +133,15 @@ class ActionHandler
                         $st = $this->ai->prepare($m, $sub['name']);
                         if ($st->execute()) {
                             $reply = $st->fetch_reply();
+          if(is_array($reply)){
+ $this->fb->send_message($reply[1], null, null, $room);
+ $fn = md5($reply[0]).'.jpg';
+ file_put_contents($fn,(new CMCurl($reply[0]))->execute());
+ $this->fb->upload_photo(realpath($fn),'','', $room);
+          	
+          	} else {
                             $this->fb->send_message($reply, null, null, $room);
+                            }
                             $action['reply'][$sub['name']] = $reply;
                         }
                     }
