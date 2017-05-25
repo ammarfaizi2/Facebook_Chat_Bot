@@ -1,15 +1,15 @@
 # Facebook Interactive Chat
 ## By Ammar Faizi
-### Cara pakai : 
-- Rename config.php.dist menjadi config.php
-- Edit config.php sesuai dengan akun Facebook Bot
-- Jalankan cli.php
+### How to use : 
+- Rename config.php.dist to config.php
+- Edit config.php with your Facebook Bot Account
+- Execute cli.php
 
 
 
 
 
-## Instalasi Composer
+## Install Composer
 `composer install`
 
 
