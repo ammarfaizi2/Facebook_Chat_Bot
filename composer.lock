@@ -4,6 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+    "hash": "32aeeb2f30cb556b7cca5ebc0a0247de",
     "content-hash": "23af80b89f984489ceed84166a428d5f",
     "packages": [
         {
@@ -12,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ammarfaizi2/AI.git",
-                "reference": "e90907b35682b9becf4833c35c42cf8dcb70f787"
+                "reference": "d105925e1fdf6a2d0238470d6b5292ae481dbd18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ammarfaizi2/AI/zipball/e90907b35682b9becf4833c35c42cf8dcb70f787",
-                "reference": "e90907b35682b9becf4833c35c42cf8dcb70f787",
+                "url": "https://api.github.com/repos/ammarfaizi2/AI/zipball/d105925e1fdf6a2d0238470d6b5292ae481dbd18",
+                "reference": "d105925e1fdf6a2d0238470d6b5292ae481dbd18",
                 "shasum": ""
             },
             "require": {
@@ -41,7 +42,7 @@
                 }
             ],
             "description": "AI",
-            "time": "2017-05-22 06:07:45"
+            "time": "2017-05-27 06:25:22"
         },
         {
             "name": "ammarfaizi2/facebook",
