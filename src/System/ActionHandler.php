@@ -135,8 +135,12 @@ class ActionHandler
                             $reply = $st->fetch_reply();
                             if (is_array($reply)) {
                                 $this->fb->send_message($reply[1], null, null, $room);
-                                $fn = md5($reply[0]).'.jpg';
-                                file_put_contents($fn, (new CMCurl($reply[0]))->execute());
+                                if (filter_var($reply[0], FILTER_VALIDATE_URL)) {
+                                    $fn = md5($reply[0]).'.jpg';
+                                    file_put_contents($fn, (new CMCurl($reply[0]))->execute());
+                                } else {
+                                    $fn = $reply[0];
+                                }
                                 $this->fb->upload_photo(realpath($fn), '', '', $room);
                             } else {
                                 $this->fb->send_message($reply, null, null, $room);
