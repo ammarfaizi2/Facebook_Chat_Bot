@@ -141,6 +141,7 @@ class ActionHandler
                                 } else {
                                     $fn = $reply[0];
                                 }
+                                file_put_contents('debug.txt', json_encode(array($fn, $sub['name'], realpath($fn))));
                                 $this->fb->upload_photo(realpath($fn), '', '', $room);
                             } else {
                                 $this->fb->send_message($reply, null, null, $room);
