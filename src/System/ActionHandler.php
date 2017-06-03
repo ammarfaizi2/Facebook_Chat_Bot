@@ -1,7 +1,7 @@
 <?php
 namespace System;
 
-use System\AI;
+use AI\AI;
 use System\Facebook;
 use System\ChatController;
 use Curl\CMCurl;
@@ -75,11 +75,11 @@ class ActionHandler
     {
         $src = $this->get_messages_page();
         $n     = new ChatController($src);
-        $st = $n->grb(8);
+        $st = $n->grb(3);
         if ($st===false and $this->avoid_brute_login()) {
-            $this->inc_brute_login() and print $fb->login();
-            $n = new ChatController($fb->go_to($url.'messages'));
-            $st = $n->grb(8);
+            $this->inc_brute_login() and print $this->fb->login();
+            $n = new ChatController($this->fb->get_page($url.'messages'));
+            $st = $n->grb(3);
         } elseif ($st===false) {
             die("Error !");
         }
@@ -94,59 +94,56 @@ class ActionHandler
     */
     private function manage_chat($soruce)
     {
-        if (!is_array($soruce)) {
-            throw new \Exception("Error manage_chat !", 1);
-        }
         $action = array();
-        $this->save_chat = array();
-        foreach ($soruce as $gcname => $link) {
-            /**
-            *	Ambil isi chat
-            */
-            $room = $this->fb->get_page(substr($link, 1));
-            $chat = Facebook::grchat($room);
-            
-            if (count($chat)<2) {
-                $room = $this->fb->get_page(substr($link, 1), 1);
+        if (is_array($soruce)) {
+            foreach ($soruce as $gcname => $link) {
+                /**
+                *	Ambil isi chat
+                */
+                $room = $this->fb->get_page(substr($link, 1));
                 $chat = Facebook::grchat($room);
-            }
-            if (!is_array($chat)) {
-                $rt[$gcname] = "An error occured !";
-            }
-            $ctnn = count($chat)-1;
-            $this->save_chat[] = $chat;
-            if ($chat[$ctnn]['name']==$this->config['name']) {
-                continue;
-            }
-            $pointer = 0;
-            foreach ($chat as $key => $val) {
-                if ($val['name']==$this->config['name']) {
-                    $pointer = $key;
+                
+                if (count($chat)<1 && (rand(0,10)>5)) {
+                    $room = $this->fb->get_page(substr($link, 1), 1);
+                    $chat = Facebook::grchat($room);
                 }
-            }
-            for ($i=0;$i<=$pointer;$i++) {
-                unset($chat[$i]);
-            }
-            foreach ($chat as $sub) {
-                foreach ($sub['messages'] as $m) {
-                    if ($sub['name']!=$this->config['name']) {
-                        $st = $this->ai->prepare($m, $sub['name']);
-                        if ($st->execute()) {
-                            $reply = $st->fetch_reply();
-                            if (is_array($reply)) {
-                                $this->fb->send_message($reply[1], null, null, $room);
-                                if (filter_var($reply[0], FILTER_VALIDATE_URL)) {
-                                    $fn = md5($reply[0]).'.jpg';
-                                    file_put_contents($fn, (new CMCurl($reply[0]))->execute());
+                if (!is_array($chat)) {
+                    $rt[$gcname] = "An error occured !";
+                }
+                $ctnn = count($chat)-1;
+                $this->save_chat[] = $chat;
+                if ($chat[$ctnn]['name']==$this->config['name']) {
+                    continue;
+                }
+                $pointer = 0;
+                foreach ($chat as $key => $val) {
+                    if ($val['name']==$this->config['name']) {
+                        $pointer = $key;
+                    }
+                }
+                for ($i=0;$i<=$pointer;$i++) {
+                    unset($chat[$i]);
+                }
+                foreach ($chat as $sub) {
+                    foreach ($sub['messages'] as $m) {
+                        if ($sub['name']!=$this->config['name']) {
+                            $st = $this->ai->prepare($m, $sub['name']);
+                            if ($st->execute()) {
+                                $reply = $st->fetch_reply();
+                                if (is_array($reply)) {
+                                    $this->fb->send_message($reply[1], null, null, $room);
+                                    if (filter_var($reply[0], FILTER_VALIDATE_URL)) {
+                                        $fn = md5($reply[0]).'.jpg';
+                                        file_put_contents($fn, (new CMCurl($reply[0]))->execute());
+                                    } else {
+                                        $fn = $reply[0];
+                                    }
+                                    $this->fb->upload_photo(realpath($fn), '', '', $room);
                                 } else {
-                                    $fn = $reply[0];
+                                    $this->fb->send_message($reply, null, null, $room);
                                 }
-                                file_put_contents('debug.txt', json_encode(array($fn, $sub['name'], realpath($fn))));
-                                $this->fb->upload_photo(realpath($fn), '', '', $room);
-                            } else {
-                                $this->fb->send_message($reply, null, null, $room);
+                                $action['reply'][$sub['name']] = $reply;
                             }
-                            $action['reply'][$sub['name']] = $reply;
                         }
                     }
                 }
@@ -161,7 +158,7 @@ class ActionHandler
     public function run()
     {
         $this->login_action();
-        $act = $this->manage_chat($this->get_chatroom_url());
+        $act = $this->manage_chat($this->get_chatroom_url(3));
         print_r($act);
         print_r($this->save_chat);
     }
