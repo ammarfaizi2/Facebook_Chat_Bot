@@ -38,45 +38,6 @@
         "description": "RA Tools"
     },
     {
-        "name": "ammarfaizi2/ai",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/ammarfaizi2/AI.git",
-            "reference": "d105925e1fdf6a2d0238470d6b5292ae481dbd18"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/ammarfaizi2/AI/zipball/d105925e1fdf6a2d0238470d6b5292ae481dbd18",
-            "reference": "d105925e1fdf6a2d0238470d6b5292ae481dbd18",
-            "shasum": ""
-        },
-        "require": {
-            "ammarfaizi2/ratools": "dev-master"
-        },
-        "time": "2017-05-27 06:25:22",
-        "type": "project",
-        "installation-source": "source",
-        "autoload": {
-            "psr-0": {
-                "App": "src/",
-                "System": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "RedAngel PHP Concept"
-        ],
-        "authors": [
-            {
-                "name": "Ammar Faizi",
-                "email": "ammarfaizi2@gmail.com"
-            }
-        ],
-        "description": "AI"
-    },
-    {
         "name": "ammarfaizi2/facebook",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -113,5 +74,79 @@
             }
         ],
         "description": "Facebook Utilities"
+    },
+    {
+        "name": "ammarfaizi2/teacrypt",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ammarfaizi2/teacrypt.git",
+            "reference": "8ac200ca2338b386d25ace0da83dc67275704daf"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ammarfaizi2/teacrypt/zipball/8ac200ca2338b386d25ace0da83dc67275704daf",
+            "reference": "8ac200ca2338b386d25ace0da83dc67275704daf",
+            "shasum": ""
+        },
+        "time": "2017-06-02 06:31:24",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Teacrypt\\": "Teacrypt/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD"
+        ],
+        "authors": [
+            {
+                "name": "Ammar Faizi",
+                "email": "ammarfaizi2@gmail.com"
+            }
+        ]
+    },
+    {
+        "name": "ammarfaizi2/ai",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ammarfaizi2/AI.git",
+            "reference": "e9ea8d29fea681564a86fc8f769ba317c0748517"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ammarfaizi2/AI/zipball/e9ea8d29fea681564a86fc8f769ba317c0748517",
+            "reference": "e9ea8d29fea681564a86fc8f769ba317c0748517",
+            "shasum": ""
+        },
+        "require": {
+            "ammarfaizi2/ratools": "*",
+            "ammarfaizi2/teacrypt": "*"
+        },
+        "time": "2017-06-03 06:29:21",
+        "type": "project",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "AI": "src/",
+                "App": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD"
+        ],
+        "authors": [
+            {
+                "name": "Ammar Faizi",
+                "email": "ammarfaizi2@gmail.com"
+            }
+        ],
+        "description": "AI"
     }
 ]
