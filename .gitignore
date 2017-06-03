@@ -1,3 +1,5 @@
-vendor/ammarfaizi2/ins.hash
-data/
+/vendor/ammarfaizi2/ins.hash
+/data/ai
+/data/brainly
+/data/google
 config.php
