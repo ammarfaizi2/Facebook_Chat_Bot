@@ -12,7 +12,8 @@
     "license": "BSD",
     "autoload": {
         "psr-0": {
-            "Bot": "src/"
+            "Bot": "src/",
+            "Hub": "src/"
         },
         "files":[
             "config.php"

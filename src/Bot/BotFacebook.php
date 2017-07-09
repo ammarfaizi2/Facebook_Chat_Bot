@@ -9,6 +9,7 @@ namespace Bot;
  */
 
 use AI\AI;
+use Hub\Singleton;
 use Facebook\Facebook;
 
 class BotFacebook
@@ -29,4 +30,8 @@ class BotFacebook
 	{
 		$this->fb = new Facebook($email, $pass, $user);
 	}
+
+	/**
+	 * Run it.
+	 */
 }
