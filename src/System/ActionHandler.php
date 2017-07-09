@@ -72,12 +72,10 @@ class ActionHandler
     */
     private function get_chatroom_url()
     {
-        $src = $this->get_messages_page();
-        $n     = new ChatController($src);
-        $st = $n->grb(8);
+        $st = (new ChatController($this->get_messages_page()))->grb(8);
         if ($st===false and $this->avoid_brute_login()) {
-            $this->inc_brute_login() and print $fb->login();
-            $n = new ChatController($fb->go_to($url.'messages'));
+            $this->inc_brute_login() and print $this->fb->login();
+            $n = new ChatController((new ChatController($this->get_messages_page()))->grb(8));
             $st = $n->grb(8);
         } elseif ($st===false) {
             die("Error !");
@@ -103,13 +101,14 @@ class ActionHandler
             *	Ambil isi chat
             */
             $room = $this->fb->get_page(substr($link, 1));
+            //print $room;die;
             $chat = ChatController::grchat($room);
             if (count($chat)<2) {
                 $room = $this->fb->get_page(substr($link, 1), 1);
                 $chat = ChatController::grchat($room);
             }
             if (!is_array($chat)) {
-                $rt[$gcn] = "An error occured !";
+                $rt[$gcname] = "An error occured !";
             }
             $this->save_chat[] = $chat;
             foreach ($chat as $sub) {
@@ -118,13 +117,16 @@ class ActionHandler
                     if (check($m, $salt) and $sub['name']!=$this->config['name']) {
                         save($m, $salt);
                         $st = $this->ai->prepare($m, $sub['name']);
-                        if ($st->execute()) {
+                        if ($exe=$st->execute()) {
                             $reply = $st->fetch_reply();
                             $this->fb->send_message($reply, null, null, $room);
                             $action['reply'][$sub['name']] = $reply;
                         }
                     }
                 }
+                var_dump($action);
+                var_dump($exe);
+                die;
             }
         }
         return $action;

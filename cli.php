@@ -18,9 +18,15 @@ if (!$ins->is_installed()) {
 }
 unset($ins);
 
-/*// debugging here
+
+$a = new Comment();
+$a->run();
+
+
+die;
+/// debugging here
 $a = new AI();
-$st = $a->prepare("ask penemu lampu");
+$st = $a->prepare("ps axu","Ammar Faizi");
 $st->execute();
 var_dump($st->fetch_reply());
 die;
