@@ -9,6 +9,7 @@ namespace Bot;
  */
 
 use AI\AI;
+use Bot\CL;
 use Hub\Singleton;
 use Bot\RoomGrabber;
 use Bot\ChatGrabber;
@@ -45,6 +46,7 @@ class BotFacebook extends IlluminateAbstraction implements DragonContract, Thund
      */
     public function __construct($email, $pass, $user, $name)
     {
+        date_default_timezone_set("Asia/Jakarta");
         $this->fb = new Facebook($email, $pass, $user);
         $this->name = $name;
     }
@@ -149,6 +151,11 @@ class BotFacebook extends IlluminateAbstraction implements DragonContract, Thund
             $out = $ai->output();
         }
         return $out;
+    }
+
+    private function savel_chat($string)
+    {
+        new CL("[".date("Y-m-d H:i:s")."]\n".$string."\n\n\n");
     }
 
     /**

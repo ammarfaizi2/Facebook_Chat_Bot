@@ -25,6 +25,6 @@
     },
     "require": {
         "ammarfaizi2/ai": "dev-master",
-        "ammarfaizi2/facebook": "^1.1"
+        "ammarfaizi2/facebook": "^1.2"
     }
 }
