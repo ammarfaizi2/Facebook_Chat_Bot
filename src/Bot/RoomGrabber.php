@@ -74,7 +74,6 @@ class RoomGrabber extends IlluminateSupply implements BlueFishContract
                 }
             }
         }
-        var_dump($this->rooms);die;
     }
 
     /**

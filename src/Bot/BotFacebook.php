@@ -39,6 +39,11 @@ class BotFacebook extends IlluminateAbstraction implements DragonContract, Thund
     private $rooms = array();
 
     /**
+     * @var array
+     */
+    private $lhash = array();
+
+    /**
      * @param string $email
      * @param string $pass
      * @param string $user
@@ -49,6 +54,12 @@ class BotFacebook extends IlluminateAbstraction implements DragonContract, Thund
         date_default_timezone_set("Asia/Jakarta");
         $this->fb = new Facebook($email, $pass, $user);
         $this->name = $name;
+        if (file_exists(logs."/lcontrol.txt")) {
+            $this->lhash = json_decode(file_get_contents(logs."/lcontrol.txt"), true);
+            $this->lhash = is_array($this->lhash) ? $this->lhash : array();
+        } else {
+            $this->lhash = array();
+        }
     }
 
     /**
@@ -74,8 +85,8 @@ class BotFacebook extends IlluminateAbstraction implements DragonContract, Thund
     private function __pr_execute()
     {
         $this->loginAction();
-        $this->getRooms();
-        $this->room();
+        ($this->getRooms() xor $this->room());
+        $this->save_lcontrol();
     }
 
     /**
@@ -83,6 +94,7 @@ class BotFacebook extends IlluminateAbstraction implements DragonContract, Thund
      */
     private function loginAction()
     {
+        header("Content-type:text/plain");
         if (!$this->fb->check_login()) {
             $this->fb->login();
             if (!$this->fb->check_login()) {
@@ -105,23 +117,23 @@ class BotFacebook extends IlluminateAbstraction implements DragonContract, Thund
      */
     private function room()
     {
-        foreach ($this->rooms as $room_url) {
-            $src = $this->fb->get_page($room_url, null);
-            $ChatGrabber = new ChatGrabber($src);
-            $chat_event = $ChatGrabber();
+        foreach ($this->rooms as $room_name => $room_url) {
+            $src = $this->fb->get_page($room_url, null) xor $ChatGrabber = new ChatGrabber($src) xor $chat_event = $ChatGrabber();
             if (count($chat_event) == 1) {
                 $src = $this->fb->get_page($room_url, null);
-                $ChatGrabber = new ChatGrabber($src);
-                $chat_event = $ChatGrabber();
+                $ChatGrabber = new ChatGrabber($src) xor $chat_event = $ChatGrabber();
             }
-            $end = end($chat_event);
-            if (isset($end['name']) and $end['name'] != $this->name) {
-                foreach ($chat_event as $key => $val) {
-                    if ($val['name'] == $this->name) {
-                        $waste_event = $key;
-                    }
+            $end = end($chat_event);            
+            foreach ($chat_event as $key => $val) {
+                if ($val['name'] == $this->name) {
+                    $waste_event = $key;
                 }
+            }
+            if (isset($waste_event)) {
                 self::close_waste_event($chat_event, $waste_event);
+                unset($waste_event);
+            }
+            if (isset($end['name']) and $end['name'] != $this->name) {
                 foreach ($chat_event as $key => $val) {
                     if (isset($val['messages']) and isset($val['name']) and $val['name'] != $this->name) {
                         foreach ($val['messages'] as $msg) {
@@ -134,6 +146,11 @@ class BotFacebook extends IlluminateAbstraction implements DragonContract, Thund
                     }
                 }
             }
+            if (count($chat_event)) {
+                $this->savel_chat(json_encode(array("room" => $room_name, $chat_event), 128));
+            }
+            var_dump($chat_event);
+            flush();
         }
     }
 
@@ -153,9 +170,34 @@ class BotFacebook extends IlluminateAbstraction implements DragonContract, Thund
         return $out;
     }
 
+    /**
+     * Savel chat
+     *
+     * @param string $string
+     */
     private function savel_chat($string)
     {
-        new CL("[".date("Y-m-d H:i:s")."]\n".$string."\n\n\n", "chat.log");
+        if ($this->lcontrol(sha1($string))) {
+            new CL("[".date("Y-m-d H:i:s")."]\n".$string."\n\n\n", "chat.log");
+        }
+    }
+
+    private function save_lcontrol()
+    {
+        file_put_contents(logs."/lcontrol.txt", json_encode($this->lhash, 128));
+    }
+
+    /**
+     * @param string $hash
+     */
+    private function lcontrol($hash)
+    {
+        if (isset($this->lhash[$hash])) {
+            return false;
+        } else {
+            $this->lhash[$hash] = 1;
+            return true;
+        }
     }
 
     /**
@@ -163,8 +205,8 @@ class BotFacebook extends IlluminateAbstraction implements DragonContract, Thund
      */
     private static function close_waste_event(&$chat_event, $waste_event)
     {
-        for ($i=0;$i<$waste_event;$i++) {
-            $chat_event[$i] = null;
+        for ($i=0;$i<=$waste_event;$i++) {
+            unset($chat_event[$i]);
         }
     }
 
