@@ -150,7 +150,7 @@ class BotFacebook extends IlluminateAbstraction implements DragonContract, Thund
      */
     private static function close_waste_event(&$chat_event, $waste_event)
     {
-        for ($i=0; $i < $waste_event; $i++) { 
+        for ($i=0; $i < $waste_event; $i++) {
             $chat_event[$i] = null;
         }
     }
@@ -172,6 +172,5 @@ class BotFacebook extends IlluminateAbstraction implements DragonContract, Thund
 
     public function __destruct()
     {
-
     }
 }

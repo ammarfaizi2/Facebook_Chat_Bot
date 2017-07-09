@@ -4,8 +4,8 @@ namespace Hub\Contracts;
 
 interface DragonContract
 {
-	/**
-	 * Destructor.
-	 */
-	public function __destruct();
+    /**
+     * Destructor.
+     */
+    public function __destruct();
 }

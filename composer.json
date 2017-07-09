@@ -1,7 +1,14 @@
 {
     "name": "ammarfaizi2/botfb",
     "description": "Bot Facebook",
-    "type": "Project",
+    "keywords": [
+        "Artificial Inteligence",
+        "AI",
+        "Facebook Bot",
+        "Facebook Interactive Chat",
+        "Chat Bot"
+    ],
+    "type": "package",
     "minimum-stability": "dev",
     "authors": [
         {
