@@ -58,6 +58,7 @@ class RoomGrabber
 
 	/**
 	 * @param int $limit
+	 * @return array
 	 */
 	public function __invoke($limit = null)
 	{
