@@ -106,9 +106,7 @@ class BotFacebook extends IlluminateAbstraction implements DragonContract, Thund
                 $ChatGrabber = new ChatGrabber($src);
                 $chat_event = $ChatGrabber();
             }
-            var_dump($chat_event);
             $end = end($chat_event);
-            print "\n\n\n\n";
             if (isset($end['name']) and $end['name'] != $this->name) {
                 foreach ($chat_event as $key => $val) {
                     if ($val['name'] == $this->name) {
