@@ -14,10 +14,7 @@
         "psr-0": {
             "Bot": "src/",
             "Hub": "src/"
-        },
-        "files":[
-            "config.php"
-        ]
+        }
     },
     "require": {
         "ammarfaizi2/ai": "dev-master",
