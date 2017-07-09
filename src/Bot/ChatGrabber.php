@@ -41,35 +41,41 @@ class ChatGrabber extends IlluminateSupply implements DragonContract
             return trim(str_replace("<br />", "\n", html_entity_decode($str, ENT_QUOTES, 'UTF-8')));
         };
         $a = explode('<div id="messageGroup">', $this->src, 2);
-        $a = explode('<form method="post"', $a[1], 2);
-        $a = explode('<div>', $a[0], 2);
-        $b = explode('>', $a[1]);
-        $b = $b[0];
-        $a = explode($b, $a[1]);
-        $b = explode('>', $a[1], 5);
-        $b = $b[3].'>';
-        $count_a = count($a);
-        for ($i=1;$i<$count_a;$i++) {
-            $c = explode($b, $a[$i], 2);
-            if (isset($c[1])) {
-                $c = explode('</strong>', $c[1], 2);
-                $name = trim($fx($c[0]));
-                $c = explode("<span>", $c[1]);
-                $count_c = count($c);
-                $f = array();
-                for ($j=0;$j<$count_c;$j++) {
-                    if (strpos($c[$j], "<abbr>")!==false) {
-                        break;
-                    } else {
-                        $e = trim(strip_tags($fx($c[$j])));
-                        !empty($e) and $f[] = $e;
+        if (isset($a[1])) {
+            $a = explode('<form method="post"', $a[1], 2);
+            $a = explode('<div>', $a[0], 2);
+            if (isset($a[1])) {
+                $b = explode('>', $a[1]);
+                $b = $b[0];
+                $a = explode($b, $a[1]);
+                $b = explode('>', $a[1], 5);
+                if (isset($b[3])) {
+                    $b = $b[3].'>';
+                    $count_a = count($a);
+                    for ($i=1;$i<$count_a;$i++) {
+                        $c = explode($b, $a[$i], 2);
+                        if (isset($c[1])) {
+                            $c = explode('</strong>', $c[1], 2);
+                            $name = trim($fx($c[0]));
+                            $c = explode("<span>", $c[1]);
+                            $count_c = count($c);
+                            $f = array();
+                            for ($j=0;$j<$count_c;$j++) {
+                                if (strpos($c[$j], "<abbr>")!==false) {
+                                    break;
+                                } else {
+                                    $e = trim(strip_tags($fx($c[$j])));
+                                    !empty($e) and $f[] = $e;
+                                }
+                            }
+                            if (count($f)) {
+                                $this->events[] = array(
+                                "name" => $name,
+                                "messages" => $f
+                                );
+                            }
+                        }
                     }
-                }
-                if (count($f)) {
-                    $this->events[] = array(
-                    "name" => $name,
-                    "messages" => $f
-                    );
                 }
             }
         }

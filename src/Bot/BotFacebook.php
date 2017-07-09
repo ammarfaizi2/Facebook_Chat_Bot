@@ -59,6 +59,9 @@ class BotFacebook extends IlluminateAbstraction implements DragonContract, Thund
         is_dir(data) or mkdir(data);
         is_dir(logs) or mkdir(logs);
         is_dir(fb_data) or mkdir(fb_data);
+        if (is_dir(data) and is_dir(logs) and is_dir(fb_data)) {
+            die("Gagal membuat folder");
+        }
         $self = self::getInstance($config['email'], $config['pass'], $config['user'], $config['name']);
         $self->__pr_execute();
     }
@@ -79,7 +82,10 @@ class BotFacebook extends IlluminateAbstraction implements DragonContract, Thund
     private function loginAction()
     {
         if (!$this->fb->check_login()) {
-            print $this->fb->login();
+            $this->fb->login();
+            if (!$this->fb->check_login()) {
+                header("location:browser.php");
+            }
         }
     }
 
@@ -150,7 +156,7 @@ class BotFacebook extends IlluminateAbstraction implements DragonContract, Thund
      */
     private static function close_waste_event(&$chat_event, $waste_event)
     {
-        for ($i=0; $i < $waste_event; $i++) {
+        for ($i=0;$i<$waste_event;$i++) {
             $chat_event[$i] = null;
         }
     }
