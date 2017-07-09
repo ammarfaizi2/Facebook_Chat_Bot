@@ -51,23 +51,25 @@ class ChatGrabber extends IlluminateSupply implements DragonContract
 		$count_a = count($a);
 		for ($i=1;$i<$count_a;$i++) { 
 			$c = explode($b, $a[$i], 2);
-			$c = explode('</strong>', $c[1], 2);
-			$name = trim($fx($c[0]));
-			$c = explode("<span>", $c[1]);
-			$count_c = count($c); $f = array();
-			for($j=0;$j<$count_c;$j++){
-				if (strpos($c[$j], "<abbr>")!==false) {
-					break;
-				} else {
-					$e = trim(strip_tags($fx($c[$j])));
-					!empty($e) and $f[] = $e;
+			if (isset($c[1])) {
+				$c = explode('</strong>', $c[1], 2);
+				$name = trim($fx($c[0]));
+				$c = explode("<span>", $c[1]);
+				$count_c = count($c); $f = array();
+				for($j=0;$j<$count_c;$j++){
+					if (strpos($c[$j], "<abbr>")!==false) {
+						break;
+					} else {
+						$e = trim(strip_tags($fx($c[$j])));
+						!empty($e) and $f[] = $e;
+					}
 				}
-			}
-			if (count($f)) {
-				$this->events[] = array(
-					"name" => $name,
-					"messages" => $f
-				);
+				if (count($f)) {
+					$this->events[] = array(
+						"name" => $name,
+						"messages" => $f
+					);
+				}
 			}
 		}
 	}

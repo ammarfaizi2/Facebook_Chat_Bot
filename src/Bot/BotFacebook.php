@@ -47,7 +47,6 @@ class BotFacebook extends IlluminateAbstraction implements DragonContract, Thund
     {
         $this->fb = new Facebook($email, $pass, $user);
         $this->name = $name;
-        $this->ai = new AI();
     }
 
     /**
@@ -107,13 +106,57 @@ class BotFacebook extends IlluminateAbstraction implements DragonContract, Thund
                 $ChatGrabber = new ChatGrabber($src);
                 $chat_event = $ChatGrabber();
             }
-            var_dump($chat_event);die;
+            var_dump($chat_event);
+            $end = end($chat_event);
+            print "\n\n\n\n";
+            if (isset($end['name']) and $end['name'] != $this->name) {
+                foreach ($chat_event as $key => $val) {
+                    if ($val['name'] == $this->name) {
+                        $waste_event = $key;
+                    }
+                }
+                self::close_waste_event($chat_event, $waste_event);
+                foreach ($chat_event as $key => $val) {
+                    if (isset($val['messages']) and isset($val['name']) and $val['name'] != $this->name) {
+                        foreach ($val['messages'] as $msg) {
+                            if ($reply = $this->ai_isolator($msg, $val['name'])) {
+                                if (isset($reply['text'][0])) {
+                                    $this->fb->send_message($reply['text'][0], null, null, $src);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            var_dump($chat_event);
+            die;
         }
     }
 
-    private function ai_isolator($message)
+    /**
+     * @param string $message
+     * @param string $actor
+     * @return mixed
+     */
+    private function ai_isolator($message, $actor = "")
     {
+        $ai = new AI();
+        $out = false;
+        $ai->input($message, $actor);
+        if ($ai->execute()) {
+            $out = $ai->output();
+        }
+        return $out;
+    }
 
+    /**
+     * Close waste event
+     */
+    private static function close_waste_event(&$chat_event, $waste_event)
+    {
+        for ($i=0; $i < $waste_event; $i++) { 
+            $chat_event[$i] = null;
+        }
     }
 
     /**
