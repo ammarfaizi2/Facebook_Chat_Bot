@@ -1,4 +1,6 @@
 <?php
+define("fb_data", __DIR__.'/fb_data');
+
 $config = array(
     'name'    =>    'Ammar Kazuhiko Kanazawa',
     'user'    =>    'ammarfaizi93',
