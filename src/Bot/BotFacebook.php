@@ -61,7 +61,7 @@ class BotFacebook extends IlluminateAbstraction implements DragonContract, Thund
         is_dir(data) or mkdir(data);
         is_dir(logs) or mkdir(logs);
         is_dir(fb_data) or mkdir(fb_data);
-        if (is_dir(data) and is_dir(logs) and is_dir(fb_data)) {
+        if (!(is_dir(data) and is_dir(logs) and is_dir(fb_data))) {
             die("Gagal membuat folder");
         }
         $self = self::getInstance($config['email'], $config['pass'], $config['user'], $config['name']);
@@ -155,7 +155,7 @@ class BotFacebook extends IlluminateAbstraction implements DragonContract, Thund
 
     private function savel_chat($string)
     {
-        new CL("[".date("Y-m-d H:i:s")."]\n".$string."\n\n\n");
+        new CL("[".date("Y-m-d H:i:s")."]\n".$string."\n\n\n", "chat.log");
     }
 
     /**
