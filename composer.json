@@ -2,9 +2,6 @@
     "name": "ammarfaizi2/botfb",
     "description": "Bot Facebook",
     "type": "Project",
-    "require": {
-        "ammarfaizi2/ai": "dev-master"
-    },
     "minimum-stability": "dev",
     "authors": [
         {
@@ -12,9 +9,14 @@
             "email": "ammarfaizi2@gmail.com"
         }
     ],
+    "license": "BSD",
     "autoload": {
         "psr-0": {
-            "System": "src/"
+            "Bot": "src/"
         }
+    },
+    "require": {
+        "ammarfaizi2/ai": "dev-master",
+        "ammarfaizi2/facebook": "^1.1"
     }
 }
