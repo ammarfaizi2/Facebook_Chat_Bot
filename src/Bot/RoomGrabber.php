@@ -8,7 +8,10 @@ namespace Bot;
  * @license BSD
  */
 
-class RoomGrabber
+use Hub\Contracts\BlueFishContract;
+use Hub\Abstraction\IlluminateSupply;
+
+class RoomGrabber extends IlluminateSupply implements BlueFishContract
 {	
 	/**
 	 * @var string
@@ -64,5 +67,13 @@ class RoomGrabber
 	{
 		$this->real_grabber();
 		return $this->rooms;
+	}
+
+	/**
+	 * Destructor.
+	 */
+	public function __destruct()
+	{
+		unset($this->src);
 	}
 }

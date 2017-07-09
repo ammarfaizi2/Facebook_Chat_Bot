@@ -13,10 +13,12 @@ use Hub\Singleton;
 use Bot\RoomGrabber;
 use Bot\ChatGrabber;
 use Facebook\Facebook;
-use Hub\Contracts\BotContract;
+use Hub\Contracts\DragonContract;
+use Hub\Contracts\ThunderContract;
+use Hub\Contracts\BlueFishContract;
 use Hub\Abstraction\IlluminateAbstraction;
 
-class BotFacebook extends IlluminateAbstraction implements BotContract
+class BotFacebook extends IlluminateAbstraction implements DragonContract, ThunderContract, BlueFishContract
 {
     const VERSION = "2.0.1";
 
@@ -131,6 +133,6 @@ class BotFacebook extends IlluminateAbstraction implements BotContract
 
     public function __destruct()
     {
-        
+
     }
 }

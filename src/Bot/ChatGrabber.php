@@ -8,7 +8,10 @@ namespace Bot;
  * @license BSD
  */
 
-class ChatGrabber
+use Hub\Contracts\DragonContract;
+use Hub\Abstraction\IlluminateSupply;
+
+class ChatGrabber extends IlluminateSupply implements DragonContract
 {	
 	/**
 	 * @var string
@@ -28,6 +31,9 @@ class ChatGrabber
 		$this->src = $src;
 	}
 
+	/**
+	 * Parse Event
+	 */
 	private function parseEvents()
 	{
 		$fx = function ($str)
@@ -73,5 +79,13 @@ class ChatGrabber
 	{
 		$this->parseEvents();
 		return $this->events;
+	}
+
+	/**
+	 * Destructor.
+	 */
+	public function __destruct()
+	{
+		unset($this->src);
 	}
 }

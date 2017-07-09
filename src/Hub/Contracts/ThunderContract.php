@@ -2,7 +2,7 @@
 
 namespace Hub\Contracts;
 
-interface BotContract
+interface ThunderContract
 {
 	/**
      * @param string $email
