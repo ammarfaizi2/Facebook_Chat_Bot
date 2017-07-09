@@ -2,4 +2,7 @@
 /data
 /config.php
 *.lock
+*.tmp
 /ice
+/test.php
+/fb_data
