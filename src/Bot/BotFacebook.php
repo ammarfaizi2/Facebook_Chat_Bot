@@ -14,24 +14,41 @@ use Facebook\Facebook;
 
 class BotFacebook
 {
-	const VERSION = "2.0.1";
+    const VERSION = "2.0.1";
 
-	/**
-	 * @var Facebook\Facebook
-	 */
-	private $fb;
+    /**
+     * Use Singleton trait.
+     */
+    use Singleton;
 
-	/**
-	 * @param string $email
-	 * @param string $pass
-	 * @param string $user
-	 */
-	public function __construct($email, $pass, $user)
-	{
-		$this->fb = new Facebook($email, $pass, $user);
-	}
+    /**
+     * @var Facebook\Facebook
+     */
+    private $fb;
 
-	/**
-	 * Run it.
-	 */
+    /**
+     * @param string $email
+     * @param string $pass
+     * @param string $user
+     */
+    public function __construct($email, $pass, $user)
+    {
+        $this->fb = new Facebook($email, $pass, $user);
+    }
+
+    /**
+     * Run it.
+     */
+    public static function run($config)
+    {
+        $self = self::getInstance();
+    }
+
+    /**
+     * Login
+     */
+    protected function loginAction()
+    {
+
+    }
 }
