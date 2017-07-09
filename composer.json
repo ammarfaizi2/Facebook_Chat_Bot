@@ -3,17 +3,15 @@
     "description": "Bot Facebook",
     "type": "Project",
     "require": {
-        "ammarfaizi2/ai": "dev-master",
-        "ammarfaizi2/facebook": "dev-master"
+        "ammarfaizi2/ai": "dev-master"
     },
-    "license": "RedAngel PHP Concept",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Ammar Faizi",
             "email": "ammarfaizi2@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "autoload": {
         "psr-0": {
             "System": "src/"

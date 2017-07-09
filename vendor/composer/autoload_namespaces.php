@@ -6,8 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'System' => array($baseDir . '/src', $vendorDir . '/ammarfaizi2/facebook/facebook'),
-    'Curl' => array($vendorDir . '/ammarfaizi2/ratools/src'),
+    'System' => array($baseDir . '/src', $vendorDir . '/ammarfaizi2/ai/src'),
+    'Phpml' => array($vendorDir . '/php-ai/php-ml/src'),
     'App' => array($vendorDir . '/ammarfaizi2/ai/src'),
     'AI' => array($vendorDir . '/ammarfaizi2/ai/src'),
 );
