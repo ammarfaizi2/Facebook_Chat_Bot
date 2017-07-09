@@ -1,4 +1,5 @@
-vendor/ammarfaizi2/ins.hash
-data/
-.php_cs.cache
-config.php
+/vendor/ammarfaizi2/ins.hash
+/data/ai
+/data/brainly
+/data/google
+/config.php
