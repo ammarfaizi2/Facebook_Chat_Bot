@@ -128,8 +128,6 @@ class BotFacebook extends IlluminateAbstraction implements DragonContract, Thund
                     }
                 }
             }
-            var_dump($chat_event);
-            die;
         }
     }
 
