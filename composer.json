@@ -1,30 +1,14 @@
 {
-    "name": "ammarfaizi2/botfb",
-    "description": "Bot Facebook",
-    "keywords": [
-        "Artificial Inteligence",
-        "AI",
-        "Facebook Bot",
-        "Facebook Interactive Chat",
-        "Chat Bot"
-    ],
-    "type": "package",
-    "minimum-stability": "dev",
+    "name": "ammarfaizi2/fb-interactive-chat",
+    "description": "Facebook Interactive Chat",
+    "type": "project",
+    "license": "BSD",
     "authors": [
         {
             "name": "Ammar Faizi",
             "email": "ammarfaizi2@gmail.com"
         }
     ],
-    "license": "BSD",
-    "autoload": {
-        "psr-0": {
-            "Bot": "src/",
-            "Hub": "src/"
-        }
-    },
-    "require": {
-        "ammarfaizi2/ai": "dev-master",
-        "ammarfaizi2/facebook": "^1.2"
-    }
+    "minimum-stability": "stable",
+    "require": {}
 }
