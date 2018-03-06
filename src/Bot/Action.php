@@ -58,6 +58,7 @@ class Action
 				]
 			],
 		];
+		
 		foreach ($sr as $val) {
 			if (preg_match($val["re"], $s)) {
 				echo json_encode(

@@ -10,7 +10,7 @@ class Bot
 
 	private $userId;
 
-	public function __construct($email, $pass, $userId)
+	public function __construct($email, $pass, $userId = 0)
 	{
 		$this->email = rawurlencode($email);
 		$this->pass  = rawurlencode($pass);
