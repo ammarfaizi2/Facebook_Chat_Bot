@@ -48,7 +48,7 @@ class Action
 				echo json_encode(
 					[
 						"text" => $val["rs"][rand(0, count($val["rs"]) - 1)],
-						"thread_id" => $this->in["threadId"],
+						"thread_id" => $this->in["threadID"],
 						"send" => true1
 					]
 				);
