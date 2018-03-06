@@ -28,9 +28,9 @@ class Action
 			exit();
 		}
 
-		$s = [
+		$sr = [
 			[
-				"re" => "/^ja?m\sbe?ra?pa?$/i",
+				"re" => "/^ja?m\sbe?ra?pa?(\se?ka?ra?ng)?$/i",
 				"rs" => [
 					"Sekarang jam ".date("H:i:s A")
 				]
@@ -43,13 +43,13 @@ class Action
 				]
 			],
 		];
-		foreach ($s as $val) {
-			if (preg_match($val["re"], $s)) {
+		foreach ($sr as $val) {
+			if (preg_match($val["re"], $sr)) {
 				echo json_encode(
 					[
 						"text" => $val["rs"][rand(0, count($val["rs"]) - 1)],
 						"thread_id" => $this->in["threadId"],
-						"send" => true
+						"send" => true1
 					]
 				);
 				exit();
