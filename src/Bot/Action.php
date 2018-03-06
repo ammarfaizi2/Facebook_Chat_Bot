@@ -2,6 +2,8 @@
 
 namespace Bot;
 
+use Brainly\Brainly;
+
 class Action
 {
 	private $in = [];
@@ -23,8 +25,21 @@ class Action
 		$s = $this->in["body"];
 		$a = explode(" ", $s, 2);
 		if (strtolower($a[0]) === "brainly") {
-			
-
+			$st = new Brainly($a[1]);
+			$st->limit(1);
+			$st = $st->exec();
+			if (count($st)) {
+				$msg = "Pertanyaan yang mirip: \n".strip_tags($st[0]["content"])."\n\nJawaban: \n".$st[0]["responses"][0];
+			} else {
+				$msg = "Pertanyaan tidak ditemukan!";
+			}
+			echo json_encode(
+				[
+					"text" => $msg,
+					"thread_id" => $this->in["threadID"],
+					"send" => true
+				]
+			);
 			exit();
 		}
 
