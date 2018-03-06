@@ -13,6 +13,8 @@ class Action
 
 	public function run()
 	{
-		
+		if (isset($this->in["body"])) {
+			echo 123123123;
+		}
 	}
 }

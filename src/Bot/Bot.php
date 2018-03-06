@@ -8,10 +8,13 @@ class Bot
 
 	private $pass;
 
-	public function __construct($email, $pass)
+	private $userId;
+
+	public function __construct($email, $pass, $userId)
 	{
 		$this->email = rawurlencode($email);
 		$this->pass  = rawurlencode($pass);
+		$this->userId = rawurlencode($userId);
 	}
 
 	public static function stream_exec($cmd)
@@ -33,6 +36,7 @@ class Bot
 		self::stream_exec("node run.js listen ".rawurlencode(json_encode(
 			[
 				"listen_to" => ["*"],
+				"bot_user_id" => $this->userId
 			]
 		)));
 	}
