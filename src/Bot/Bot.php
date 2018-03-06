@@ -29,11 +29,10 @@ class Bot
 
 	public function login()
 	{
-		// self::stream_exec("node run.js login \"{$this->email}\" \"{$this->pass}\"");
+		self::stream_exec("node run.js login \"{$this->email}\" \"{$this->pass}\"");
 		self::stream_exec("node run.js listen ".rawurlencode(json_encode(
 			[
 				"listen_to" => ["*"],
-				
 			]
 		)));
 	}
