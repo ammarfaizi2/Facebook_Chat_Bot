@@ -14,7 +14,46 @@ class Action
 	public function run()
 	{
 		if (isset($this->in["body"])) {
-			echo 123123123;
+			$this->response();	
+		}
+	}
+
+	private function response()
+	{
+		$s = $this->in["body"];
+		$a = explode(" ", $s, 2);
+		if (strtolower($a[0]) === "brainly") {
+			
+
+			exit();
+		}
+
+		$s = [
+			[
+				"re" => "/^ja?m\sbe?ra?pa?$/i",
+				"rs" => [
+					"Sekarang jam ".date("H:i:s A")
+				]
+			],
+			[
+				"re" => "/^(apa|pa|ap)\ska?ba?r$/i",
+				"rs" => [
+					"Baik",
+					"Sehat"
+				]
+			],
+		];
+		foreach ($s as $val) {
+			if (preg_match($val["re"], $s)) {
+				echo json_encode(
+					[
+						"text" => $val["rs"][rand(0, count($val["rs"]) - 1)],
+						"thread_id" => $this->in["threadId"],
+						"send" => true
+					]
+				);
+				exit();
+			}
 		}
 	}
 }

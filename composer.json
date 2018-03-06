@@ -9,8 +9,10 @@
             "email": "ammarfaizi2@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
-    "require": {},
+    "minimum-stability": "dev",
+    "require": {
+        "ammarfaizi2/brainly": "dev-master"
+    },
     "autoload": {
         "psr-4": {
             "Bot\\": "src/Bot/"
