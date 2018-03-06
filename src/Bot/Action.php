@@ -44,7 +44,7 @@ class Action
 			],
 		];
 		foreach ($sr as $val) {
-			if (preg_match($val["re"], $sr)) {
+			if (preg_match($val["re"], $s)) {
 				echo json_encode(
 					[
 						"text" => $val["rs"][rand(0, count($val["rs"]) - 1)],
