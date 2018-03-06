@@ -49,7 +49,7 @@ class Action
 					[
 						"text" => $val["rs"][rand(0, count($val["rs"]) - 1)],
 						"thread_id" => $this->in["threadID"],
-						"send" => true1
+						"send" => true
 					]
 				);
 				exit();
