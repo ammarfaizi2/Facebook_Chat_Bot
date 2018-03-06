@@ -29,7 +29,7 @@ class Action
 			$st->limit(1);
 			$st = $st->exec();
 			if (count($st)) {
-				$msg = "Pertanyaan yang mirip: \n".strip_tags($st[0]["content"])."\n\nJawaban: \n".$st[0]["responses"][0]["content"];
+				$msg = "Pertanyaan yang mirip: \n".strip_tags($st[0]["content"])."\n\nJawaban: \n".strip_tags(str_replace("<br />", "\n", $st[0]["responses"][0]["content"]));
 			} else {
 				$msg = "Pertanyaan tidak ditemukan!";
 			}
