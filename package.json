@@ -1,9 +1,9 @@
 {
   "name": "bot-facebook",
   "description": "Simple Bot Facebook",
-  "main": "index.js",
+  "main": "./js/run.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node js/test.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +17,6 @@
   "author": "Ammar Faizi",
   "license": "BSD",
   "dependencies": {
-    "facebook-chat-api": "github:schmavery/facebook-chat-api"
+    "facebook-chat-api": "1.4.0"
+  }
 }

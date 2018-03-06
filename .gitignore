@@ -1,9 +1,5 @@
-/vendor
-/data
-/config.php
-*.lock
 *.tmp
-/ice
-/test.php
-/fb_data
+*.lock
+/vendor
 /credentials.php
+/node_modules
